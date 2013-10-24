@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Remote PC Suite Help</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="images.js"></script>
+    <script type="text/javascript" src="sections.js"></script>    
+    <script type="text/javascript">                                         
+		$(document).ready(function(){
+			showAbout();
+		});
+	</script>   
+</head>
+<body>
+<div align="center"> 
+	<div class="document">
+        <span class="menu">        
+            <p>
+            	<a href="#" onclick="showAbout();">About</a>
+            </p>
+            <p>
+            	<a href="#" onclick="showConnections();">1. Managing Connections</a>
+            </p>
+            <p>
+            	<a href="#" onclick="showUsers();">2. Managing Users</a>
+            </p>                        
+            <p>
+            	<a href="#" onclick="showSettings();">3. Configuring the Application</a>
+            </p>
+            <p>
+            	<a href="#" onclick="showRestrictions();">4. Restrictions and Limitations</a>
+            </p>
+            <p>
+            	<a href="#" onclick="showRelated();">Related Projects</a>
+            </p>                      
+            <p class="icon">
+            	<img src="iremote_icon.png" style="width:150px;"/>
+            </p>      
+            <p>
+            	<a href="http://itunes.com/apps/iremotesuite">iRemote at AppStore</a>
+            </p>        
+            <p>
+            	<a href="http://www.scientific-soft.com/mobile/apps/iremote/">iRemote on the Web</a>
+            </p>                    
+        </span>    
+		<span class="content">         
+            <p class="maintitle">
+                <b>Remote PC Suite Help</b>
+            </p>             
+            <div class="article">            
+           		<div class="sectionAbout">               
+                    <p class="title">
+                        About
+                    </p>    
+                    <p> 
+                        <b>Remote PC Suite</b> is a host application that allows you to connect your devices, running 
+                        <b>iRemote Suite</b> software, and manipulate your desktop or notebook. 
+                    </p>      
+                    <p class="image">
+                    	<script> 
+							showImage("help001", 
+								"help001.mac.png", "help001.win7.png", "help001.winxp.png", 
+								"Main application window."); 
+                      	</script>
+                    </p> 
+                    <p class="subtitle">
+                    	iRemote Suite 1.4 features:
+                    </p>
+                    <p> 
+                        <ul>
+                        	<li>
+                            	Desktop screen sharing with zooming support. 
+                                This allows you to observe either complete screen or a part of it, 
+                                as close as it is necessary;
+                            </li>
+                            <li>                            
+                            	Mouse control (mouse movement, mouse clicks, tap-to-click, scrolling);
+                            </li>
+                            <li>               
+                            	Keyboard control;             
+                            </li>
+                            <li>                  
+                            	Master volume control;          
+                            </li>
+                            <li>      
+                            	Fully-functional shell access. 
+                                You are able to control you PC/Mac with the help of shell commands;                      
+                            </li>
+                            <li>           
+	                            Authorization feature. 
+                                This feature allows you to remember your device once, 
+                                so you do not have to approve each connection on the desktop.                 
+                            </li>
+							<li>
+								iOS and Android devices are supported.
+							</li>
+                        </ul>
+                  	</p>
+                    <p class="subtitle"> 
+						Supported desktop platforms:
+                  	</p>
+                    <p>                         
+                        <ul>
+                        	<li>
+                            	Mac OS X 10.5 or above (Intel only);
+                            </li>
+                        	<li>
+                            	Windows XP / Windows 2003 Server / Windows Vista / Windows 7.
+                            </li>                            
+                        </ul>
+                  	</p>          
+                    <p class="subtitle">
+	                    Definitions
+                    </p>
+                    <p>
+						<b>Remote PC Suite</b> - is desktop software. 
+                        You are always able to download latest version of the tool at 
+                        <a href="http://www.scientific-soft.com/mobile/apps/iremote/">
+                        	http://www.scientific-soft.com/mobile/apps/iremote/</a>.
+                    </p>
+                    <p>
+						<b>iRemote Suite</b> - is mobile application for iPhone. 
+                        You have to proceed to Updates section of App Store application on your iPhone 
+                        to check whether there are any updates of iRemote Suite. 
+                        Note, that iRemote Suite must be installed on your iPhone.               
+                    </p>
+            	</div>            
+            	<div class="sectionConnections">     
+                    <p class="title">
+                        1. Managing Connections
+                    </p>    
+                    <p>
+                    	The most wide spread way to control you desktop is being inside the same local network
+                        (to be connected to the same WiFi router). When both devices (desktop and mobile phone) 
+                        are connected to the netwotk, you can rpoceed to launching Remote PC Suite/iRemote Suite.
+                    </p>
+                    <p>
+                        You will see the following confirmation dialog when anyone attempts to connect to your computer.    
+                    </p>
+                    <p class="image">
+                    	<script> 
+							showImage("help002", 
+								"help002.mac.png", "help002.win7.png", "help002.winxp.png", 
+								"Confirmation dialog."); 
+                      	</script>                    
+                    </p>    
+                    <p>
+                        The following options are available at the moment:
+                        <ul>
+                            <li>Allow connection once.</li>            
+                            <li>Deny connection.</li>
+                            <li>Allow connection and remember device.</li>
+                        </ul>
+                    </p>    
+                    <p>        
+                        If you want to remember this device for future use, select 'Allow &amp; Remember' option.
+                        You will be immediately prompted for the password.        
+                    </p>   
+               		<p>
+                    	<b>Note:</b> You are only allowed to enter password using primary keyboard on the device.
+                    </p>
+                    <p class="image">
+                      	<script> 
+							showImage("help005", 
+								"help005.mac.png", "help005.win7.png", "help005.winxp.png", 
+								"Registering new device."); 
+                      	</script>                                              
+                    </p>     
+                    <p>
+                        Then you will be prompted to enter this password on the device.
+                    </p>
+                    <p class="image">
+                        <img src="./help006.png"/> <br/>
+                        Authenticating the device. 
+                    </p>       
+                    <p>
+                        Here you need to enter the same password that you've just used on the desktop.
+                    </p>
+                    <p>
+                        After this procedure you device becomes authorized and 
+                        you will not have to allow connection explicitly on the desktop each time.
+                    </p>
+                    <p>
+                        <b>Note:</b> RemotePC allows the only device running iRemote Suite to be connected at the time. 
+                    </p>   
+                    <p>
+                        You may disconnect device clicking “Disconnect” button on main application window. 
+                    </p>       
+                    <p class="image">
+                        <img src="./help003.png"/> <br/>
+                        Part of Remote PC main window with “Disconnect” button highlighted.
+                    </p>          
+            	</div>            
+            	<div class="sectionUsers">                                                                       
+                    <p class="title">
+                        2. Managing Users
+                    </p>      
+                    <p>
+                        You may access users manager by clicking corresponding button on the main application window.
+                    </p>   
+                    <p class="image">
+                        <img src="./help007.png"/> <br/>
+                        Part of Remote PC main window with “Users Manager” button highlighted.
+                    </p>         
+                    <p class="image">
+                    	<script> 
+							showImage("help008", 
+								"help008.mac.png", "help008.win7.png", "help008.winxp.png", 
+								"Users Manager main window."); 
+                      	</script>   
+                    </p>   
+                    <p>
+                        Here you are able to perform the following operations        
+                        <ul>
+                            <li>Edit device.</li>            
+                            <li>Remove device.</li>
+                        </ul>        
+                    </p>   
+                    <p>
+                        Editing allows you to set new password and change IP policy. 
+                        Each account is being created with strict one by default.
+                        This means that a device is associated with certain IP address.
+                        Here you can chenge this ip and or disable this option at all.        
+                    </p>
+                    <p>
+                        <b>Note:</b> It is highly recommended to keep this option enabled 
+                        due to security considerations.
+                    </p>                    
+            	</div>            
+            	<div class="sectionSettings">                                            
+                    <p class="title">
+                        3. Configuring the Application
+                    </p>            
+                    <p class="image">
+                       	<script> 
+							showImage("help004", 
+								"help004.mac.png", "help004.win7.png", "help004.winxp.png", 
+								"Remote PC application settings."); 
+                      	</script>   
+                    </p>    
+                    <p class="subtitle">
+                        Spreading screenshots
+                    </p>    
+                    <p>
+                        This group of settings allows you to enable or disable sharing screenshots with connected devices.
+                        You are also able to specify frame rate. 
+                        This value may be float.
+                        For example, it allows you to grab and spread one screenshot per 4 seconds, 
+                        by specifying value of <b>0.25</b>.
+                    </p>
+                    <p class="subtitle">
+                        Port value
+                    </p>
+                    <p>
+                        Sometimes you have to change port number when another software uses <b>8444</b> value,
+                        which is default for <b>Remote PC</b>.        
+                    </p>
+                    <p>
+                        <b>Note:</b> When you apply port changes, application restarts service, and all 					
+                        currently connected clients will be disconnected.     
+                    </p>     
+                    <p class="subtitle">
+                        Possible Errors
+                    </p>               
+                    <p>
+                    	<ul>
+                        	<li>
+                            	<p>
+                            		<i>Server has failed to start. Change port value in application settings.</i> 
+                                </p>
+                                <p>
+                                    This error occurs, if you specify port value, which is already busy.
+                                    In this case, you should specify another port value.
+                                    If you are sure, that specified value is correct, try to apply it ("Settings"->"Apply"),
+                                    until this error appears.
+                                </p>
+                                <p>
+                                    <b>Note:</b> When you see this message, server is not running. 
+                                    There are two ways to start it. 
+                                    The first on is to quit application and launch it again. 
+                                    The second one is to apply settings ("Settings"->"Apply").
+                                </p>
+                            </li>
+                        </ul>
+                    </p>                                    
+            	</div>            
+            	<div class="sectionRestrictions">                         
+                    <p class="title">
+                        4. Restrictions and Limitations
+                    </p>    
+                    <p>		
+                        <ul>
+                            <li>
+                                Application does not simulate DirectInput events.
+                            </li>
+                            <li>
+                                You may connect the only device, running iRemote Suite, to your computer at the time.
+                            </li>          
+                            <li>
+                                Application settings are stored in <i>Config.xml</i> file. 
+                                You should not modify this file directly. 
+                                Use application UI for such purposes.     
+                            </li>
+                        </ul>        
+                    </p>                         
+            	</div>      
+	          	<div class="sectionRelated">                         
+                    <p class="title">
+                        Related Projects
+                    </p>                   
+                    <p class="subtitle">
+                    	CommonKit
+                    </p> 		
+					<p>
+                    	iRemote and RemotePC data model, 
+                        concurrency schema and object oriented network interaction are based on CommonKit project.
+                    </p>
+                    <p>
+                    	<a href="http://commonkit.googlecode.com/">http://commonkit.googlecode.com/</a>
+                    </p>
+                    <p class="subtitle">
+                    	hielog
+                    </p> 		
+					<p>
+                    	hielog (Hierarchical Logging) is lightweight logging solution for C++. 
+                        This library is utilized for application on device testing.
+                    </p>
+                    <p>
+                    	<a href="http://hielog.googlecode.com/">http://hielog.googlecode.com/</a>
+                    </p>
+                    <p class="subtitle">
+                    	boost::asio
+                    </p> 		
+					<p>
+                    	Low level network interaction in CommonKit is based on cross-platform wrapper over 
+                        BSD sockets provided by boost::asio.
+                    </p>
+                    <p>
+                    	<a href="http://boost.org/">http://boost.org/</a>
+                    </p>                    
+                </div>
+         	</div> <!-- article -->            
+            <p class="copyright">
+                Copyright (c) 2011 Egor Pushkin <br/>
+                All Rights Reserved
+            </p>                   
+        </span> <!-- Content -->        
+    </div>
+</div>    
+</body>
+</html>

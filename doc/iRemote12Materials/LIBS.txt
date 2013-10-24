@@ -1,0 +1,44 @@
+THIS IS THE LIST OF THIRD PARTY SOFTWARE UTILIZED IN IREMOTE SUITE
+AND REMOTE PC SUITE PRODUCTS.
+
+1. Apple iPhone SDK.
+
+Apple iPhone SDK 2.2.1 and Apple iPhone SDK 3.0 were utilized in 
+iRemote Suite. This software is distrinuted under 'iPhone SDK Agreement'.
+
+2. Nokia Qt.
+
+Qt 4.5.0 was utilized in Remote PC Suite. Utilized version of Qt is 
+distributed under 'GNU LESSER GENERAL PUBLIC LICENSE (Version 2.1)'.
+
+3. Boost.
+
+Boost 1.37 was utilized in both iRemote Suite and Remote PC Suite.
+This library is distributed under 'Boost Software License - Version 1.0 - 
+August 17th, 2003'.
+
+4. Loki.
+
+Loki 0.1.6 was utilized in both iRemote Suite and Remote PC Suite.
+This library is distributed under 'MIT Licence'.
+
+5. Expat. 
+
+Expat was utilized in both iRemote Suite and Remote PC Suite.
+This library is distributed under 'MIT Licence'.
+
+6. HashLib++.
+
+hashlib++ - a simple hash library for C++
+Copyright (c) 2007,2008 Benjamin Grüdelbach
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
