@@ -1,0 +1,71 @@
+/**
+ * Copyright (c) 2013 Egor Pushkin. All rights reserved.
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+#ifndef AUTHDIALOG_H
+#define AUTHDIALOG_H
+
+#include <QtGui/QDialog>
+
+namespace Ui {
+    class AuthDialog;
+}
+
+class AuthDialog : public QDialog {
+    Q_OBJECT
+    Q_DISABLE_COPY(AuthDialog)
+public:
+	explicit AuthDialog(const QString& ip, const QString& id, const QString& name, int device, bool pswSupported, QWidget *parent = 0);
+    virtual ~AuthDialog();
+
+	typedef enum tagAuthCode
+	{
+		Remembered = Accepted + 1
+	}
+	AuthCode;
+
+	QString GetPassword();
+
+public slots:
+
+	void Close();
+
+private slots:
+
+	void allowed();
+	void remembered();
+	void denied();
+
+	void reject();
+
+signals:
+
+	void Closed();
+
+private:
+
+    Ui::AuthDialog *m_ui;	
+	bool pswSupported_;
+	QString password_;
+	
+};
+
+#endif // AUTHDIALOG_H

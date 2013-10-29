@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="help">Help</string>
+    <string name="default_host">192.168.1.104</string>
+    <string name="hosts">Hosts</string>
+    <string name="default_port">8444</string>    
+    
+    <string name="app_short_name">iRemote</string>
+    <string name="app_name">iRemote Suite</string>
+	<string name="host_ip">Host IP Address:</string>
+	<string name="host_port">Port Value (1024-65535):</string>
+	<string name="login_dialog_title">Connect</string>
+	<string name="login_dialog_ok">Catch!</string>
+	<string name="login_dialog_cancel">Cancel</string>
+	<string name="touch_pad">Touch Pad</string>
+	<string name="keyboard">Keyboard</string>
+	<string name="shell">Shell</string>
+	<string name="hots">Hot Keys</string>
+	<string name="password_dialog_title">Enter Password</string>
+	<string name="back">Back</string>
+	
+	<string name="help_dialog_title">iRemote Help</string>
+	<string name="password_dialog_prompt">Enter password to get control over host machine.</string>
+	<string name="password_dialog_title_wrong">Wrong Password</string>
+	<string name="password_dialog_prompt_wrong">Enter correct password to get control over host machine.</string>
+	<string name="settings">Settings</string>
+</resources>

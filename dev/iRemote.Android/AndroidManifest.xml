@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.scientificsoft.iremote.android.iremote"
+      android:versionCode="4"
+      android:versionName="1.0.3">
+      
+    <application 
+    	android:name="iRemoteApp"
+    	android:icon="@drawable/icon" 
+    	android:label="@string/app_short_name">    
+        <activity 
+        	android:name=".ui.home.HomeActivity"
+        	android:label="@string/app_name"
+            android:alwaysRetainTaskState="true"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+    	</activity>    	
+    	<activity 
+    		android:name=".ui.home.SplashActivity"
+    	    android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale"
+    	    android:theme="@android:style/Theme.NoTitleBar"/>
+    	<activity 
+    		android:name=".ui.home.LicenseActivity"
+    	    android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale"
+    	    android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity 
+        	android:name=".ui.home.HelpActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity 
+        	android:name=".ui.home.AboutActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity 
+        	android:name=".ui.control.ControlActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale"
+            android:theme="@android:style/Theme.NoTitleBar"/>        
+		<activity android:name="com.google.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"/>                        
+	</application>
+
+    <uses-sdk
+    	android:minSdkVersion="3" 
+    	android:targetSdkVersion="5" />
+    	
+    <supports-screens
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:anyDensity="true" />
+    <!--  android:xlargeScreens="true" -->    	
+        
+	<uses-feature android:name="android.hardware.wifi" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />        
+
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.VIBRATE" />	
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />	
+
+</manifest> 

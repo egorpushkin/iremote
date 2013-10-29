@@ -1,0 +1,1214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{eef4e1af-661b-45b3-a0e5-278873b97f82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{a6b6308a-c562-41c2-8d3a-c38a923ad6df}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{42684673-63ff-47c7-9db4-331aa80f3a1c}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="3rdParty">
+      <UniqueIdentifier>{45cd9cfc-bbb7-4882-a3f6-459199a03d09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\expat">
+      <UniqueIdentifier>{7c8c4b8f-fe56-4b25-a2b6-d5bbe2418ef6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\hashlib++">
+      <UniqueIdentifier>{7e813f64-1fb9-4015-b63d-a240a37fb9ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server">
+      <UniqueIdentifier>{30166399-7800-4596-86ca-001425d7f587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\UsersManager">
+      <UniqueIdentifier>{079bb3b6-ff02-481e-a13e-dba0463573ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\Shell">
+      <UniqueIdentifier>{33774999-0b79-4e75-8c2e-115b6a242f10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{7c81736d-0ce6-4e61-a0ff-33f594cf2d41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Annunciators">
+      <UniqueIdentifier>{a10c9992-ee94-4a36-a5e2-824c3ab82318}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hardware">
+      <UniqueIdentifier>{be0228ec-67e2-489b-bfb6-aeb2dfdf1d9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hardware\Win32">
+      <UniqueIdentifier>{6e7b1184-743e-4537-8791-7f013120e8a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hardware\Vista">
+      <UniqueIdentifier>{ae50a981-2cdf-4364-a48c-06dd28d2bed9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hardware\Provider">
+      <UniqueIdentifier>{17e941a4-d3d9-40e4-b765-0513840754d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hardware\Shared">
+      <UniqueIdentifier>{bc11cc23-e77d-454a-9bc9-8839855072ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="3rdParty\libjpeg">
+      <UniqueIdentifier>{aeae8975-54f2-4ebd-b718-8a106c8edabc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\pugi">
+      <UniqueIdentifier>{800b04aa-4991-4240-bf4a-9345843d18e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\Services">
+      <UniqueIdentifier>{f931747e-33f2-47bf-8df1-5f294621fac6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iRemote.Cpp">
+      <UniqueIdentifier>{b695ea1f-6bc4-4221-a11d-0b1cbc886828}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iRemote.Cpp\Messages">
+      <UniqueIdentifier>{14a502ed-142f-4d9d-8c94-49f16c95e7b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iRemote.Cpp\Versions">
+      <UniqueIdentifier>{16fba7b3-6f6b-4ea6-8e86-e6cfe9ffd6c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iRemote.Cpp\KeyCodes">
+      <UniqueIdentifier>{4a02857d-6ff6-4b13-ba8e-97a889735038}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iRemote.Cpp\SFB">
+      <UniqueIdentifier>{dfc6bb3c-6138-43fb-a4cb-56e8eb97ab11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iRemote.Cpp\SFB\Messages">
+      <UniqueIdentifier>{bbaca9b7-4bb9-46b3-8c46-59ea21fe7f12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iRemote.Cpp\SFB\Server">
+      <UniqueIdentifier>{3d999266-8685-4132-8d0b-96e09dc12feb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\Common.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\InstanceLock.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\main.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_aboutdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_aboutdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_authdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_authdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_dialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_dialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_edituserdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_edituserdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_rememberuserdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_rememberuserdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_settingsdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_settingsdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_usersmngdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_usersmngdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_RemotePC.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\expat\xmlparse.c">
+      <Filter>3rdParty\expat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\expat\xmlrole.c">
+      <Filter>3rdParty\expat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\expat\xmltok.c">
+      <Filter>3rdParty\expat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\expat\xmltok_impl.c">
+      <Filter>3rdParty\expat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\expat\xmltok_ns.c">
+      <Filter>3rdParty\expat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\hashlib++\hl_md5.cpp">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\hashlib++\hl_md5wrapper.cpp">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\hashlib++\hl_sha1.cpp">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\hashlib++\hl_sha1wrapper.cpp">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\hashlib++\hl_sha256.cpp">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\hashlib++\hl_sha256wrapper.cpp">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\hashlib++\hl_sha2ext.cpp">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\hashlib++\hl_sha384wrapper.cpp">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\hashlib++\hl_sha512wrapper.cpp">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\AuthContext.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Client.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Config.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\NetworkHelper.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\ServerContext.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\UsersManager\DUsersManagerStub.cpp">
+      <Filter>Server\UsersManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\UsersManager\User.cpp">
+      <Filter>Server\UsersManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\UsersManager\UsersManager.cpp">
+      <Filter>Server\UsersManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Shell\CtrlHandler.cpp">
+      <Filter>Server\Shell</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Shell\ProcessTool.cpp">
+      <Filter>Server\Shell</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Shell\ShellContext.cpp">
+      <Filter>Server\Shell</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Shell\ShellHost.cpp">
+      <Filter>Server\Shell</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\aboutdialog.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\authdialog.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Controls.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dialog.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\edituserdialog.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\rememberuserdialog.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\settingsdialog.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\UIConfig.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\usersmngdialog.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Annunciators\Events.cpp">
+      <Filter>UI\Annunciators</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Annunciators\UsersEvents.cpp">
+      <Filter>UI\Annunciators</Filter>
+    </ClCompile>
+    <ClCompile Include="Hardware\Win32\DisplayControl.cpp">
+      <Filter>Hardware\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="Hardware\Win32\HardwareControl.cpp">
+      <Filter>Hardware\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="Hardware\Win32\MixerVolumeControl.cpp">
+      <Filter>Hardware\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="Hardware\Vista\EndpointVolumeControl.cpp">
+      <Filter>Hardware\Vista</Filter>
+    </ClCompile>
+    <ClCompile Include="Hardware\Provider\HardwareGuids.cpp">
+      <Filter>Hardware\Provider</Filter>
+    </ClCompile>
+    <ClCompile Include="Hardware\Provider\HardwareProvider.cpp">
+      <Filter>Hardware\Provider</Filter>
+    </ClCompile>
+    <ClCompile Include="Hardware\Shared\ScreenshotSpreader.cpp">
+      <Filter>Hardware\Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\bmp.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\cdjpeg.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jcapimin.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jcapistd.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jccoefct.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jccolor.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jcdctmgr.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jchuff.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jcinit.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jcmainct.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jcmarker.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jcmaster.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jcomapi.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jcparam.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jcphuff.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jcprepct.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jcsample.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jctrans.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jdapimin.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jdapistd.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jdatadst.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jdatasrc.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jdcoefct.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jdcolor.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jddctmgr.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jdhuff.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jdinput.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jdmainct.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jdmarker.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jdmaster.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jdmerge.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jdphuff.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jdpostct.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jdsample.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jdtrans.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jerror.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jfdctflt.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jfdctfst.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jfdctint.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jidctflt.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jidctfst.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jidctint.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jidctred.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jmemmgr.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jmemnobs.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jquant1.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jquant2.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jsimd_none.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\jutils.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\rdbmp.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\rdcolmap.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\rdgif.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\rdppm.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\rdswitch.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\rdtarga.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\transupp.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\turbojpegl.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\wrbmp.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\wrgif.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\wrppm.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libjpeg\wrtarga.c">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\pugi\pugixml.cpp">
+      <Filter>3rdParty\pugi</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Services\Device.cpp">
+      <Filter>Server\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Services\ServiceDescriptor.cpp">
+      <Filter>Server\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="Server\Services\ServicesManager.cpp">
+      <Filter>Server\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\AudioMessages.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\AuthMessage.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\AuthResponse.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\AuthResponse2.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\CookieMessage.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\DataMessage.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\KeyboardMessage.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\Messages.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\MouseClickMessage.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\MoveMessage.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\MoveToMessage.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\PasswordMessage.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\PasswordRequest.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\ScreenshotMessage.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\ScrollMessage.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\ScrollMessage2.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\ShellRequest.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\ShellResponse.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\StreamRequest.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\StringMessage.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\VolumeMessage.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\ZoomLevelMessage.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\ZoomParamsMessage.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Versions\Features.cpp">
+      <Filter>iRemote.Cpp\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Versions\Versions.cpp">
+      <Filter>iRemote.Cpp\Versions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Messages\BatchHeader.cpp">
+      <Filter>iRemote.Cpp\SFB\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Messages\BlockMessage.cpp">
+      <Filter>iRemote.Cpp\SFB\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Messages\ControlMessage.cpp">
+      <Filter>iRemote.Cpp\SFB\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Messages\DeviceDisconnected.cpp">
+      <Filter>iRemote.Cpp\SFB\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Messages\DeviceInfo.cpp">
+      <Filter>iRemote.Cpp\SFB\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Messages\DeviceNotFound.cpp">
+      <Filter>iRemote.Cpp\SFB\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Messages\InitMessage.cpp">
+      <Filter>iRemote.Cpp\SFB\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Messages\RequestDevice.cpp">
+      <Filter>iRemote.Cpp\SFB\Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Server\ByteBuffer.cpp">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Server\DeliveryHandler.cpp">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Server\DeliveryQueue.cpp">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Server\FBManager.cpp">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Server\FBService.cpp">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Server\ImageSource.win.cpp">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Server\InitHandler.cpp">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Server\JpegCompressor.cpp">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Server\Matrix.cpp">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Server\MatrixComparator.cpp">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Server\MemoryCache.cpp">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Server\RasterFormat.cpp">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Server\RawImage.cpp">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\SFB\Server\SwapBuffer.cpp">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\iRemote.Cpp\Messages\ServiceRequest.cpp">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\Common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\InstanceLock.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\resource.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_aboutdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_authdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_dialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_EditUserDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_rememberuserdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_settingsdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_usersmngdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat\ascii.h">
+      <Filter>3rdParty\expat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat\asciitab.h">
+      <Filter>3rdParty\expat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat\expat.h">
+      <Filter>3rdParty\expat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat\expat_external.h">
+      <Filter>3rdParty\expat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat\iasciitab.h">
+      <Filter>3rdParty\expat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat\internal.h">
+      <Filter>3rdParty\expat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat\latin1tab.h">
+      <Filter>3rdParty\expat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat\macconfig.h">
+      <Filter>3rdParty\expat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat\nametab.h">
+      <Filter>3rdParty\expat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat\utf8tab.h">
+      <Filter>3rdParty\expat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat\xmlrole.h">
+      <Filter>3rdParty\expat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat\xmltok.h">
+      <Filter>3rdParty\expat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat\xmltok_impl.h">
+      <Filter>3rdParty\expat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\hashlib++\hashlibpp.h">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\hashlib++\hl_exception.h">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\hashlib++\hl_hashwrapper.h">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\hashlib++\hl_md5.h">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\hashlib++\hl_md5wrapper.h">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\hashlib++\hl_sha1.h">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\hashlib++\hl_sha1wrapper.h">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\hashlib++\hl_sha256.h">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\hashlib++\hl_sha256wrapper.h">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\hashlib++\hl_sha2ext.h">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\hashlib++\hl_sha2mac.h">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\hashlib++\hl_sha384wrapper.h">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\hashlib++\hl_sha512wrapper.h">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\hashlib++\hl_types.h">
+      <Filter>3rdParty\hashlib++</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\AuthContext.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Client.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Config.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\IClientHandler.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\IServerControl.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\IUIEvents.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\NetworkHelper.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\ServerContext.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\UsersManager\DUsersManager.h">
+      <Filter>Server\UsersManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\UsersManager\DUsersManagerStub.h">
+      <Filter>Server\UsersManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\UsersManager\User.h">
+      <Filter>Server\UsersManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\UsersManager\UsersManager.h">
+      <Filter>Server\UsersManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Shell\CtrlHandler.h">
+      <Filter>Server\Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Shell\IShellControl.h">
+      <Filter>Server\Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Shell\ProcessTool.h">
+      <Filter>Server\Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Shell\ShellContext.h">
+      <Filter>Server\Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Shell\ShellHost.h">
+      <Filter>Server\Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Shell\ShellSupport.h">
+      <Filter>Server\Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Controls.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\UIConfig.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Annunciators\Events.h">
+      <Filter>UI\Annunciators</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Annunciators\UsersEvents.h">
+      <Filter>UI\Annunciators</Filter>
+    </ClInclude>
+    <ClInclude Include="Hardware\Hardware.h">
+      <Filter>Hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="Hardware\Win32\DisplayControl.h">
+      <Filter>Hardware\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Hardware\Win32\HardwareControl.h">
+      <Filter>Hardware\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Hardware\Win32\IVolumeControlInitializer.h">
+      <Filter>Hardware\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Hardware\Win32\MixerVolumeControl.h">
+      <Filter>Hardware\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Hardware\Vista\EndpointVolumeControl.h">
+      <Filter>Hardware\Vista</Filter>
+    </ClInclude>
+    <ClInclude Include="Hardware\Provider\HardwareProvider.h">
+      <Filter>Hardware\Provider</Filter>
+    </ClInclude>
+    <ClInclude Include="Hardware\Provider\IDisplayControl.h">
+      <Filter>Hardware\Provider</Filter>
+    </ClInclude>
+    <ClInclude Include="Hardware\Provider\IKeyboardControl.h">
+      <Filter>Hardware\Provider</Filter>
+    </ClInclude>
+    <ClInclude Include="Hardware\Provider\IMouseControl.h">
+      <Filter>Hardware\Provider</Filter>
+    </ClInclude>
+    <ClInclude Include="Hardware\Provider\IVolumeControl.h">
+      <Filter>Hardware\Provider</Filter>
+    </ClInclude>
+    <ClInclude Include="Hardware\Shared\ScreenshotSpreader.h">
+      <Filter>Hardware\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\bmp.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\cderror.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\cdjpeg.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\jchuff.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\jconfig.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\jdct.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\jdhuff.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\jerror.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\jinclude.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\jmemsys.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\jmorecfg.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\jpegint.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\jpeglib.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\jsimd.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\jsimddct.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\jversion.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\rrtimer.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\rrutil.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\transupp.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libjpeg\turbojpeg.h">
+      <Filter>3rdParty\libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\pugi\pugiconfig.hpp">
+      <Filter>3rdParty\pugi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\pugi\pugixml.hpp">
+      <Filter>3rdParty\pugi</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Services\Device.h">
+      <Filter>Server\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Services\IDevice.h">
+      <Filter>Server\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Services\IDeviceHandler.h">
+      <Filter>Server\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Services\IServiceHandler.h">
+      <Filter>Server\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Services\IServicesManager.h">
+      <Filter>Server\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Services\ServiceDescriptor.h">
+      <Filter>Server\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Services\Services.h">
+      <Filter>Server\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="Server\Services\ServicesManager.h">
+      <Filter>Server\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\AudioMessages.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\AuthMessage.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\AuthResponse.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\AuthResponse2.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\CookieMessage.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\DataMessage.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\IDataMessage.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\IScreenshotMessage.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\IStringMessage.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\KeyboardMessage.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\Messages.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\MouseClickMessage.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\MoveMessage.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\MoveToMessage.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\PasswordMessage.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\PasswordRequest.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\ScreenshotMessage.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\ScrollMessage.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\ScrollMessage2.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\ShellRequest.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\ShellResponse.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\StreamRequest.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\StringMessage.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\VolumeMessage.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\ZoomLevelMessage.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\ZoomParamsMessage.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Versions\Features.h">
+      <Filter>iRemote.Cpp\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Versions\Versions.h">
+      <Filter>iRemote.Cpp\Versions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\KeyCodes\VirtualCodes.Win32.h">
+      <Filter>iRemote.Cpp\KeyCodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Messages\BatchHeader.h">
+      <Filter>iRemote.Cpp\SFB\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Messages\BlockMessage.h">
+      <Filter>iRemote.Cpp\SFB\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Messages\ControlMessage.h">
+      <Filter>iRemote.Cpp\SFB\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Messages\DeviceDisconnected.h">
+      <Filter>iRemote.Cpp\SFB\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Messages\DeviceInfo.h">
+      <Filter>iRemote.Cpp\SFB\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Messages\DeviceNotFound.h">
+      <Filter>iRemote.Cpp\SFB\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Messages\InitMessage.h">
+      <Filter>iRemote.Cpp\SFB\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Messages\RequestDevice.h">
+      <Filter>iRemote.Cpp\SFB\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Server\ByteBuffer.h">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Server\DeliveryHandler.h">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Server\DeliveryQueue.h">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Server\FBManager.h">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Server\FBService.h">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Server\ImageSource.h">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Server\InitHandler.h">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Server\JpegCompressor.h">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Server\Math.h">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Server\Matrix.h">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Server\MatrixComparator.h">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Server\MemoryCache.h">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Server\RasterFormat.h">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Server\RawImage.h">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Server\SFB.h">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\SFB\Server\SwapBuffer.h">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\iRemote.Cpp\Messages\ServiceRequest.h">
+      <Filter>iRemote.Cpp\Messages</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resource">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="Resources\AboutIcon.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\DisconnectIcon.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\EditUser.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\HelpIcon.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\RemotePC.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\UsersIcon.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\3rdParty\libjpeg\config.guess">
+      <Filter>3rdParty\libjpeg</Filter>
+    </None>
+    <None Include="..\3rdParty\libjpeg\config.h.in">
+      <Filter>3rdParty\libjpeg</Filter>
+    </None>
+    <None Include="..\3rdParty\libjpeg\jconfig.h.in">
+      <Filter>3rdParty\libjpeg</Filter>
+    </None>
+    <None Include="..\iRemote.Cpp\SFB\Server\ImageSource.mm">
+      <Filter>iRemote.Cpp\SFB\Server</Filter>
+    </None>
+    <None Include="Resources\ComboBoxDown.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\CheckBoxIndicator.png">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources\RemotePC.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="Resources\ButtonNarrow.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Resources\ButtonNormal.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Resources\ButtonWide.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Resources\Icon.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Resources\SeparatorBottom.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Resources\SeparatorMiddle.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Resources\SeparatorTop.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Resources\SettingsIcon.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuildStep>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Resources\Win\aboutdialog.ui">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\Win\authdialog.ui">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\Win\dialog.ui">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\Win\edituserdialog.ui">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\Win\rememberuserdialog.ui">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="RemotePC.qrc">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\Win\settingsdialog.ui">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\Win\usersmngdialog.ui">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI\aboutdialog.h">
+      <Filter>UI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI\authdialog.h">
+      <Filter>UI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI\dialog.h">
+      <Filter>UI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI\edituserdialog.h">
+      <Filter>UI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI\rememberuserdialog.h">
+      <Filter>UI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI\settingsdialog.h">
+      <Filter>UI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI\usersmngdialog.h">
+      <Filter>UI</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

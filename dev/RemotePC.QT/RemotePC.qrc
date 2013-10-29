@@ -1,0 +1,19 @@
+<RCC>
+  <qresource prefix="/">
+    <file>Resources/CheckBoxIndicator.png</file>
+    <file>Resources/ComboBoxDown.png</file>
+    <file>Resources/EditUser.png</file>
+    <file>Resources/HelpIcon.png</file>
+    <file>Resources/AboutIcon.png</file>
+    <file>Resources/DisconnectIcon.png</file>
+    <file>Resources/UsersIcon.png</file>
+    <file>Resources/ButtonNormal.png</file>
+    <file>Resources/SeparatorBottom.png</file>
+    <file>Resources/SeparatorTop.png</file>
+    <file>Resources/SettingsIcon.png</file>
+    <file>Resources/ButtonWide.png</file>
+    <file>Resources/ButtonNarrow.png</file>
+    <file>Resources/SeparatorMiddle.png</file>
+    <file>Resources/Icon.png</file>
+  </qresource>
+</RCC>

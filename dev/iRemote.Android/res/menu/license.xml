@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item 
+		android:id="@+id/menu_decline" 
+		android:title="Decline"
+		android:icon="@drawable/menu_exit"/>
+	<item 
+		android:id="@+id/menu_accept" 
+		android:title="Accept"
+		android:icon="@drawable/menu_accept"/>
+</menu>

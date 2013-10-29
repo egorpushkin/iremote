@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads" 
+    android:background="@color/background">
+    
+	<LinearLayout
+		android:id="@+id/home_content"
+		android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true">    
+	    
+	    <!-- Navigation bar -->
+		<RelativeLayout
+			android:id="@+id/navbar"	
+			android:layout_width="fill_parent" 
+			android:layout_height="40dip" 		
+			android:orientation="horizontal">
+			<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+				android:src="@drawable/navbar"
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent" 
+				android:scaleType="fitXY">
+			</ImageView>				
+			<TextView 
+				android:id="@+id/navbar_title"
+				android:text="iRemote Suite"
+				android:textColor="@color/text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textStyle="bold" 
+				android:textSize="20dip" 
+				android:layout_centerHorizontal="true" 
+				android:layout_centerVertical="true"/>				
+		</RelativeLayout>	    
+
+		<!-- AdMob panel -->
+		<com.google.ads.AdView 
+			android:id="@+id/ad"
+			android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        ads:adUnitId="a14c4834b88d1ff"
+	        ads:adSize="BANNER"
+	        ads:loadAdOnCreate="true"/>	
+		
+		<!-- Control buttons. -->
+		<RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content">		
+			<!-- 1st row of buttons. -->
+		    <LinearLayout
+		    	android:id="@+id/home_btns_row1"
+		        android:orientation="horizontal"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"						        
+		        android:layout_weight="1" 
+				android:layout_centerHorizontal="true"		        
+		        android:paddingBottom="5dip" 
+		        android:paddingTop="5dip" 
+		        android:paddingLeft="35dip" 
+		        android:paddingRight="35dip">        
+	            <Button android:id="@+id/button_connect"
+	                style="@style/HomeButton"
+	                android:text="Connect"
+	                android:drawableTop="@drawable/home_connect"/>
+	            <Button android:id="@+id/button_hosts"
+	                style="@style/HomeButton"
+	                android:text="Known Hosts"
+	                android:drawableTop="@drawable/home_hosts"/>
+		    </LinearLayout>		    
+			<!-- 2nd row of buttons. -->	    
+		    <LinearLayout
+		        android:orientation="horizontal"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"   
+		        android:layout_centerHorizontal="true"
+		        android:layout_below="@id/home_btns_row1"
+		        android:paddingBottom="10dip" 
+		        android:paddingTop="5dip" 
+		        android:paddingLeft="35dip" 
+		        android:paddingRight="35dip">        
+	            <Button android:id="@+id/button_help"
+	                style="@style/HomeButton"
+	                android:text="Help"
+	                android:drawableTop="@drawable/home_help"/>
+	            <Button android:id="@+id/button_about"
+	                style="@style/HomeButton"
+	                android:text="About"
+	                android:drawableTop="@drawable/home_info"/>
+		    </LinearLayout>   	    
+	    </RelativeLayout>
+	    
+	    <include layout="@layout/separator_control"/>
+		
+		<!-- Status area -->
+		<LinearLayout
+			android:id="@+id/home_status_area"
+			android:orientation="vertical"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+	        android:paddingBottom="10dip" 
+	        android:paddingTop="10dip" 
+	        android:paddingLeft="20dip" 
+	        android:paddingRight="20dip">
+		
+			<!-- Introduction/welcome message. -->
+			<LinearLayout
+				android:id="@+id/home_status_initial"
+				android:orientation="vertical"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content">
+				<TextView 
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:textSize="@dimen/text_home_status_primary"
+					android:textColor="@color/text"
+					android:text="Welcome to iRemote Suite!">
+				</TextView>	
+   				<TextView 
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:textSize="@dimen/text_home_status_secondary"
+					android:textColor="@color/text_secondary"
+					android:text="Make sure that you downloaded and installed Remote PC Suite on your Mac or PC. This is required step to get control over your workstation from a phone.">
+				</TextView>	
+			</LinearLayout>
+			
+			<!-- Progress message -->
+			<LinearLayout
+				android:id="@+id/home_status_progress"
+				android:orientation="horizontal"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:visibility="gone">			    
+				<ProgressBar 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"
+					android:paddingLeft="15dip"
+					android:paddingRight="10dip"
+					android:layout_gravity="center_vertical"
+					style="?android:attr/progressBarStyleSmall"/>
+				<LinearLayout
+					android:id="@+id/home_status_progress"
+					android:orientation="vertical"
+			    	android:layout_width="fill_parent"
+			    	android:layout_height="wrap_content"
+			    	android:layout_gravity="center_vertical">	
+					<TextView 
+						android:id="@+id/home_primary_status"
+						android:layout_width="fill_parent" 
+						android:layout_height="wrap_content"
+						android:textSize="@dimen/text_home_status_primary"
+						android:textColor="@color/text"
+						android:text="Welcome to iRemote Suite!">
+					</TextView>
+					<TextView 
+						android:id="@+id/home_secondary_status"
+						android:layout_width="fill_parent" 
+						android:layout_height="wrap_content"
+						android:textSize="@dimen/text_home_status_secondary"
+						android:textColor="@color/text_secondary"
+						android:text="Welcome to iRemote Suite!">
+					</TextView>											
+				</LinearLayout>
+			</LinearLayout>
+			
+			<!-- Error message. -->
+			<LinearLayout
+				android:id="@+id/home_status_error"
+				android:orientation="vertical"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:visibility="gone">
+				<TextView 
+					android:id="@+id/home_primary_status"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:textSize="@dimen/text_home_status_primary"
+					android:textColor="@color/text_error"
+					android:gravity="center_horizontal"
+					android:textStyle="bold"
+					android:text="Welcome to iRemote Suite!">
+				</TextView>	
+			</LinearLayout>			
+			
+			<!-- Status message. -->
+			<LinearLayout
+				android:id="@+id/home_status_message"
+				android:orientation="vertical"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:visibility="gone">
+				<TextView 
+					android:id="@+id/home_primary_status"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:textSize="@dimen/text_home_status_primary"
+					android:textColor="@color/text"
+					android:text="Welcome to iRemote Suite!">
+				</TextView>	
+   				<TextView 
+					android:id="@+id/home_secondary_status"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:textSize="@dimen/text_home_status_secondary"
+					android:textColor="@color/text_secondary"
+					android:text="Message.">
+				</TextView>	
+			</LinearLayout>						
+		</LinearLayout>
+	    <include layout="@layout/separator_control"/>		
+	</LinearLayout>
+	
+	<!-- Copyright notice. -->
+	<LinearLayout
+		android:id="@+id/home_copyright"
+		android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:paddingBottom="4dip">	    
+		<TextView 
+			android:id="@+id/home_version"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:textSize="@dimen/text_home_bottom"
+			android:text="iRemote Suite " 
+			android:gravity="center_horizontal" 
+			android:textColor="@color/text">
+		</TextView>		
+   		<TextView 
+			android:id="@+id/home_copyright"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:textSize="@dimen/text_home_bottom"
+			android:text="Copyright (c) Egor Pushkin" 
+			android:gravity="center_horizontal" 
+			android:textColor="@color/text_secondary">			
+		</TextView>	    
+    </LinearLayout>   	
+	
+</RelativeLayout>

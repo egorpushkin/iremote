@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UsersMngDialog</class>
+ <widget class="QDialog" name="UsersMngDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>379</width>
+    <height>250</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>379</width>
+    <height>250</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>379</width>
+    <height>250</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Users Manager</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(58,58,58); 
+selection-background-color: rgb(67, 67, 67);
+color: rgb(255, 255, 255);
+</string>
+  </property>
+  <widget class="Line" name="line_4">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>190</y>
+     <width>381</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>background-image: url(:/Resources/SeparatorBottom.png); 
+border: none;</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>208</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>background-color: rgb(46, 46, 46);
+border:none;</string>
+   </property>
+   <widget class="QPushButton" name="closeButton">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>3</y>
+      <width>75</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>background-image: url(:/Resources/ButtonNormal.png); 
+border: none;
+color: rgb(255, 255, 255);
+font: bold 10pt &quot;Lucida Grande&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Close</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QTreeWidget" name="users_">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>10</y>
+     <width>281</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Lucida Grande</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string>QTreeView {
+	border: none;
+}
+QAbstractScrollArea::corner {
+	background: rgb(58,58,58); 
+}
+QHeaderView::section {
+	background: rgb(58,58,58); 
+/*	border-bottom: 1px dashed white; */
+	border-style: dashed;
+	border-width: 1px;
+    border-bottom-color: white;
+	padding: 4px 4px 4px 4px;
+	font: bold 12pt &quot;Lucida Grande&quot;;
+}
+  QScrollBar:vertical {
+      width: 8px;
+	border: none;
+  }
+  QScrollBar::handle:vertical {
+      background: rgb(126,126,126);
+      min-height: 50px;
+	  margin: 26px 0px 4px 0px;
+     border-width: 1px;
+     border-style: solid;
+     border-radius: 4px;
+  }
+QScrollBar::add-line:vertical {
+      border: none;
+      height: 0px;
+  }
+
+  QScrollBar::sub-line:vertical {
+      border: none;
+      height: 0px;
+  }
+  QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+      border: none;
+      width: 0px;
+      height: 0px;
+  }
+
+  QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+      background: none;
+      height: 0px;
+  }</string>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAsNeeded</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <attribute name="headerVisible">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="headerCascadingSectionResizes">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="headerShowSortIndicator" stdset="0">
+    <bool>false</bool>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>Known Devices</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>50</y>
+     <width>35</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>QPushButton {
+	background-image: url(:/Resources/ButtonNarrow.png); 
+	border: none;
+	color: rgb(255, 255, 255);
+	font: bold 8pt &quot;MS Shell Dlg 2&quot;;
+	image: url(:/Resources/DisconnectIcon.png);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>20</y>
+     <width>35</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>QPushButton {
+	background-image: url(:/Resources/ButtonNarrow.png); 
+	border: none;
+	color: rgb(255, 255, 255);
+	font: bold 8pt &quot;MS Shell Dlg 2&quot;;
+	image: url(:/Resources/EditUser.png);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>closeButton</sender>
+   <signal>clicked()</signal>
+   <receiver>UsersMngDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>253</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>179</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>UsersMngDialog</receiver>
+   <slot>RemoveUser()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>353</x>
+     <y>64</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>353</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>UsersMngDialog</receiver>
+   <slot>EditUser()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>346</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>345</x>
+     <y>144</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>users_</sender>
+   <signal>itemDoubleClicked(QTreeWidgetItem*,int)</signal>
+   <receiver>UsersMngDialog</receiver>
+   <slot>ItemDoubleClicked(QTreeWidgetItem*,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>124</x>
+     <y>116</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>18</x>
+     <y>73</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>RemoveUser()</slot>
+  <slot>EditUser()</slot>
+  <slot>ItemDoubleClicked(QTreeWidgetItem*,int)</slot>
+ </slots>
+</ui>

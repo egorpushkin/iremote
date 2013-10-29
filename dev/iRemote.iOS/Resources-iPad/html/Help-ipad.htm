@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>iRemote Suite Help</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/> 	
+    <link href="style-ipad.css" media="screen" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <p> 
+        <b>iRemote Suite</b> is iPhone application that allows you to manipulate your workstation or notebook.
+    </p>    
+    <p class="title">
+        1. Requirements
+    </p>    
+    <p class="subtitle">
+        Network neighborhood
+    </p>
+    <p>
+        Network neighborhood is the primary thing you need to take an advantage of using this software. 
+        At first, you need local area network to be able to connect your desktop or notebook. 
+        And finally, you need WiFi router to be able to connect your iPhone to your local network.
+    </p>    
+    <p>
+        The scenario may be easier, of course, if you have a notebook with embedded WiFi module which is 
+        capable to create Ad Hoc network. In this case you can connect your iPhone to notebook directly
+        without mediators.
+    </>
+    <p class="subtitle">
+        Host application
+    </p>
+    <p>
+        Before you launch your mobile client you have to download and install host application,
+        which is called <b>Remote PC Suite</b> on your desktop system. 
+        You may found latest binaries for your platform at <br/>
+            <a href="http://www.scientific-soft.com/mobile/apps/iremote/">http://www.scientific-soft.com/mobile/apps/iremote/</a> <br/>
+        <b>Note:</b> 
+        Binaries for your desktop system are always FREE. 
+        And what is much more important is that you should not download binaries from third-party mirrors. 
+        The only authorized distributor of <b>Remote PC Suite</b> is <b>Scientific Software</b>. 
+        Please, use authorized mirror to protect your system.    
+    </p>
+    
+    <p class="title">
+        2. Connecting to Host
+    </p>      
+    <p>
+        The only way to connect to your host is to take an advantage of TCP/IP networking.
+        It means that you have to specify IP address and PORT of your desktop to establish the connection.
+    </p>    
+    <p>
+        <b>Remote PC Suite</b> provides you a way to acquire your IP address easily.
+        It is displayed at the bottom of Remote PC Suite main window.
+    </p>
+    <p class="image">
+        <img src="./Help001.jpg"/> <br/>
+        Part of host application window with ip combo box.
+    </p>
+    <p>
+        <i>Advanced</i> <br/>
+        The software uses port number 8444 by default. It may occur so, that another software (on your desktop)
+        uses the same port number. In this case you will be prompted with an error when you launch
+        <b>Remote PC Suite</b>. You will have to choose another port value and specify it while logging in
+        with <b>iRemote Suite</b>.
+    </p>
+    <p class="image">
+        <img src="./Help002.jpg"/> <br/>
+        iRemote login page with ip and port populated.
+    </p>
+    <p>
+        Press ‘Catch’ button to establish connection with host application which should be launched on your workstation.     
+    </p>
+    <p>
+        It is now possible to remember your device on the desktop. 
+        This feature allows you to connect to a host remotely.
+        You will need to enter password on the device just once.
+    </p>
+    <p class="image">
+        <img src="./Help003.jpg"/> <br/>
+        Password request in iRemote.
+    </p>   
+    <p>
+        After successful connection attempt, you will have this host on the list and will be able to connect to it 'in a click' 
+        without any confirmations on desktop side.
+    </p> 
+    <p class="image">
+        <img src="./Help007.jpg"/> <br/>
+        List of known hosts.
+    </p>   
+    <p>
+        Here you can select any particular host to connect to it immediately. 
+        You are also able to remove hosts from the list in standard iPhone way.
+    </p>     
+    <p>
+    	You can get one of the following erros, when attempting to extablish connection with the host:
+    </p>
+    <p>
+    	<ul>
+        	<li>
+            	<i>Failed to connect to host.</i> <br/> 
+                <p>
+                    This error occurs, when target host is not accessible.
+                    Check whether IP address and port values are correct and ensure that Remote PC Suite is launched.
+                    You can also try to restart Remote PC Suite on the host.
+            	</p>
+            </li>
+        	<li>
+            	<i>Connection is terminated by host.</i> <br/>     
+            	<p>
+                    Host application terminated connection for some reason. 
+                    This error occurs, when user disconnects device by means of Remote PC Suite, or
+                    Remote PC Suite is terminated.                
+				</p>                
+            </li>
+        	<li>
+            	<i>Limit of connections is reached.</i> <br/>            	
+                <p>
+                    The only device is allowed to be connected to the host at the moment.
+                    You will get this error, if you try to connect a device, when another device is already connected.
+                </p>
+            </li>
+        	<li>
+            	<i>Wrong device IP address.</i> <br/>            	
+                <p>
+                    If you create a rule for your device (remember it on the host), the device is associated with its cureent IP address.
+                    If device IP address is changed for some reason, you have to proceed to 
+                    Remote PC-&gt;User's Manager-&gt;<i>Your Device</i> and modify IP address.
+                    If device IP is frequently changed, you can turn this feature off at the same place.
+                    Just leave 'Associate with IP address' checkbox blank.
+                </p>
+            </li>
+        </ul>
+    </p>
+
+    <p class="title">
+        3. TouchPad
+    </p>      
+    <p class="subtitle">
+        Pan Feature
+    </p>     
+    <p>
+        Use pan gestures to move mouse cursor over the screen of your desktop. 
+        Mouse events are inverted. This means the following. 
+        Imagine, that when you move you finger along the screen of your device you literally move visible area along your desktop screen.
+    </p>      
+    <p class="subtitle">
+        Scroll Feature
+    </p>     
+    <p>
+        Touch screen with two fingers simultaneously and pan to scroll active window vertically.
+        You are also able to scroll any window horizontally if you are running Windows Vista (or higher) on your desktop.
+    </p>
+    <p class="subtitle">
+        Zoom Feature
+    </p>     
+    <p>
+        You are able to zoom in and zoom out using enther +/- controls (at the rop of the screen) or two fingers pinch guesture.
+        This feature allows you to see the entire screen or certain part of it, as close as it is necessary.
+    </p>    
+    <p class="image">
+        <img src="./Help008.jpg"/> <br/> 
+        Sceeen zooming in action. 
+    </p>
+    <p class="subtitle">
+        Landscape Mode
+    </p>   
+    <p>
+        This feature allows you to control desktop in landscape mode.
+        Landscape mode is only enabled on Touch Pad and iKeyboard screens. 
+        Note that you cannot navigate between screens in landscape mode. 
+        You should turn iPhone/iPod into portrait mode to see tab bar at the bottom of the screen. 
+    </p>      
+    <p class="image">
+        <img src="./Help010.jpg"/> <br/> 
+        Viewing desktop in landscape mode. 
+    </p>
+    <p class="subtitle">
+        Clicks Feature
+    </p>   
+	<p>
+    	Use buttons to simulate mouse clicks. 
+        It is now possible to tap touch pad to simulate mouse click.
+        Mouse click will be sent to current cursor position.
+    </p>
+    <p>
+        <b>Note:</b> Mouse and keyboard buttons behave as natural ones. 
+        Application distinguishes button down and button up events. 
+        This allows you to drag windows and select regions combining button down and pan gestures.
+    <p class="image">
+        <img src="./Help005.jpg"/> <br/>
+        Selecting area of the desktop.
+    </p>
+    <p class="subtitle">
+        Standard Keyboard
+    </p>  	
+	<p>
+		Since iRemote 1.2.2 there is no separate screen for standard keyboard. 
+		You can now toggle keyboard directly on Touch Pad screen, when necessary.
+		Just use button at the top right corner of the screen to show/hide keyboard.
+		You may use standart iPhone keyboard to input everything you want using any international keyboard layout.
+	</p>
+    <p class="image">
+        <img src="./Help006.jpg"/> <br/>
+        Text input is fast with standard keyboard. 
+    </p>
+	
+    <p class="title">
+        4. Shell
+    </p> 
+    <p>
+        This feature provides you with a chance to get access to native desktop system command interpreter from your iPhone.
+        You are able to configure your system, launch applications and do lots of other things by means of command interpreter.
+        Native interpreter for Mac platform is <b>Bash</b>. 
+        Windows runs <b>cmd.exe</b> for the same purposes, but it's functionality is much more limited.
+    </p>
+    <p>
+    	It is almost impossible to cover all shell scripting topics for both Mac and Windows platforms in a single manual.
+        If you are totally unfamiliar with command prompts, you can type 'dir' to get the contents of current directory 
+        under Windows system, or 'ls' to do the same thing under Mac. 
+    </p>
+    <p class="image">
+        <img src="./Help009.jpg"/> <br/>
+        Pinging google.com.
+    </p>    
+    <p>
+		You can also refer to the following resources:
+        <ul>
+        	<li>
+		        <a href="http://en.wikipedia.org/wiki/Bash">http://en.wikipedia.org/wiki/Bash</a>
+            </li>
+            <li>
+		        <a href="http://en.wikipedia.org/wiki/Command_Prompt_(Windows)">http://en.wikipedia.org/wiki/ Command_Prompt_(Windows)</a>
+        	</li>
+        </ul>
+    </p>
+    <p class="subtitle">
+    	Important notes:
+    </p>    
+    <p>
+    	<ul>
+        	<li>
+            	<p>
+                    <b>Windows</b>. When attempting to launch an application by means of iRemote you must use 'start $app name$'
+                    syntax instead of just '$app name$'. 
+                </p>
+            </li>
+            <li>
+            	<p>
+                    Some shell commands (such as 'ping') do not return execution to the commands interpreter immediately. 
+                    If you run one of such commands and disconeect from the host, it (command) will continue execution in the background.
+                    When you extablish connection again, you will see new messages, coming from the shell.
+                    Note, that you will get only new messages, when connection is extablished. 
+                    Remote PC Suite does not caches messages, when there are no connected clients.
+                </p>
+                <p>
+                    You can use 'Ctrl-C' button (at top left corner) to terminate such command. 
+                    This button actually simulates Ctrl-C combination.
+                </p>
+            </li>
+			<li>
+            	<p>
+					Each connected device gets access to desktop shell without a warning of any kind.				
+                </p>
+			</li>
+			<li>
+            	<p>
+                    Network interaction between Remote PC Suite and iRemote Suite is not encrypted.
+                    This means that, all your commands and server responses are transferred as is. 
+                </p>
+			</li>
+            <li>
+            	<p>
+                    A number of lines in shell view on the device is limited to 128.
+                    This limitations is caused by performance considerations.
+                    User interface of iRemote may become sluggish, if shell command outputs huge amount of data
+                    (try 'man bash' on MacOSX for an example).
+                    This is generally caused by shell view control, and will be fixed in future iRemote releases.
+              	</p>
+            </li>            
+        </ul>
+    </p>
+
+    <p class="title">
+        5. Hot Keys
+    </p> 
+    <p>
+        Use this tab to simulate most common combination of keys.
+    </p>   
+
+    <p class="title">
+        6. Full Size Keyboard
+    </p> 
+    <p>
+        This feature provides you with a chance to do almost everything you can do with your regular keyboard. 
+        Of course, due to its size it may not efficiently replace desktop one. 
+    </p>  
+
+	<p class="title">
+        7. Settings
+    </p> 
+	<p class="subtitle">
+        Pan Mode
+    </p>  
+    <p>
+		Default mode assumes that mouse cursor moves in the same direction finger moves along the screen surface.
+	</p>	
+	<p class="image">
+        <img src="./Help011.jpg"/> <br/> 
+        Inverse panning (default mode). 
+    </p>	
+	<p>
+		Turning this mode off, allows you to literally grag screen content along the device screen.
+	</p>
+	<p class="image">
+        <img src="./Help012.jpg"/> <br/> 
+        Direct panning. 
+    </p>
+	<p>
+		The best way to understand the difference and to pick the most appropriate mode is to try both!
+    </p>  
+	<p class="subtitle">
+        Autorotation
+    </p>  
+    <p>
+		This option allows you to disable touch pad autorotation, when device orientation changes.
+    </p>
+    
+    <p class="title">
+        8. Sleep Mode
+    </p> 
+    <p>
+        <b>iRemote Suite</b> terminates connection with the host as soon as device goes to sleep mode.
+        When device wakes up, the application attempts to reestablish the connection.
+        You will not prompted for confirmation in this case for convenience.
+        Application exchanges security cookie with the host any time, when you prove authenticaiton
+        request clicking 'Allow' button in <b>Remote PC</b>, and uses this cookie to 
+        reconnect automatically.
+    </p> 
+    <p>        
+        <b>iRemote Suite</b> does not prevents for the device to go to sleep to increase battery life.
+    </p>   
+
+    <p class="title">
+        9. Limitations
+    </p> 
+    <p>
+        <ul>
+            <li>
+                iRemote Suite (by means of Host Application) does not simulate DirectInput events.
+            </li>
+            <li>
+                You may connect the only device running iRemote Suite to your host at the time.
+            </li>            
+        </ul>
+    </p>   
+   
+    <br/>
+    
+    <p class="copyright">
+        Copyright (c) 2010 Egor Pushkin <br/>
+        All Rights Reserved
+    </p>    
+    
+</body>
+</html>

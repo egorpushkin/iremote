@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+   	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<RelativeLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent">
+	    <View
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent"/>    	    
+		<LinearLayout 
+		    android:orientation="vertical"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"	    
+	    	android:layout_centerHorizontal="true">	    
+			<LinearLayout			
+			    android:orientation="horizontal"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:padding="2dp">
+			    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton
+			    	style="@style/RegularButton" android:text="F1" android:id="@+id/hot_f1"/>
+			    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton		
+			    	style="@style/RegularButton" android:text="F2" android:id="@+id/hot_f2"/>
+			    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton		
+			    	style="@style/RegularButton" android:text="F3" android:id="@+id/hot_f3"/>
+			    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton		
+			    	style="@style/RegularButton" android:text="F4" android:id="@+id/hot_f4"/>
+			    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton		
+			    	style="@style/RegularButton" android:text="F5" android:id="@+id/hot_f5"/>
+			    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton		
+			    	style="@style/RegularButton" android:text="F6" android:id="@+id/hot_f6"/>								
+			</LinearLayout>        
+			<LinearLayout 
+			    android:orientation="horizontal"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:padding="2dp">
+			    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton
+			    	style="@style/RegularButton" android:text="F7" android:id="@+id/hot_f7"/>
+			    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton		
+			    	style="@style/RegularButton" android:text="F8" android:id="@+id/hot_f8"/>
+			    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton		
+			    	style="@style/RegularButton" android:text="F9" android:id="@+id/hot_f9"/>
+			    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton		
+			    	style="@style/RegularButton" android:text="F10" android:id="@+id/hot_f10"/>
+			    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton		
+			    	style="@style/RegularButton" android:text="F11" android:id="@+id/hot_f11"/>
+			    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton		
+			    	style="@style/RegularButton" android:text="F12" android:id="@+id/hot_f12"/>		    
+			</LinearLayout>       			    
+		    <LinearLayout
+		    	android:orientation="vertical"
+		  		android:layout_width="fill_parent"
+				android:layout_height="wrap_content">			
+			    <RelativeLayout 
+				    android:orientation="horizontal"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:padding="2dp">
+					<LinearLayout 
+					    android:orientation="horizontal"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentLeft="true">
+					    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton
+					    	style="@style/RegularButton" android:text="Esc" android:id="@+id/hot_esc" android:minWidth="60dp"/>
+					    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton	
+					    	style="@style/RegularButton" android:text="Tab ⇥" android:id="@+id/hot_tab" android:minWidth="60dp"/>
+					</LinearLayout>  
+					<LinearLayout 
+					    android:orientation="horizontal"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentRight="true">
+					    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton
+					    	style="@style/RegularButton" android:text="Enter" android:id="@+id/hot_enter"  android:minWidth="70dp"/>
+					</LinearLayout>  
+				</RelativeLayout>
+			</LinearLayout>					
+		    <LinearLayout
+		    	android:orientation="vertical"
+		  		android:layout_width="fill_parent"
+				android:layout_height="wrap_content">			
+			    <RelativeLayout 
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:padding="2dp">
+					<LinearLayout 
+					    android:orientation="horizontal"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentLeft="true">
+					    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton
+					    	style="@style/RegularButton" android:text="Eject" android:id="@+id/hot_eject" android:minWidth="60dp"/>
+					    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton	
+					    	style="@style/RegularButton" android:text="⇧ Shift ⇧" android:id="@+id/hot_shift" android:minWidth="80dp"/>
+					</LinearLayout>  
+					<LinearLayout 
+					    android:orientation="horizontal"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentRight="true">
+					    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton
+					    	style="@style/RegularButton" android:text="Win" android:id="@+id/hot_win" android:minWidth="80dp"/>
+					    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton
+					    	style="@style/RegularButton" android:text="Popup" android:id="@+id/hot_popup" android:minWidth="60dp"/>
+					</LinearLayout>  
+				</RelativeLayout> 		
+			</LinearLayout>					
+		    <LinearLayout
+		    	android:orientation="vertical"
+		  		android:layout_width="fill_parent"
+				android:layout_height="wrap_content">						
+			    <RelativeLayout 
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:padding="2dp">
+					<LinearLayout 
+					    android:orientation="horizontal"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentLeft="true">
+					    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton
+					    	style="@style/RegularButton" android:text="Ctrl" android:id="@+id/hot_ctrl" android:minWidth="60dp"/>
+					    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton	
+					    	style="@style/RegularButton" android:text="Alt" android:id="@+id/hot_alt" android:minWidth="60dp"/>
+					</LinearLayout>  
+					<LinearLayout 
+					    android:orientation="horizontal"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentRight="true">
+					    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton
+					    	style="@style/RegularButton" android:text="Space" android:id="@+id/hot_space" android:minWidth="100dp"/>
+					</LinearLayout>  
+				</RelativeLayout>
+			</LinearLayout>					
+		    <LinearLayout
+		    	android:orientation="vertical"
+		  		android:layout_width="fill_parent"
+				android:layout_height="wrap_content">						
+			    <RelativeLayout 
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:padding="2dp">
+					<LinearLayout 
+					    android:orientation="vertical"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentLeft="true">
+			   			<LinearLayout 
+						    android:orientation="horizontal"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"
+						    android:layout_alignParentLeft="true">
+						    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton
+								style="@style/RegularButton" android:text="Ins" android:id="@+id/hot_ins"/>
+							<com.scientificsoft.iremote.android.iremote.ui.controls.HotButton	
+				    			style="@style/RegularButton" android:text="Home" android:id="@+id/hot_home"/>
+				    		<com.scientificsoft.iremote.android.iremote.ui.controls.HotButton	
+				    			style="@style/RegularButton" android:text="PgUp" android:id="@+id/hot_pgup"/>	
+						</LinearLayout>
+			   			<LinearLayout 
+						    android:orientation="horizontal"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"
+						    android:layout_alignParentLeft="true">
+						    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton
+								style="@style/RegularButton" android:text="Del" android:id="@+id/hot_del"/>
+							<com.scientificsoft.iremote.android.iremote.ui.controls.HotButton	
+				    			style="@style/RegularButton" android:text="End" android:id="@+id/hot_end"/>
+				    		<com.scientificsoft.iremote.android.iremote.ui.controls.HotButton	
+				    			style="@style/RegularButton" android:text="PgDn" android:id="@+id/hot_pgdn"/>	
+						</LinearLayout>  				  
+					</LinearLayout>  
+					<LinearLayout 
+					    android:orientation="vertical"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentRight="true">
+			   			<LinearLayout 
+						    android:orientation="horizontal"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"
+						    android:paddingLeft="52dp">
+						    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton
+				    			style="@style/RegularButton" android:text="↑" android:id="@+id/hot_up"/>	
+						</LinearLayout>
+			   			<LinearLayout 
+						    android:orientation="horizontal"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content">
+						    <com.scientificsoft.iremote.android.iremote.ui.controls.HotButton
+								style="@style/RegularButton" android:text="←" android:id="@+id/hot_left"/>
+							<com.scientificsoft.iremote.android.iremote.ui.controls.HotButton	
+				    			style="@style/RegularButton" android:text="↓" android:id="@+id/hot_down"/>
+				    		<com.scientificsoft.iremote.android.iremote.ui.controls.HotButton	
+				    			style="@style/RegularButton" android:text="→" android:id="@+id/hot_right"/>	
+						</LinearLayout>  	    
+					</LinearLayout>  
+				</RelativeLayout> 			
+			</LinearLayout>					
+			<RelativeLayout 
+				android:id="@+id/hot_clear_section"
+			    android:orientation="horizontal"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:paddingBottom="3dp"
+			    android:visibility="gone">			
+				<View 
+					android:id="@+id/hot_clear_separator"
+					android:layout_width="fill_parent"
+					android:layout_height="1dip"
+				 	android:layout_marginLeft="15dip" 
+				 	android:layout_marginRight="15dip"	
+				 	android:layout_marginTop="10dip"
+				 	android:layout_marginBottom="10dip"
+					android:background="@drawable/separator"/>
+				<Button 				 
+					android:id="@+id/hot_clear"					 
+					android:text="   Clear Combination   "
+					android:layout_centerHorizontal="true"
+					android:layout_below="@id/hot_clear_separator"
+					style="@style/RegularButton"/>
+			</RelativeLayout> 				
+			<View 
+				android:layout_width="fill_parent"
+				android:layout_height="1dip"
+			 	android:layout_marginLeft="15dip" 
+			 	android:layout_marginRight="15dip"	
+			 	android:layout_marginTop="10dip"
+			 	android:layout_marginBottom="10dip"
+				android:background="@drawable/separator"/> 					
+			<LinearLayout 
+			    android:orientation="horizontal"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:padding="2dp">
+	  			<TextView 
+					android:layout_width="wrap_content" 
+					android:layout_height="fill_parent"
+					android:textSize="@dimen/text_home_bottom"
+					android:text="Volume" 					
+					android:textColor="@color/text"
+					android:gravity="center_vertical"
+					android:layout_marginRight="10dip">
+				</TextView>						
+				<SeekBar android:id="@+id/hot_volume"
+			       android:layout_width="fill_parent"
+			       android:layout_height="wrap_content"
+			       android:minWidth="240dp"
+			       android:max="65535"
+			       android:progress="0"/>					
+			</LinearLayout>
+		</LinearLayout>    
+	</RelativeLayout>
+</ScrollView>

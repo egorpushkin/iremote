@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    
+    <!-- Hosts list -->
+	<LinearLayout 
+		android:id="@+id/hosts_list_content"
+	    android:orientation="vertical" 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:visibility="gone">    
+ 		<!-- android:childDivider="@drawable/separator"  -->
+		<ExpandableListView 
+			android:id="@+id/hosts_list" 
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			android:cacheColorHint="#00000000"
+			android:dividerHeight="0dp"
+			android:childDivider="@android:color/transparent"
+			android:layout_weight="1"/>
+		<LinearLayout
+			android:id="@+id/home_status_message"
+			android:orientation="vertical"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:padding="10dip"
+		    android:layout_weight="0">
+			<TextView 
+				android:id="@+id/home_version"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/text_home_status_secondary"
+				android:textColor="@color/text_secondary"
+				android:text="Pick item to connect to the host instantly, or hit 'Remove' button to delete host from the list."/>
+		</LinearLayout>
+	</LinearLayout>
+	
+    <!-- No hosts message -->
+	<RelativeLayout 
+		android:id="@+id/no_hosts_content"
+	    android:orientation="vertical" 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="15dp">    
+
+			<TextView 
+				android:id="@+id/no_hosts_label1"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/text_hosts_large"
+				android:textColor="@color/text"
+				android:textStyle="bold"
+				android:gravity="center_horizontal"
+				android:paddingBottom="10dp"
+				android:layout_alignParentTop="true"
+				android:text="There are no known hosts on your list."/>
+
+			<TextView 
+				android:id="@+id/no_hosts_label2"			
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/text_hosts_medium"
+				android:textColor="@color/text_secondary"
+				android:gravity="center_horizontal"
+				android:paddingBottom="10dp"
+				android:layout_below="@id/no_hosts_label1"
+				android:text="This means that you have not made any successful connection attempts."/>
+
+	</RelativeLayout>	
+</LinearLayout>
+

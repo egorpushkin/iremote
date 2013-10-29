@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="background">#141414</color>
+	<color name="shell_text">#00f606</color>
+	<color name="text">#ffffff</color>
+	<color name="text_error">#ff0000</color>	
+	<color name="text_secondary">#a0a0a0</color>	
+</resources>

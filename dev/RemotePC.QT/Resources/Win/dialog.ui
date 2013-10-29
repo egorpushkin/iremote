@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogClass</class>
+ <widget class="QDialog" name="DialogClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>402</width>
+    <height>313</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>402</width>
+    <height>313</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>402</width>
+    <height>313</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Remote PC Suite</string>
+  </property>
+  <property name="styleSheet">
+   <string>background-color: rgb(58,58,58);
+selection-background-color: rgb(67, 67, 67);
+color: rgb(255, 255, 255);
+</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>277</y>
+     <width>401</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(46, 46, 46);</string>
+   </property>
+   <widget class="QComboBox" name="endpoints_">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>3</y>
+      <width>121</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="widget_2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>401</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>background-color: rgb(46, 46, 46);
+border:none;</string>
+   </property>
+  </widget>
+  <widget class="QTreeWidget" name="connections_">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>70</y>
+     <width>341</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <attribute name="headerVisible">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="headerCascadingSectionResizes">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="headerShowSortIndicator" stdset="0">
+    <bool>false</bool>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>Devices</string>
+    </property>
+   </column>
+   <item>
+    <property name="text">
+     <string>iOS Devices</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Android Devices</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>230</y>
+     <width>35</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="styleSheet">
+    <string>background-image: url(:/Resources/ButtonNarrow.png); 
+border: none;
+color: rgb(255, 255, 255);
+font: bold 8pt &quot;MS Shell Dlg 2&quot;;
+image: url(:/Resources/SettingsIcon.png); </string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>283</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>background-color: rgb(46, 46, 46);</string>
+   </property>
+   <property name="text">
+    <string>Your ip address:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>230</y>
+     <width>35</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="styleSheet">
+    <string>background-image: url(:/Resources/ButtonNarrow.png); 
+border: none;
+color: rgb(255, 255, 255);
+font: bold 8pt &quot;MS Shell Dlg 2&quot;;
+image: url(:/Resources/HelpIcon.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>230</y>
+     <width>35</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="styleSheet">
+    <string>QPushButton {
+	background-image: url(:/Resources/ButtonNarrow.png); 
+	border: none;
+	color: rgb(255, 255, 255);
+	font: bold 8pt &quot;MS Shell Dlg 2&quot;;
+	image: url(:/Resources/AboutIcon.png);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>0</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string>background-color: rgb(46, 46, 46);</string>
+   </property>
+   <property name="text">
+    <string>Remote PC Suite</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>30</y>
+     <width>331</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>color: rgb(255, 255, 0);
+background-color: rgb(46, 46, 46);</string>
+   </property>
+   <property name="text">
+    <string>Advanced toolset for remote manipulation over your worsktation.</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>335</x>
+     <y>10</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string>background-color: rgb(46, 46, 46);</string>
+   </property>
+   <property name="text">
+    <string>1.5 Dev</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>230</y>
+     <width>35</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	background-image: url(:/Resources/ButtonNarrow.png); 
+	border: none;
+	color: rgb(255, 255, 255);
+	font: bold 8pt &quot;MS Shell Dlg 2&quot;;
+	image: url(:/Resources/DisconnectIcon.png);
+}
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="Line" name="line_4">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>260</y>
+     <width>401</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>background-image: url(:/Resources/SeparatorBottom.png); 
+border: none;</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_5">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>50</y>
+     <width>401</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>background-image: url(:/Resources/SeparatorTop.png); 
+border: none;</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_5">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>230</y>
+     <width>35</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="styleSheet">
+    <string>background-image: url(:/Resources/ButtonNarrow.png); 
+border: none;
+color: rgb(255, 255, 255);
+font: bold 8pt &quot;MS Shell Dlg 2&quot;;
+image: url(:/Resources/UsersIcon.png); 
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>connections_</tabstop>
+  <tabstop>pushButton_3</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>pushButton_4</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>endpoints_</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../../RemotePC.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogClass</receiver>
+   <slot>settings()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>386</x>
+     <y>238</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>232</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogClass</receiver>
+   <slot>disconnect()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>264</x>
+     <y>241</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>281</x>
+     <y>226</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogClass</receiver>
+   <slot>about()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>71</x>
+     <y>241</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>27</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogClass</receiver>
+   <slot>help()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>95</x>
+     <y>237</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>14</x>
+     <y>156</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogClass</receiver>
+   <slot>showUsersMng()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>308</x>
+     <y>244</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>179</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>settings()</slot>
+  <slot>help()</slot>
+  <slot>disconnect()</slot>
+  <slot>about()</slot>
+  <slot>showUsersMng()</slot>
+ </slots>
+</ui>

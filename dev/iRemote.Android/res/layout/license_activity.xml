@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Navigation bar -->
+	<RelativeLayout
+		android:id="@+id/navbar"	
+		android:layout_width="fill_parent" 
+		android:layout_height="40dip" 		
+		android:orientation="horizontal">
+		<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+			android:src="@drawable/navbar"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent" 
+			android:scaleType="fitXY"/>
+		<Button 
+			android:layout_width="wrap_content" 
+			android:textSize="12dp" 
+			android:layout_height="wrap_content" 
+			android:background="@drawable/button_normal_selector" 
+			android:textColor="@color/text"
+			android:minWidth="50dp"
+			android:layout_alignParentLeft="true"
+			android:layout_marginLeft="10dp" 
+			android:layout_centerVertical="true" 
+			android:id="@+id/decline" 
+			android:text="Decline"/>				
+		<TextView 
+			android:id="@+id/navbar_title"
+			android:text="EULA"
+			android:textColor="@color/text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textStyle="bold" 
+			android:textSize="20dip" 
+			android:layout_centerHorizontal="true" 
+			android:layout_centerVertical="true"/>				
+		<Button 
+			android:layout_width="wrap_content" 
+			android:textSize="12dp" 
+			android:layout_height="wrap_content" 
+			android:background="@drawable/button_normal_selector" 
+			android:textColor="@color/text"
+			android:minWidth="50dp"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="10dp" 
+			android:layout_centerVertical="true" 
+			android:id="@+id/accept" 
+			android:text="Accept"/>			
+	</RelativeLayout>	    
+
+	<WebView		
+		android:id="@+id/doc_web_view"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent">
+	</WebView>
+
+</LinearLayout>

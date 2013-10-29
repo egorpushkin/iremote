@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@android:id/tabhost" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent">
+		
+		<RelativeLayout
+			android:id="@+id/navbar"	
+			android:layout_width="fill_parent" 
+			android:layout_height="40dip" 		
+			android:orientation="horizontal">			
+			<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+				android:src="@drawable/navbar"
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent" 
+				android:scaleType="fitXY">
+			</ImageView>							
+			<TextView 
+				android:id="@+id/navbar_title"
+				android:text="Title"
+				android:textColor="@color/text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textStyle="bold" 
+				android:textSize="20dip" 
+				android:layout_centerHorizontal="true" 
+				android:layout_centerVertical="true"/>									
+		</RelativeLayout>
+		
+		<RadioGroup 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:orientation="horizontal"
+			android:checkedButton="@+id/tabitem_first"
+			android:id="@+id/tabbar">
+			<com.scientificsoft.iremote.android.iremote.ui.controls.TabBarButton 
+				android:id="@+id/tabitem_first"
+				android:background="@drawable/button_radio"
+				android:layout_weight="0.25"/>
+			<com.scientificsoft.iremote.android.iremote.ui.controls.TabBarButton 
+				android:id="@+id/tabitem_second"
+				android:background="@drawable/button_radio"
+				android:layout_weight="0.25"/>
+			<com.scientificsoft.iremote.android.iremote.ui.controls.TabBarButton 
+				android:id="@+id/tabitem_third" 
+				android:background="@drawable/button_radio"
+				android:layout_weight="0.25"/>
+			<com.scientificsoft.iremote.android.iremote.ui.controls.TabBarButton 
+				android:id="@+id/tabitem_fourth" 
+				android:background="@drawable/button_radio"
+				android:layout_weight="0.25"/>				
+		</RadioGroup>		
+		
+		<FrameLayout android:id="@android:id/tabcontent"
+			android:layout_width="fill_parent" 
+			android:layout_height="0dip"
+			android:layout_weight="1" 
+			android:padding="0dip" 						
+   			android:background="@color/background">
+			
+            <!-- Touch Pad layout -->
+		    <com.scientificsoft.iremote.android.iremote.ui.control.TouchTab
+				android:id="@+id/tab_touchpad"
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent"/>
+            			            
+            <!-- Shell layout -->
+		    <com.scientificsoft.iremote.android.iremote.ui.control.ShellTab
+				android:id="@+id/tab_shell"
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent"/>
+			
+            <!-- Hots layout -->
+		    <com.scientificsoft.iremote.android.iremote.ui.control.HotsTab
+				android:id="@+id/tab_hots"
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent"/>
+				            
+			<!-- Settings layout -->
+		    <com.scientificsoft.iremote.android.iremote.ui.control.SettingsTab
+				android:id="@+id/tab_settings"
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent"/>
+		</FrameLayout>
+
+		<TabWidget android:id="@android:id/tabs"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_weight="0" android:visibility="gone" />
+	</LinearLayout>
+</TabHost>

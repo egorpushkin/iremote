@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/shell_item_text"
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+	android:textSize="@dimen/text_home_status_primary"
+	android:textColor="@color/shell_text" 
+    android:typeface="monospace"
+    android:singleLine="false"/>
