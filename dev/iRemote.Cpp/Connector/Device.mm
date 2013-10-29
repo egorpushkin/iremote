@@ -22,6 +22,7 @@
 
 #import <UIKit/UIKit.h>
 
+#include "Common/Common.h"
 #include <string>
 
 #include "Device.h"
@@ -33,7 +34,7 @@ namespace iPhone
 
     std::string Device::GetId()
     {
-        return std::string( [[UIDevice currentDevice].uniqueIdentifier UTF8String] );
+        return std::string( Guid::Generate().ToString() );
     }
 
     std::string Device::GetName()

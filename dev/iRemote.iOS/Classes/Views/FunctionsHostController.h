@@ -28,8 +28,8 @@
 
 @interface FunctionsHostController : UINavigationController< TabbarController > {
     
-    FunctionsController *functionsControllerWin;
-    FunctionsController *functionsControllerMac;
+    UIView *winFunctions;
+    UIView *macFunctions;
     
 }
 

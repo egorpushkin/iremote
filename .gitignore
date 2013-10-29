@@ -1,0 +1,7 @@
+# MacOS misc
+.DS_Store
+*~
+__MACOSX
+xcuserdata
+.hg
+.svn

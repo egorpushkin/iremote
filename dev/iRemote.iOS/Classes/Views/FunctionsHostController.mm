@@ -43,9 +43,19 @@
 - (void)connected {
     // Determite target platform.
     if ( RemotePC::HostPlatform::IsMac() )
-        self.topViewController.view = functionsControllerMac.view;
+        self.topViewController.view = macFunctions;
     else
-        self.topViewController.view = functionsControllerWin.view;        
+        self.topViewController.view = winFunctions;
+}
+
+#pragma mark Helpers
+
+- (UIView*)loadView:(NSString*)nibName {
+    UIViewController *controller = [[FunctionsController alloc] initWithNibName:nibName bundle:[NSBundle mainBundle]];
+    UIView *view = [controller.view retain];
+    controller.view = nil;
+    [controller release];
+    return [view autorelease];
 }
 
 #pragma mark Life cycle tools
@@ -53,15 +63,15 @@
 - (id)initWithCoder:(NSCoder*)coder {
     if ((self = [super initWithCoder:coder])) {     
         // Construct view controllers.
-        functionsControllerWin = [[FunctionsController alloc] initWithNibName:@"FunctionsWin" bundle:[NSBundle mainBundle]];        
-        functionsControllerMac = [[FunctionsController alloc] initWithNibName:@"FunctionsMac" bundle:[NSBundle mainBundle]];
+        winFunctions = [[self loadView:@"FunctionsWin"] retain];
+        macFunctions = [[self loadView:@"FunctionsMac"] retain];
     }
     return self;
 }
 
 - (void)dealloc {
-    [functionsControllerWin release];
-    [functionsControllerMac release];
+    [winFunctions release];
+    [macFunctions release];
     [super dealloc];
 }
 
