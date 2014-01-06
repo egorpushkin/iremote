@@ -5,3 +5,7 @@ __MACOSX
 xcuserdata
 .hg
 .svn
+
+# Android
+bin/
+gen/

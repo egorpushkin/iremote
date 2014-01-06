@@ -152,7 +152,7 @@ public class CrashReporter implements Thread.UncaughtExceptionHandler {
                 safeStr(android.os.Build.BRAND) + "_" +
                 safeStr(android.os.Build.MODEL) + "_" +
                 safeStr(android.os.Build.VERSION.RELEASE) + "_" +
-                safeStr(android.os.Build.VERSION.SDK) + "_" +
+                android.os.Build.VERSION.SDK_INT + "_" +
                 safeStr(android.os.Build.VERSION.INCREMENTAL) + "_" +
                 String.format("%8X", (new Random()).nextInt());
             
@@ -170,7 +170,7 @@ public class CrashReporter implements Thread.UncaughtExceptionHandler {
                 "\nLocale Name:       " + safeStr((null == locale) ? null : locale.getDisplayName()) +
                 "\nLocale Code:       " + localeCode +
                 "\nRelease Ver:       " + safeStr(android.os.Build.VERSION.RELEASE) +
-                "\nSDK Ver:           " + safeStr(android.os.Build.VERSION.SDK) +
+                "\nSDK Ver:           " + android.os.Build.VERSION.SDK_INT +
                 "\nIncremental Ver:   " + safeStr(android.os.Build.VERSION.INCREMENTAL) +
                 "\nBuild Brand:       " + safeStr(android.os.Build.BRAND) +
                 "\nBuild Model:       " + safeStr(android.os.Build.MODEL) +

@@ -34,7 +34,7 @@ import com.scientificsoft.iremote.platform.system.Device4;
 
 public class ApiFeatures {
 	
-	public static final int sdk_ = new Integer(Build.VERSION.SDK).intValue();
+	public static final int sdk_ = Build.VERSION.SDK_INT;
 	
 	/**
 	 * Creates ScaleGestureDetector.

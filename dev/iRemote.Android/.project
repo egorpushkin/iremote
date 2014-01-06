@@ -38,9 +38,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>common</name>
+			<name>cmn</name>
 			<type>2</type>
-			<location>/Users/egorpushkin/Projects/iRemote/trunk/dev/iRemote.Java/src</location>
+			<locationURI>PARENT-1-PROJECT_LOC/iRemote.Java/src</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
