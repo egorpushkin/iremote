@@ -46,8 +46,6 @@
 // Connector to the server.
 #include "Connector/Server.h"
 #include "Connector/Device.h"
-// FB engine.
-#include "SFB/Client/SFB.h"
 
 // Application config
 #include "../../Server/Config/Config.h"
@@ -55,7 +53,6 @@
 #include "../State/UIConfig.h"
 // Events handlers.
 #include "../Annunciators/UIEvents.h"
-#include "../Annunciators/FBEvents.h"
 
 @implementation iRemoteAppDelegate
 
@@ -68,16 +65,7 @@
 	
 	// Initialize tool responsible for events delivery.
 	RemotePC::IUIEventsPtr events(mc::Class< RemotePC::UIEvents >::Create());
-	RemotePC::Holder::Instance().SetEvents(events);	
-	
-	// Check whether we are running on a tablet.
-	if ( mc::iPhone::Device::IsTablet() ) {
-		// Initialize and register FB engine.
-		RemotePC::SFB::IFBEventsPtr fbEvents(mc::Class< RemotePC::SFB::FBEvents >::Create());		
-		RemotePC::SFB::FBServiceHolder::instance().fbService()->setEvents(fbEvents);
-		RemotePC::Holder::Instance().ServicesManager()->RegisterService(
-		    RemotePC::SFB::FBServiceHolder::instance().serviceHandler());
-	}
+	RemotePC::Holder::Instance().SetEvents(events);
     
     // Display status bar. This trick helps to avoid status bar on splash screen.
     application.statusBarHidden = NO;

@@ -36,20 +36,20 @@
 	<true/>
 	<key>UIRequiresPersistentWiFi</key>
 	<true/>
+	<key>UIStatusBarHidden-ipad</key>
+	<false/>
 	<key>UIStatusBarHidden-iphone</key>
 	<true/>
 	<key>UIStatusBarHidden-ipod</key>
 	<true/>
-	<key>UIStatusBarHidden-ipad</key>
-	<false/>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleBlackOpaque</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 </dict>
 </plist>
