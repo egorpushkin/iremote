@@ -3,7 +3,7 @@
 # -------------------------------------------------
 TARGET = RemotePC
 TEMPLATE = app
-INCLUDEPATH = ../3rdParty/boost146 \
+INCLUDEPATH = ../3rdParty/boost \
     ../3rdParty/cmnkit/source/include \
     ../3rdParty/cmnkit/source/sdk/include \
     ../3rdParty/Expat \
@@ -12,6 +12,7 @@ INCLUDEPATH = ../3rdParty/boost146 \
     ../3rdParty/libjpeg \
     ../iRemote.Cpp \
     ./UI
+QT += widgets
 win32 {
     LIBS += libws2_32 \
         libmswsock \
@@ -37,19 +38,19 @@ macx {
     # QMAKE_MAC_SDK = /Developer/SDKs/MacOSX10.4u.sdk
     # CONFIG += x86 ppc
 
-    QMAKE_MAC_SDK = /Developer/SDKs/MacOSX10.6.sdk
+    # QMAKE_MAC_SDK = /Developer/SDKs/MacOSX10.6.sdk
     # CONFIG += x86
     CONFIG(release, debug|release) {
-        LIBS += ../../../3rdParty/cmnkit/source/lib/macx/release/libMinCOM.a
-        PRE_TARGETDEPS = ../../../3rdParty/cmnkit/source/lib/macx/release/libMinCOM.a
+        LIBS += ../3rdParty/cmnkit/source/lib/macx/release/libMinCOM.a
+        PRE_TARGETDEPS = ../3rdParty/cmnkit/source/lib/macx/release/libMinCOM.a
         OBJECTS_DIR = ./release
-        DESTDIR = ../../../bin/macx/release
+        DESTDIR = ../bin/macx/release
     }
     CONFIG(debug, debug|release) {
-        LIBS += ../../../3rdParty/cmnkit/source/lib/macx/debug/libMinCOM.a
-        PRE_TARGETDEPS = ../../../3rdParty/cmnkit/source/lib/macx/debug/libMinCOM.a
+        LIBS += ../3rdParty/cmnkit/source/lib/macx/debug/libMinCOM.a
+        PRE_TARGETDEPS = ../3rdParty/cmnkit/source/lib/macx/debug/libMinCOM.a
         OBJECTS_DIR = ./debug
-        DESTDIR = ../../../bin/macx/debug
+        DESTDIR = ../bin/macx/debug
     }
     HEADERS += Hardware/Mac/HardwareControl.h \
         Hardware/Mac/VolumeControl.h \

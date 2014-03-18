@@ -24,7 +24,7 @@
 
 #if defined(__MACH__)
 #include <boost/interprocess/sync/file_lock.hpp>
-#include <QtGui/QApplication>
+#include <QApplication>
 #endif // Platform
 #include "InstanceLock.h"
 

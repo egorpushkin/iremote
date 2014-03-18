@@ -37,6 +37,8 @@
 
 // QT is responsible for image capturing and resizing.
 #include <QtGui/QtGui>
+#include <QDesktopWidget>
+#include <QApplication>
 
 namespace RemotePC
 {

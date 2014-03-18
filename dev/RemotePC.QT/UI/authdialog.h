@@ -23,7 +23,7 @@
 #ifndef AUTHDIALOG_H
 #define AUTHDIALOG_H
 
-#include <QtGui/QDialog>
+#include <QDialog>
 
 namespace Ui {
     class AuthDialog;

@@ -22,7 +22,7 @@
 
 #include "Common/Common.h"
 
-#include <QtGui/QApplication>
+#include <QApplication>
 #include <QDir>
 #include "UI/dialog.h"
 #include "UI/UIConfig.h"

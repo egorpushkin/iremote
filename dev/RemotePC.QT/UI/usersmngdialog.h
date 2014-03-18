@@ -23,8 +23,8 @@
 #ifndef USERSMNGDIALOG_H
 #define USERSMNGDIALOG_H
 
-#include <QtGui/QDialog>
-#include <QtGui/QTreeWidget>
+#include <QDialog>
+#include <QTreeWidget>
 
 // This declaration is required to compile moc_usersmngdialog.cpp.
 #include <MinCOM/MinCOM.h>

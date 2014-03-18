@@ -25,8 +25,8 @@
 
 #include "Common/Common.h"
 
-#include <QtGui/QDialog>
-#include <QtGui/QTreeWidgetItem>
+#include <QDialog>
+#include <QTreeWidgetItem>
 #include <QSystemTrayIcon>
 #include <QMutex>
 
