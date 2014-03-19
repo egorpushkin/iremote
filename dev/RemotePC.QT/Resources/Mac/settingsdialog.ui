@@ -552,6 +552,22 @@ border: none;</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>sfbCompr_</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>compressionChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>231</x>
+     <y>157</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>284</x>
+     <y>2</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>apply()</slot>
