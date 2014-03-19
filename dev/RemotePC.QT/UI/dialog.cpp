@@ -80,7 +80,6 @@ Dialog::Dialog(QWidget *parent)
 	, events_()
 	, serverThread_()
 	, serverControl_()
-    , fbService_()
 	, currentAuth_(0)
 	, srcTimer_( new QTimer(this) )
 	, volumeTimer_( new QTimer(this) )
@@ -89,6 +88,9 @@ Dialog::Dialog(QWidget *parent)
 	//////////////////////////////////////////////////////////////////////////
 
 	ui->setupUi(this);
+
+    // Register size_t.
+    qRegisterMetaType<size_t>("size_t");
 
 	// Connect self to self signals. This trick is used to perform actions from
 	// server context's thread on main UI thread.
@@ -106,27 +108,27 @@ Dialog::Dialog(QWidget *parent)
 
 	QObject::connect(
 		this,
-		SIGNAL(ProveAuthenticationSig(int)),
+        SIGNAL(ProveAuthenticationSig(size_t)),
 		this,
-		SLOT(ProveAuthenticationSlot(int)));
+        SLOT(ProveAuthenticationSlot(size_t)));
 
 	QObject::connect(
 		this,
-		SIGNAL(ShowDeviceSig(int)),
+        SIGNAL(ShowDeviceSig(size_t)),
 		this,
-		SLOT(ShowDeviceSlot(int)));
+        SLOT(ShowDeviceSlot(size_t)));
 
 	QObject::connect(
 		this,
-		SIGNAL(HideDeviceSig(int)),
+        SIGNAL(HideDeviceSig(size_t)),
 		this,
-		SLOT(HideDeviceSlot(int)));
+        SLOT(HideDeviceSlot(size_t)));
 
 	QObject::connect(
 		this,
-		SIGNAL(ShowOldiRemoteWarningSig(int)),
+        SIGNAL(ShowOldiRemoteWarningSig(size_t)),
 		this,
-		SLOT(ShowOldiRemoteWarningSlot(int)));
+        SLOT(ShowOldiRemoteWarningSlot(size_t)));
 
 	// Configure system tray icon
 	trayIcon_ = new QSystemTrayIcon(this);
@@ -227,7 +229,6 @@ void Dialog::StopService()
 		serverThread_->Join();
 		serverControl_ = NULL;
 		serverThread_ = NULL;
-        fbService_ = NULL;
 	}
 }
 
@@ -240,8 +241,6 @@ void Dialog::RestartService()
 	// Start new service.
 	serverThread_ = mc::Library::Thread();
     serverControl_ = mc::Class< RemotePC::ServerContext >::Create( events_ );
-    fbService_ = mc::Class< RemotePC::SFB::FBService >::Create( serverControl_->ServicesManager() );
-    serverControl_->ServicesManager()->RegisterService(fbService_);
 	serverThread_->SetContext(serverControl_);
 	serverThread_->Start();
 }
@@ -269,7 +268,7 @@ void Dialog::FailedToStartServiceSlot()
 		"Server has failed to start. \nChange port value in application settings.");
 }
 
-void Dialog::ProveAuthenticationSlot(int cookie)
+void Dialog::ProveAuthenticationSlot(size_t cookie)
 {
 	MC_LOG_ROUTINE;
 	mc::SemaphoreScopeRelease locker( events_->GetAuthSem() );
@@ -348,7 +347,7 @@ QTreeWidgetItem *Dialog::FindDevicesBranch(int device)
 	throw std::exception();
 }
 
-void Dialog::ShowDeviceSlot(int cookie)
+void Dialog::ShowDeviceSlot(size_t cookie)
 {
 	MC_LOG_ROUTINE;
 	try 
@@ -358,7 +357,7 @@ void Dialog::ShowDeviceSlot(int cookie)
 		QTreeWidgetItem * devicesBranch = FindDevicesBranch(client.GetDevice());
 		QTreeWidgetItem * deviceItem = 
 			new QTreeWidgetItem( devicesBranch, QStringList( QString(client.GetName().c_str()) ) );
-		deviceItem->setData( 0, Qt::UserRole, cookie );
+        deviceItem->setData( 0, Qt::UserRole, (quint64)cookie );
 
 		ui->connections_->expandAll();
 	}
@@ -370,13 +369,13 @@ void Dialog::ShowDeviceSlot(int cookie)
 	}
 }
 
-void Dialog::RemoveDevice(int cookie, int branch)
+void Dialog::RemoveDevice(size_t cookie, int branch)
 {
 	QTreeWidgetItem * iPhones = ui->connections_->topLevelItem( branch );
 	for ( int i = 0 ; i < iPhones->childCount() ; ++i )
 	{
 		QTreeWidgetItem * childDevice = iPhones->child( i );
-		if ( childDevice->data(0, Qt::UserRole) == cookie )
+        if ( childDevice->data(0, Qt::UserRole) == (quint64)cookie )
 		{
 			iPhones->removeChild( childDevice );
 			return;
@@ -384,10 +383,10 @@ void Dialog::RemoveDevice(int cookie, int branch)
 	}
 }
 
-void Dialog::HideDeviceSlot(int cookie)
+void Dialog::HideDeviceSlot(size_t cookie)
 {
 	MC_LOG_ROUTINE;
-	if ( cookie == (int)currentAuth_ )
+    if ( cookie == currentAuth_ )
 	{
 		emit CloseAuthDialogSig();
 		return;
@@ -397,7 +396,7 @@ void Dialog::HideDeviceSlot(int cookie)
 	RemoveDevice(cookie, 1);
 }
 
-void Dialog::ShowOldiRemoteWarningSlot(int cookie)
+void Dialog::ShowOldiRemoteWarningSlot(size_t cookie)
 {
 	MC_LOG_ROUTINE;
 	// Enable other modal notifications after this is closed.
@@ -449,7 +448,7 @@ void Dialog::FailedToStartService()
 void Dialog::ProveAuthentication(size_t cookie)
 {
 	MC_LOG_ROUTINE;
-	emit ProveAuthenticationSig(cookie);
+    emit ProveAuthenticationSig(cookie);
 }
 
 void Dialog::ShowDevice(size_t cookie)
@@ -537,11 +536,6 @@ void Dialog::settings()
 	{
 		srcTimer_->setInterval( GetTimerInterval() );
 	}
-    // Check whether SFB settings are changed.
-    if ( RemotePC::Config::Instance().IsSFBChanged() )
-    {
-        fbService_->ReloadSettings();
-    }
 
     // Complete apply procedure.
     RemotePC::Config::Instance().FlushFlags();

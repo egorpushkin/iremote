@@ -50,9 +50,9 @@ namespace RemotePC
     {
         return 
 			// Size of username property
-			sizeof( size_t ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_USERNAME).toString() ) +
+            sizeof( int ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_USERNAME).toString() ) +
 			// Size of password property
-			sizeof( size_t ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_PASSWORD).toString() );
+            sizeof( int ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_PASSWORD).toString() );
     }
 
     // MessageImpl section

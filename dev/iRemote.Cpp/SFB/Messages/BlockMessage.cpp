@@ -72,7 +72,7 @@ namespace SFB
     }
 
     // IScreenshotMessage section
-    size_t BlockMessage::GetDataLength()
+    int BlockMessage::GetDataLength()
     {
         return dataLength_;
     }

@@ -56,7 +56,7 @@ namespace SFB
         virtual ~BlockMessage();
 
         // IScreenshotMessage section
-        virtual size_t GetDataLength();
+        virtual int GetDataLength();
 
         virtual const char * GetData();
 

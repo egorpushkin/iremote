@@ -55,7 +55,7 @@ namespace RemotePC
             float imageDimension = 256.0f * zoomLevel;
 
             // Grab part of desktop.
-            QPixmap screenImage = QPixmap::grabWindow(
+            QPixmap screenImage = QApplication::primaryScreen()->grabWindow(
                 QApplication::desktop()->winId(),
                 position.x_ - imageDimension / 2, position.y_ - imageDimension / 2,
                 imageDimension, imageDimension);
@@ -79,8 +79,8 @@ namespace RemotePC
             #endif
 
             mc::IMessagePtr message(
-            mc::Class< RemotePC::ScreenshotMessage >::Create(
-                imageBytes.size(), imageBytes.constData() ) );
+                mc::Class< RemotePC::ScreenshotMessage >::Create(
+                    imageBytes.size(), imageBytes.constData() ) );
 
             // Send image to the client.
             protocol->Send( message );

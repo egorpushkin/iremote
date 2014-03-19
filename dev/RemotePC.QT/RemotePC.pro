@@ -12,6 +12,14 @@ INCLUDEPATH = ../3rdParty/boost \
     ../3rdParty/libjpeg \
     ../iRemote.Cpp \
     ./UI
+
+clang {
+    # Disable some harmless warnings
+    QMAKE_CXXFLAGS_WARN_ON += -Wno-parentheses-equality
+    QMAKE_CXXFLAGS_WARN_ON += -Wno-unused-parameter
+    QMAKE_CXXFLAGS_WARN_ON += -Wno-unused-private-field
+}
+
 QT += widgets
 win32 {
     LIBS += libws2_32 \
@@ -34,12 +42,6 @@ win32 {
         Resources/Win/usersmngdialog.ui
 }
 macx { 
-    # PPC architecture is not supported any more (since RemotePC 1.3.1).
-    # QMAKE_MAC_SDK = /Developer/SDKs/MacOSX10.4u.sdk
-    # CONFIG += x86 ppc
-
-    # QMAKE_MAC_SDK = /Developer/SDKs/MacOSX10.6.sdk
-    # CONFIG += x86
     CONFIG(release, debug|release) {
         LIBS += ../3rdParty/cmnkit/source/lib/macx/release/libMinCOM.a
         PRE_TARGETDEPS = ../3rdParty/cmnkit/source/lib/macx/release/libMinCOM.a
@@ -58,12 +60,13 @@ macx {
         Hardware/Mac/KeyboardLeds.h \
         Hardware/Mac/KeyboardEvents.h \
         Server/Shell/Processes.bsd.h
-    SOURCES += Hardware/Mac/HardwareControl.mm \
+    OBJECTIVE_SOURCES += Hardware/Mac/HardwareControl.mm \
         Hardware/Mac/VolumeControl.mm \
         Hardware/Mac/DisplayControl.mm \
         Hardware/Mac/KeyboardLeds.cpp \
         Hardware/Mac/KeyboardEvents.mm \
-        Server/Shell/Processes.bsd.cpp
+        ../iRemote.Cpp/SFB/Server/ImageSource.mm
+    SOURCES += Server/Shell/Processes.bsd.cpp
     ICON = Resources/Mac/RemotePC.icns
     QMAKE_INFO_PLIST = Resources/Mac/Info.plist
     FORMS += Resources/Mac/settingsdialog.ui \
@@ -358,7 +361,6 @@ SOURCES += \
     ../iRemote.Cpp/SFB/Server/DeliveryQueue.cpp \
     ../iRemote.Cpp/SFB/Server/DeliveryHandler.cpp \
     ../iRemote.Cpp/SFB/Server/ByteBuffer.cpp \
-    ../iRemote.Cpp/SFB/Server/ImageSource.mm \
     UI/usersmngdialog.cpp \
     UI/UIConfig.cpp \
     UI/settingsdialog.cpp \

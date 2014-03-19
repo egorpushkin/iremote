@@ -52,7 +52,7 @@ namespace RemotePC
             // Size of device property
             sizeof( int )
             // Size of value property
-            + sizeof( unsigned long );
+            + sizeof( int );
     }
 
     // MessageImpl section
@@ -62,7 +62,7 @@ namespace RemotePC
         unsigned long value = mc::MessageImpl::GetProperty(PROP_VALUE).toULong();
         
         mc::MessageImpl::Write(stream, device);
-        mc::MessageImpl::Write(stream, value);
+        mc::MessageImpl::Write(stream, (int)value);
         
         return mc::_S_OK;
     }
@@ -70,13 +70,13 @@ namespace RemotePC
     mc::result VolumeMessage::ReadBody(std::istream& stream)
     {
         int device = DEVICE_MASTER;
-        unsigned long value = 0;
+        int value = 0;
         
         mc::MessageImpl::Read(stream, device);
         mc::MessageImpl::Read(stream, value);
         
         mc::MessageImpl::PutProperty(PROP_DEVICE, device);
-        mc::MessageImpl::PutProperty(PROP_VALUE, value);
+        mc::MessageImpl::PutProperty(PROP_VALUE, (unsigned long)value);
         
         return mc::_S_OK;
     }

@@ -59,7 +59,7 @@ namespace RemotePC
 			// Size of verMinor property
 			sizeof( int ) +
 			// Size of details property
-			sizeof( size_t ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_DETAILS).toString() );
+            sizeof( int ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_DETAILS).toString() );
     }
 	
     // MessageImpl section

@@ -59,17 +59,17 @@ public:
 
 private:
 
-	QTreeWidgetItem *FindDevicesBranch(int device);
-	void RemoveDevice(int cookie, int branch);
+    QTreeWidgetItem *FindDevicesBranch(int device);
+    void RemoveDevice(size_t cookie, int branch);
 
 private slots:
 
 	void ServiceStartedSlot();
 	void FailedToStartServiceSlot();
-	void ProveAuthenticationSlot(int cookie);
-	void ShowDeviceSlot(int cookie);
-	void HideDeviceSlot(int cookie);
-	void ShowOldiRemoteWarningSlot(int cookie);
+    void ProveAuthenticationSlot(size_t cookie);
+    void ShowDeviceSlot(size_t cookie);
+    void HideDeviceSlot(size_t cookie);
+    void ShowOldiRemoteWarningSlot(size_t cookie);
 	void settings();
 	void help();
 	void about();
@@ -83,11 +83,11 @@ signals:
 
 	void ServiceStartedSig();
 	void FailedToStartServiceSig();
-	void ProveAuthenticationSig(int cookie);
-	void ShowDeviceSig(int cookie);
-	void HideDeviceSig(int cookie);
+    void ProveAuthenticationSig(size_t cookie);
+    void ShowDeviceSig(size_t cookie);
+    void HideDeviceSig(size_t cookie);
 	void CloseAuthDialogSig();
-	void ShowOldiRemoteWarningSig(int cookie);
+    void ShowOldiRemoteWarningSig(size_t cookie);
 
 protected:
 
@@ -112,7 +112,6 @@ private:
 	RemotePC::IUIEventsPtr events_;
 	mc::IThreadPtr serverThread_;
 	RemotePC::IServerControlPtr serverControl_;
-    RemotePC::IServiceHandlerPtr fbService_;
 
     /**
       * Contains cookie corresponding to currently opened authentication

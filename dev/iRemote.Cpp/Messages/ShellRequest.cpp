@@ -48,7 +48,7 @@ namespace RemotePC
     {
         return 
 			// Size of command property
-			sizeof( size_t ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_COMMAND).toString() );
+            sizeof( int ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_COMMAND).toString() );
     }
 
     // MessageImpl section

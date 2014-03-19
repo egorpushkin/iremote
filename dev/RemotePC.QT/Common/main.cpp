@@ -63,7 +63,6 @@ int main(int argc, char *argv[])
 #if !defined(IREMOTE_NO_QT_PLUGINS)
 	// Specify subdirectory where plugins are located.
 #	if defined(WIN32)
-	// QApplication::addLibraryPath("./plugins");
 	QDir pluginsDir(QApplication::applicationDirPath());
 	pluginsDir.cd("plugins");
 	QApplication::setLibraryPaths(QStringList(pluginsDir.absolutePath()));

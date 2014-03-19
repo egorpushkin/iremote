@@ -29,7 +29,7 @@ namespace RemotePC
 	{
 		virtual std::string GetMetadata() = 0;
 
-		virtual size_t GetDataLength() const = 0;
+        virtual int GetDataLength() const = 0;
 
 		virtual const char * GetData() const = 0;
 	};

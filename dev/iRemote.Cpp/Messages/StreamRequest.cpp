@@ -53,7 +53,7 @@ namespace RemotePC
             // Size of id property
             sizeof( mc::Guid ) +
             // Size of port property
-            sizeof( size_t ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_PORT).toString() ) +
+            sizeof( int ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_PORT).toString() ) +
             // Size of cookie id
             sizeof( mc::Guid );
     }

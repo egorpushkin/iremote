@@ -50,9 +50,9 @@ namespace RemotePC
     {
         return 
 			// Size of response property
-			sizeof( size_t ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_RESPONSE).toString() ) +
+            sizeof( int ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_RESPONSE).toString() ) +
 			// Size of status property
-			sizeof( mc::result );
+            sizeof( int );
     }
 
     // MessageImpl section
@@ -62,7 +62,7 @@ namespace RemotePC
 		mc::result status = mc::MessageImpl::GetProperty(PROP_STATUS).toLong();
         
 		mc::MessageImpl::Write(stream, response);
-		mc::MessageImpl::Write(stream, status);
+        mc::MessageImpl::Write(stream, (int)status);
         
         return mc::_S_OK;
     }
@@ -70,13 +70,13 @@ namespace RemotePC
     mc::result ShellResponse::ReadBody(std::istream& stream)
     {
         std::string response;
-		mc::result status;
+        int status;
 
 		mc::MessageImpl::Read(stream, response);
 		mc::MessageImpl::Read(stream, status);
 
 		mc::MessageImpl::PutProperty(PROP_RESPONSE, response);
-		mc::MessageImpl::PutProperty(PROP_STATUS, status);
+        mc::MessageImpl::PutProperty(PROP_STATUS, (mc::result)status);
         
         return mc::_S_OK;
     }

@@ -42,14 +42,14 @@ namespace RemotePC
 
 		DataMessage();
         
-		DataMessage(mc::RefGuid code, const std::string& metadata, size_t dataLength, const char * data);
+        DataMessage(mc::RefGuid code, const std::string& metadata, int dataLength, const char * data);
 
 		virtual ~DataMessage();
 
 		// IDataMessage section
 		virtual std::string GetMetadata();
 
-		virtual size_t GetDataLength() const;
+        virtual int GetDataLength() const;
 
 		virtual const char * GetData() const;
         
@@ -63,7 +63,7 @@ namespace RemotePC
 
 	private:
         
-		size_t dataLength_;
+        int dataLength_;
 
 		char * data_;
         

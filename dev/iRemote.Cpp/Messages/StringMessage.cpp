@@ -72,9 +72,9 @@ namespace RemotePC
     {
         return 
             // Size of metadata property
-			sizeof( size_t ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_METADATA).toString() ) +
+            sizeof( int ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_METADATA).toString() ) +
             // Size of value property
-            sizeof( size_t ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_VALUE).toString() );
+            sizeof( int ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_VALUE).toString() );
     }
     
     /**

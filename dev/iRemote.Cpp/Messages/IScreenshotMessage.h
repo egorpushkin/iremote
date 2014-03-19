@@ -29,7 +29,7 @@ namespace RemotePC
 	struct IScreenshotMessage : public mc::ICommon
 	{
 
-		virtual size_t GetDataLength() = 0;
+        virtual int GetDataLength() = 0;
 
 		virtual const char * GetData() = 0;
 

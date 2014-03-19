@@ -45,7 +45,7 @@ namespace RemotePC
         mc::MessageImpl::PutProperty(PROP_METADATA, "");        
     }
     
-	DataMessage::DataMessage(mc::RefGuid code, const std::string& metadata, size_t dataLength, const char * data)
+    DataMessage::DataMessage(mc::RefGuid code, const std::string& metadata, int dataLength, const char * data)
 		: mc::MessageImpl( code )
 		, mc::CommonImpl< IDataMessage >()
 		, dataLength_( dataLength )
@@ -76,7 +76,7 @@ namespace RemotePC
         return mc::MessageImpl::GetProperty(PROP_METADATA).toString();
 	}
 
-	size_t DataMessage::GetDataLength() const
+    int DataMessage::GetDataLength() const
 	{
 		return dataLength_;
 	}
@@ -94,9 +94,9 @@ namespace RemotePC
     {
         return 
 			// Size of metadata property
-			sizeof( size_t ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_METADATA).toString() ) +
+            sizeof( int ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_METADATA).toString() ) +
 			// Size of data length property
-			sizeof( size_t ) +
+            sizeof( int ) +
 			// Size of data
 			dataLength_;
     }
@@ -114,13 +114,13 @@ namespace RemotePC
         // Dump message data.
 		if ( data_ && dataLength_ > 0 ) 
 		{
-			stream.write((char*)&dataLength_, sizeof(size_t));
+            stream.write((char*)&dataLength_, sizeof(int));
 			stream.write((char*)data_, dataLength_);
 		}
 		else
 		{
 			dataLength_ = 0;
-			stream.write((char*)&dataLength_, sizeof(size_t));
+            stream.write((char*)&dataLength_, sizeof(int));
 		}
         
         return mc::_S_OK;
@@ -137,7 +137,7 @@ namespace RemotePC
 		delete [] data_;
 		data_ = NULL;
 
-		stream.read((char*)&dataLength_, sizeof(size_t));
+        stream.read((char*)&dataLength_, sizeof(int));
 		if ( 0 == dataLength_ )
 			return mc::_S_OK;
 

@@ -45,12 +45,12 @@ namespace RemotePC
         
 		ScreenshotMessage();
         
-		ScreenshotMessage(size_t dataLength, const char * data);
+        ScreenshotMessage(int dataLength, const char * data);
 
 		virtual ~ScreenshotMessage();
 
 		// IScreenshotMessage section
-		virtual size_t GetDataLength();
+        virtual int GetDataLength();
 
 		virtual const char * GetData();
         
@@ -64,7 +64,7 @@ namespace RemotePC
 
 	private:
 
-		size_t dataLength_;
+        int dataLength_;
 
 		char * data_;
         

@@ -82,9 +82,9 @@ namespace RemotePC
 			// Size of device property
 			sizeof( int ) + 
 			// Size of identifier property
-			sizeof( size_t ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_ID).toString() ) +
+            sizeof( int ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_ID).toString() ) +
 			// Size of name property
-			sizeof( size_t ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_NAME).toString() ) +
+            sizeof( int ) + mc::MessageImpl::SizeOf( mc::MessageImpl::GetProperty(PROP_NAME).toString() ) +
 			// Size of code presence flag
 			sizeof( bool ) + 
 			// Size of unique code 

@@ -55,7 +55,7 @@ namespace RemotePC
     {
     }
     
-	ScreenshotMessage::ScreenshotMessage(size_t dataLength, const char * data)
+    ScreenshotMessage::ScreenshotMessage(int dataLength, const char * data)
 		: mc::MessageImpl( messageId_ )
 		, mc::CommonImpl< IScreenshotMessage >()
 		, dataLength_( dataLength )
@@ -77,7 +77,7 @@ namespace RemotePC
 	}
 
 	// IScreenshotMessage section
-	size_t ScreenshotMessage::GetDataLength()
+    int ScreenshotMessage::GetDataLength()
 	{
 		return dataLength_;
 	}
@@ -92,7 +92,7 @@ namespace RemotePC
     {
         return 
 			// Size of data length property
-			sizeof( size_t ) +
+            sizeof( int ) +
 			// Size of data
 			dataLength_;
     }
@@ -112,13 +112,13 @@ namespace RemotePC
 
 		if ( data_ && dataLength_ > 0 ) 
 		{
-			stream.write((char*)&dataLength_, sizeof(size_t));
+            stream.write((char*)&dataLength_, sizeof(int));
 			stream.write((char*)data_, dataLength_);
 		}
 		else
 		{
 			dataLength_ = 0;
-			stream.write((char*)&dataLength_, sizeof(size_t));
+            stream.write((char*)&dataLength_, sizeof(int));
 		}
         
         return mc::_S_OK;
@@ -129,7 +129,7 @@ namespace RemotePC
 		delete [] data_;
 		data_ = NULL;
 
-		stream.read((char*)&dataLength_, sizeof(size_t));
+        stream.read((char*)&dataLength_, sizeof(int));
 		if ( 0 == dataLength_ )
 			return mc::_S_OK;
 
