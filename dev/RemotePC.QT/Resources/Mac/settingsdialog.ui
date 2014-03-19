@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>408</width>
+    <width>400</width>
     <height>398</height>
    </rect>
   </property>
@@ -21,13 +21,13 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>408</width>
+    <width>400</width>
     <height>398</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>408</width>
+    <width>400</width>
     <height>398</height>
    </size>
   </property>
@@ -63,7 +63,7 @@ border: none;</string>
   <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>-10</x>
      <y>358</y>
      <width>411</width>
      <height>41</height>
@@ -120,7 +120,7 @@ font: bold 10pt &quot;Lucida Grande&quot;;</string>
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>391</width>
+     <width>381</width>
      <height>321</height>
     </rect>
    </property>
@@ -175,13 +175,13 @@ margin: 0;
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
-     <string>General</string>
+     <string>Screen</string>
     </attribute>
     <widget class="QLabel" name="label_10">
      <property name="geometry">
       <rect>
-       <x>250</x>
-       <y>93</y>
+       <x>240</x>
+       <y>80</y>
        <width>81</width>
        <height>16</height>
       </rect>
@@ -199,8 +199,8 @@ margin: 0;
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>50</y>
+       <x>20</x>
+       <y>40</y>
        <width>311</width>
        <height>31</height>
       </rect>
@@ -221,49 +221,11 @@ margin: 0;
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="label_9">
-     <property name="geometry">
-      <rect>
-       <x>250</x>
-       <y>250</y>
-       <width>101</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Lucida Grande</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>[1024 .. 65535]</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>160</x>
-       <y>147</y>
-       <width>61</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Lucida Grande</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Medium</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>93</y>
+       <x>20</x>
+       <y>80</y>
        <width>121</width>
        <height>16</height>
       </rect>
@@ -278,27 +240,11 @@ margin: 0;
       <string>Frames per second:</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="service_">
-     <property name="geometry">
-      <rect>
-       <x>160</x>
-       <y>247</y>
-       <width>71</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Helvetica</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-    </widget>
     <widget class="QCheckBox" name="screenshotsMode_">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>20</y>
+       <x>20</x>
+       <y>10</y>
        <width>141</width>
        <height>19</height>
       </rect>
@@ -319,11 +265,117 @@ margin: 0;
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="label">
+    <widget class="Line" name="line_2">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>147</y>
+       <x>20</x>
+       <y>143</y>
+       <width>330</width>
+       <height>2</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string>background-image: url(:/Resources/SeparatorMiddle.png); 
+border: none;</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="screenshotsFPS_">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>80</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sfbComprLabel_">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>110</y>
+       <width>41</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>100%</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_44">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Compression level:</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="sfbCompr_">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>110</y>
+       <width>161</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="service_">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>260</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Helvetica</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>160</y>
        <width>61</width>
        <height>16</height>
       </rect>
@@ -335,14 +387,33 @@ margin: 0;
       </font>
      </property>
      <property name="text">
-      <string>Security:</string>
+      <string>Medium</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>230</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Traffic encryption:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>167</y>
+       <x>20</x>
+       <y>180</y>
        <width>341</width>
        <height>41</height>
       </rect>
@@ -366,8 +437,8 @@ margin: 0;
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>250</y>
+       <x>20</x>
+       <y>263</y>
        <width>46</width>
        <height>16</height>
       </rect>
@@ -382,30 +453,13 @@ margin: 0;
       <string>Port:</string>
      </property>
     </widget>
-    <widget class="Line" name="line_2">
+    <widget class="QLabel" name="label_9">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>130</y>
-       <width>330</width>
-       <height>2</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string>background-image: url(:/Resources/SeparatorMiddle.png); 
-border: none;</string>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="screenshotsFPS_">
-     <property name="geometry">
-      <rect>
-       <x>160</x>
-       <y>90</y>
-       <width>71</width>
-       <height>20</height>
+       <x>240</x>
+       <y>263</y>
+       <width>101</width>
+       <height>16</height>
       </rect>
      </property>
      <property name="font">
@@ -414,12 +468,34 @@ border: none;</string>
        <pointsize>12</pointsize>
       </font>
      </property>
+     <property name="text">
+      <string>[1024 .. 65535]</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>160</y>
+       <width>61</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Grande</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Security:</string>
+     </property>
     </widget>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>217</y>
+       <x>150</x>
+       <y>230</y>
        <width>61</width>
        <height>16</height>
       </rect>
@@ -434,409 +510,12 @@ border: none;</string>
       <string>Disabled</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_11">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>217</y>
-       <width>111</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Lucida Grande</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Traffic encryption:</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="tab_2">
-    <attribute name="title">
-     <string>SFB</string>
-    </attribute>
-    <widget class="QCheckBox" name="sfbEnabled_">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>20</y>
-       <width>181</width>
-       <height>19</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Lucida Grande</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <property name="text">
-      <string> Enable Smart Frame Buffer</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="Line" name="line_3">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>90</y>
-       <width>330</width>
-       <height>2</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string>background-image: url(:/Resources/SeparatorMiddle.png); 
-border: none;</string>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_12">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>110</y>
-       <width>311</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Lucida Grande</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="acceptDrops">
-      <bool>false</bool>
-     </property>
-     <property name="text">
-      <string>These settings allow to tune performance of SFB component (for advanced users).</string>
-     </property>
-     <property name="wordWrap">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_23">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>53</y>
-       <width>121</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Lucida Grande</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Frames per second:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_24">
-     <property name="geometry">
-      <rect>
-       <x>250</x>
-       <y>53</y>
-       <width>81</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Lucida Grande</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>[0,01 .. 5] fps</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="sfbFps_">
-     <property name="geometry">
-      <rect>
-       <x>160</x>
-       <y>50</y>
-       <width>71</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Lucida Grande</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="sfbCellSize_">
-     <property name="geometry">
-      <rect>
-       <x>160</x>
-       <y>237</y>
-       <width>71</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Lucida Grande</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_38">
-     <property name="geometry">
-      <rect>
-       <x>250</x>
-       <y>240</y>
-       <width>121</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Lucida Grande</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>[8 .. 256] power of 2</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_39">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>240</y>
-       <width>121</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Lucida Grande</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Cell size:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_40">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>160</y>
-       <width>121</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Lucida Grande</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Pixel format:</string>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="sfbPixel_">
-     <property name="geometry">
-      <rect>
-       <x>155</x>
-       <y>155</y>
-       <width>151</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Lucida Grande</family>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string>QComboBox {
-    background-color: none;
-color: black;
-}
-
-QComboBox:editable {
-    background-color: none;
-}
-
-QComboBox:!editable, QComboBox::drop-down:editable {
-    background-color: none;
-}
-
-/* QComboBox gets the &quot;on&quot; state when the popup is open */
-QComboBox:!editable:on, QComboBox::drop-down:editable:on {
-    background-color: none;
-}
-
-QComboBox:on { /* shift the text when the popup opens */
-    background-color: none;
-}
-
-QComboBox::drop-down {
-    subcontrol-origin: padding;
-    subcontrol-position: top right;
-width: 15px;
-    
-    border-left-width: 1px;
-    border-left-color: darkgray;
-    border-left-style: solid; /* just a single line */
-    border-top-right-radius: 3px; /* same radius as the QComboBox */
-    border-bottom-right-radius: 3px;
-}
-
-QComboBox::down-arrow {
-    background-color: none;
-}
-
-QComboBox::down-arrow:on { /* shift the arrow when popup is open */
-    background-color: none;
-}
-QComboBox QAbstractItemView {
-    background-color: none;
-}
-
-/*QComboBox {
- border-radius: 3px;
- border-color: rgb(128, 128, 128);
- border-width: 1px;
- border-style: inset;
- }
- QComboBox::drop-down {
- border-radius: 3px;
- border-color: rgb(158, 158, 158);
- border-width: 1px;
- border-style: inset;
- }
- QListView {
- border: none;
- color: rgb(0, 0, 0);
- background-color: rgb(255, 255, 255);
- }
- /* QComboBox {
- border-radius: 5px;
- border-color: rgb(30, 30, 30);
- border-width: 1px;
- border-style: inset;
- color: black;
- background-color: rgb(68, 68, 68);
- }
- QComboBox:!editable:on, QComboBox::drop-down:editable:on {
- color: black;
- }
- QComboBox::drop-down {
- border: none;
- background-image: url(:/Resources/ComboboxDropDown.png); 
- width: 21px;
- }
- QComboBox QAbstractItemView {
- background-color: white;
- selection-background-color: rgb(128, 128, 128);
- } */</string>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>16</width>
-       <height>16</height>
-      </size>
-     </property>
-     <property name="frame">
-      <bool>true</bool>
-     </property>
-     <item>
-      <property name="text">
-       <string>True Color - 32bpp</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Black &amp; Wtite - 8bpp</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QLabel" name="label_44">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>203</y>
-       <width>121</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Lucida Grande</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Compression level:</string>
-     </property>
-    </widget>
-    <widget class="QSlider" name="sfbCompr_">
-     <property name="geometry">
-      <rect>
-       <x>160</x>
-       <y>200</y>
-       <width>161</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="minimum">
-      <number>1</number>
-     </property>
-     <property name="maximum">
-      <number>100</number>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-    <widget class="QLabel" name="sfbComprLabel_">
-     <property name="geometry">
-      <rect>
-       <x>330</x>
-       <y>203</y>
-       <width>41</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Lucida Grande</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>100%</string>
-     </property>
-    </widget>
    </widget>
   </widget>
  </widget>
  <tabstops>
   <tabstop>screenshotsMode_</tabstop>
   <tabstop>screenshotsFPS_</tabstop>
-  <tabstop>service_</tabstop>
   <tabstop>pushButton</tabstop>
  </tabstops>
  <resources/>
@@ -870,22 +549,6 @@ QComboBox QAbstractItemView {
     <hint type="destinationlabel">
      <x>387</x>
      <y>195</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>sfbCompr_</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>SettingsDialog</receiver>
-   <slot>compressionChanged(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>245</x>
-     <y>248</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>402</x>
-     <y>90</y>
     </hint>
    </hints>
   </connection>

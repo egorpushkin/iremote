@@ -48,7 +48,7 @@ namespace RemotePC
         , sfbEnabled_( true )
         , sfbFps_( 2.0f )
         , sfbPixelFormat_( SFB_TRUECOLOR )
-        , sfbCompression_( 60 )
+        , sfbCompression_( 100 )
         , sfbCellSize_( 128 )
         , sfbChanged_( false )
 	{

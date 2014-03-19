@@ -27,6 +27,7 @@
 #include "../../Server/IClientHandler.h"
 #include "../../Server/Services/Services.h"
 #include "../../Server/IServerControl.h"
+#include "../../Server/Config.h"
 #include "ScreenshotSpreader.h"
 
 // Hardware subsystem.
@@ -46,44 +47,42 @@ namespace RemotePC
 	{
         if ( !client.IsScreenCaptureEnabled() )
             return;
-        if ( !client.IsFrameBuffer() )
-        {
-            // Acquire mouse cursor position.
-            RemotePC::ScreenPoint position = RemotePC::HardwareProvider::Instance().GetMouseControl()->GetPosition();
 
-            float zoomLevel = client.GetZoomLevel();
-            float imageDimension = 256.0f * zoomLevel;
+        // Acquire mouse cursor position.
+        RemotePC::ScreenPoint position = RemotePC::HardwareProvider::Instance().GetMouseControl()->GetPosition();
 
-            // Grab part of desktop.
-            QPixmap screenImage = QApplication::primaryScreen()->grabWindow(
-                QApplication::desktop()->winId(),
-                position.x_ - imageDimension / 2, position.y_ - imageDimension / 2,
-                imageDimension, imageDimension);
-            // Test whether image is correct.
-            if ( screenImage.width() <= 0 || screenImage.height() <= 0  )
-                return;
+        float zoomLevel = client.GetZoomLevel();
+        float imageDimension = 256.0f * zoomLevel;
 
-            screenImage = screenImage.scaled(
-                QSize(256, 256),
-                Qt::KeepAspectRatio,
-                Qt::SmoothTransformation);
+        // Grab part of desktop.
+        QPixmap screenImage = QApplication::primaryScreen()->grabWindow(
+            QApplication::desktop()->winId(),
+            position.x_ - imageDimension / 2, position.y_ - imageDimension / 2,
+            imageDimension, imageDimension);
+        // Test whether image is correct.
+        if ( screenImage.width() <= 0 || screenImage.height() <= 0  )
+            return;
 
-            // Construct screenshot message from QT image.
-            QByteArray imageBytes;
-            QBuffer imageBuffer(&imageBytes);
-            imageBuffer.open(QIODevice::WriteOnly);
-            #if !defined(IREMOTE_NO_QT_PLUGINS)
-                screenImage.save(&imageBuffer, "JPG");
-            #else
-                screenImage.save(&imageBuffer, "PNG");
-            #endif
+        screenImage = screenImage.scaled(
+            QSize(256, 256),
+            Qt::KeepAspectRatio,
+            Qt::SmoothTransformation);
 
-            mc::IMessagePtr message(
-                mc::Class< RemotePC::ScreenshotMessage >::Create(
-                    imageBytes.size(), imageBytes.constData() ) );
+        // Construct screenshot message from QT image.
+        QByteArray imageBytes;
+        QBuffer imageBuffer(&imageBytes);
+        imageBuffer.open(QIODevice::WriteOnly);
+        #if !defined(IREMOTE_NO_QT_PLUGINS)
+            screenImage.save(&imageBuffer, "JPG", Config::Instance().GetSFBCompression());
+        #else
+            screenImage.save(&imageBuffer, "PNG", Config::Instance().GetSFBCompression());
+        #endif
 
-            // Send image to the client.
-            protocol->Send( message );
-        }
+        mc::IMessagePtr message(
+            mc::Class< RemotePC::ScreenshotMessage >::Create(
+                imageBytes.size(), imageBytes.constData() ) );
+
+        // Send image to the client.
+        protocol->Send( message );
 	}
 }

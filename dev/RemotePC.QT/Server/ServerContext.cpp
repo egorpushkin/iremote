@@ -47,16 +47,6 @@
 #include "Messages/StreamRequest.h"
 #include "Versions/Features.h"
 
-// EXPERIMENTAL: RS messaging and engine.
-// #include "Messages/IStringMessage.h"
-// #include "Messages/StringMessage.h"
-// #include "RS/Messages/RSMessages.h"
-// #include "RS/Messages/ReadPortion.h"
-// #include "RS/Server/RSManager.h"
-
-// Frame Buffer service
-#include "SFB/Server/FBService.h"
-
 // Hardware subsystem
 #include "Hardware/Hardware.h"
 
@@ -575,21 +565,6 @@ namespace RemotePC
 		{
 			HandleZoomLevel(protocol, message);
 		}
-        else if ( ServiceRequest::messageId_ == message->GetCode() )
-        {
-            HandleServiceRequest(protocol, message);
-        }
-        // EXPERIMENTAL: RS messages.
-        /* else if ( RS::RSMessages::scanDirectory_ == message->GetCode() )
-        {
-            mc::IMessagePtr response = RS::RSManager::Instance().scanDirectory(message);
-            protocol->Send(response);
-        }
-        else if ( RS::ReadPortion::messageId_ == message->GetCode() )
-        {
-            mc::IMessagePtr response = RS::RSManager::Instance().readFile(message);
-            protocol->Send(response);
-        } */
 
         // Propogate message to services manager. This is required in order to deliver
         // compatibility information and general commands to service handlers.
@@ -1001,22 +976,6 @@ namespace RemotePC
 
 		return mc::_S_OK;
 	}
-
-    mc::result ServerContext::HandleServiceRequest(mc::IProtocolRef protocol, mc::IMessageRef message)
-    {
-        mc::Guid serviceId = message->GetProperty(ServiceRequest::PROP_ID).toGuid();        
-        if ( SFB::FBService::serviceId_ == serviceId )
-        {
-			// Enable frame buffer mode, if client requests SFB service.
-            clients_[protocol].SetFrameBuffer(true);
-        }
-		else if ( ScreenshotMessage::serviceId_ == serviceId )
-		{
-			// Enable legacy screen capturing.
-			clients_[protocol].EnableScreenCapture(true);
-		}
-        return mc::_S_OK;
-    }
 
 	mc::IMessagePtr ServerContext::PrepareAuthMessage(int clientMajor, int clientMinor)
 	{

@@ -54,7 +54,6 @@
 // Frame Buffer service
 #include "../Server/Services/IServiceHandler.h"
 #include "../Server/Services/IServicesManager.h"
-#include "SFB/Server/FBService.h"
 
 // Remote PC forms
 #include "authdialog.h"

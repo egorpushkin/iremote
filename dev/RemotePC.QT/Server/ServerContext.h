@@ -107,7 +107,6 @@ namespace RemotePC
 		mc::result HandleShellRequest(mc::IMessageRef message);
 		mc::result HandlePassword(mc::IProtocolRef protocol, mc::IMessageRef message);
 		mc::result HandleZoomLevel(mc::IProtocolRef protocol, mc::IMessageRef message);
-        mc::result HandleServiceRequest(mc::IProtocolRef protocol, mc::IMessageRef message);
 		mc::IMessagePtr PrepareAuthMessage(int clientMajor, int clientMinor);
 		mc::result RequestPassword(mc::IProtocolRef protocol, bool requestAuth);
 		mc::result WrongPassword(mc::IProtocolRef protocol);

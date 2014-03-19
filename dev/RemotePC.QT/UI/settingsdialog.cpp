@@ -43,12 +43,8 @@ SettingsDialog::SettingsDialog(QWidget *parent)
 	m_ui->service_->setText( RemotePC::Config::Instance().GetService().c_str() );
 	m_ui->screenshotsMode_->setCheckState( RemotePC::Config::Instance().ShareScreenshots() ? Qt::Checked : Qt::Unchecked );
 	m_ui->screenshotsFPS_->setText( QString::number( RemotePC::Config::Instance().GetFPS() ) );
-    m_ui->sfbEnabled_->setCheckState( RemotePC::Config::Instance().IsSFBEnabled() ? Qt::Checked : Qt::Unchecked );
-    m_ui->sfbFps_->setText( QString::number( RemotePC::Config::Instance().GetSFBFPS() ) );
-    m_ui->sfbPixel_->setCurrentIndex( RemotePC::Config::Instance().GetSFBPixelFormat() );
     m_ui->sfbCompr_->setValue( RemotePC::Config::Instance().GetSFBCompression() );
 	compressionChanged( RemotePC::Config::Instance().GetSFBCompression() );
-    m_ui->sfbCellSize_->setText( QString::number( RemotePC::Config::Instance().GetSFBCellSize() ) );
 }
 
 SettingsDialog::~SettingsDialog()
@@ -123,79 +119,13 @@ void SettingsDialog::apply()
 		RemotePC::Config::Instance().SetFPS( fps );
 	}
 
-    // 4. SFB. Enabled.
-    bool sfbChanged = false;
-    bool sfbEnabled = ( m_ui->sfbEnabled_->checkState() == Qt::Checked );
-    if ( RemotePC::Config::Instance().IsSFBEnabled() != sfbEnabled )
-    {
-        // Save new value.
-        RemotePC::Config::Instance().SetSFBEnabled( sfbEnabled );
-        sfbChanged = true;
-    }
-
-    // 5. SFB. FPS.
-    float sfbFps = m_ui->sfbFps_->text().toFloat();
-    if ( RemotePC::Config::Instance().GetSFBFPS() != sfbFps )
-    {
-        // Check whether new value is appropriate
-        if ( ( sfbFps < 0.01f ) || ( sfbFps > 5.0f ) )
-        {
-            RemotePC::Controls::Warning(
-                this,
-                "Error in SFB fps value",
-                "SFB frame rate value should lie in bounds [0,01..5].");
-            m_ui->tabs_->setCurrentIndex(1);
-            m_ui->sfbFps_->setFocus();
-            return;
-        }
-
-        // Save new value.
-        RemotePC::Config::Instance().SetSFBFPS(sfbFps);
-        sfbChanged = true;
-    }
-
-    // 6. SFB. Pixel format.
-    int sfbPixel = m_ui->sfbPixel_->currentIndex();
-    if ( RemotePC::Config::Instance().GetSFBPixelFormat() != sfbPixel )
-    {
-        // Save new value.
-        RemotePC::Config::Instance().SetSFBPixelFormat((RemotePC::Config::SFBFormat_)sfbPixel);
-        sfbChanged = true;
-    }
-
-    // 7. SFB. Compression level.
+    // 4. SFB. Compression level.
     int sfbCompr = m_ui->sfbCompr_->value();
     if ( RemotePC::Config::Instance().GetSFBCompression() != sfbCompr )
     {
         // Save new value.
         RemotePC::Config::Instance().SetSFBCompression(sfbCompr);
-        sfbChanged = true;
     }
-
-    // 8. SFB. Cell size.
-    size_t sfbCellSize = m_ui->sfbCellSize_->text().toInt();
-    if ( RemotePC::Config::Instance().GetSFBCellSize() != sfbCellSize )
-    {
-        // Check whether new value is appropriate
-        bool notaPower = ( sfbCellSize & ( sfbCellSize - 1 ) );
-        if ( notaPower || ( sfbCellSize < 8 ) || ( sfbCellSize > 256 ) )
-        {
-            RemotePC::Controls::Warning(
-                this,
-                "Error in SFB cell size value",
-                "SFB cell size value should lie in bounds [8..256] and be a power of 2.");
-            m_ui->tabs_->setCurrentIndex(1);
-            m_ui->sfbCellSize_->setFocus();
-            return;
-        }
-
-        // Save new value.
-        RemotePC::Config::Instance().SetSFBCellSize(sfbCellSize);
-        sfbChanged = true;
-    }
-
-    // Set change flags.
-    RemotePC::Config::Instance().SetSFBChanged(sfbChanged);
 
     // Save config file.
     RemotePC::Config::Instance().Save();
