@@ -77,7 +77,7 @@ void UsersMngDialog::EditUser()
 	if ( 1 != selectedItems.size() )
 		return;
 	QTreeWidgetItem * selectedItem = selectedItems.at(0);
-	size_t userCookie = selectedItem->data(0, Qt::UserRole).toInt();
+    size_t userCookie = selectedItem->data(0, Qt::UserRole).toULongLong();
 	if ( 0 == userCookie )
 		return;
 
@@ -137,7 +137,7 @@ void UsersMngDialog::RemoveUser()
 	if ( 1 != selectedItems.size() )
 		return;
 	QTreeWidgetItem * selectedItem = selectedItems.at(0);
-	size_t userCookie = selectedItem->data(0, Qt::UserRole).toInt();
+    size_t userCookie = selectedItem->data(0, Qt::UserRole).toULongLong();
 	if ( 0 == userCookie )
 		return;
 
@@ -195,5 +195,5 @@ void UsersMngDialog::ShowUser(const QString& deviceName, size_t userCookie)
 	QTreeWidgetItem * userItem = new QTreeWidgetItem( 
 		m_ui->users_, 
 		QStringList( deviceName ) );
-	userItem->setData( 0, Qt::UserRole, (int)userCookie );
+    userItem->setData( 0, Qt::UserRole, (quint64)userCookie );
 }

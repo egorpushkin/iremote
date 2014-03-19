@@ -421,7 +421,7 @@ void Dialog::ShowOldiRemoteWarningSlot(size_t cookie)
 		warningBox.exec();
 		currentAuth_ = 0;
 
-		// Disconnect client.
+        // Disconnect client.
 		serverControl_->HandleClient( cookie, false );
 	}
 	catch ( ... )
@@ -497,7 +497,7 @@ void Dialog::disconnect()
 	if ( 1 != selectedItems.size() )
 		return;
 	QTreeWidgetItem * selectedItem = selectedItems.at(0);
-	size_t cookie = selectedItem->data(0, Qt::UserRole).toInt();
+    size_t cookie = selectedItem->data(0, Qt::UserRole).toULongLong();
 	if ( 0 == cookie )
 		return;
 	serverControl_->DisconnectClient(cookie);
