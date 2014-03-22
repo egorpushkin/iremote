@@ -3,6 +3,9 @@
 # This script prepares Remote PC Suite installation package content.
 #  
 
+# Settings
+QT_VER="5.2.1"
+
 # Clear environment.
 rm -r build
 
@@ -42,9 +45,9 @@ function copyQtLib {
 	mkdir -p $(dirname $2)
 	cp $1 $2    
 } 
-copyQtLib "/Library/Frameworks/QtCore.framework/Versions/4/QtCore" "./build/Applications/RemotePC.app/Contents/Frameworks/QtCore.framework/Versions/4/QtCore"
-copyQtLib "/Library/Frameworks/QtGui.framework/Versions/4/QtGui" "./build/Applications/RemotePC.app/Contents/Frameworks/QtGui.framework/Versions/4/QtGui"
-copyQtLib "/Developer/Applications/Qt/plugins/imageformats/libqjpeg.dylib" "./build/Applications/RemotePC.app/Contents/plugins/imageformats/libqjpeg.dylib"
+copyQtLib "/Applications/Qt/$QT_VER/clang_64/lib/QtCore.framework/Versions/Current/QtCore" "./build/Applications/RemotePC.app/Contents/Frameworks/QtCore.framework/Versions/Current/QtCore"
+copyQtLib "/Applications/Qt/$QT_VER/clang_64/lib/QtGui.framework/Versions/Current/QtGui" "./build/Applications/RemotePC.app/Contents/Frameworks/QtGui.framework/Versions/Current/QtGui"
+copyQtLib "/Applications/Qt/$QT_VER/clang_64/plugins/imageformats/libqjpeg.dylib" "./build/Applications/RemotePC.app/Contents/plugins/imageformats/libqjpeg.dylib"
 
 # Fix dependencies from QT libraries for the following assemblies:
 #     RemotePC.app/Contents/MacOS/RemotePC
@@ -55,11 +58,11 @@ copyQtLib "/Developer/Applications/Qt/plugins/imageformats/libqjpeg.dylib" "./bu
 #     RemotePC.app/plugins/imageformats/libqjpeg.dylib
 #         QtCore
 #         QtGui
-install_name_tool -change QtCore.framework/Versions/4/QtCore @executable_path/../Frameworks/QtCore.framework/Versions/4/QtCore ./build/Applications/RemotePC.app/Contents/MacOS/RemotePC
-install_name_tool -change QtGui.framework/Versions/4/QtGui @executable_path/../Frameworks/QtGui.framework/Versions/4/QtGui ./build/Applications/RemotePC.app/Contents/MacOS/RemotePC
-install_name_tool -change QtCore.framework/Versions/4/QtCore @executable_path/../Frameworks/QtCore.framework/Versions/4/QtCore ./build/Applications/RemotePC.app/Contents/Frameworks/QtGui.framework/Versions/4/QtGui
-install_name_tool -change QtCore.framework/Versions/4/QtCore @executable_path/../Frameworks/QtCore.framework/Versions/4/QtCore ./build/Applications/RemotePC.app/Contents/plugins/imageformats/libqjpeg.dylib
-install_name_tool -change QtGui.framework/Versions/4/QtGui @executable_path/../Frameworks/QtGui.framework/Versions/4/QtGui ./build/Applications/RemotePC.app/Contents/plugins/imageformats/libqjpeg.dylib
+install_name_tool -change QtCore.framework/Versions/5/QtCore @executable_path/../Frameworks/QtCore.framework/Versions/Current/QtCore ./build/Applications/RemotePC.app/Contents/MacOS/RemotePC
+install_name_tool -change QtGui.framework/Versions/5/QtGui @executable_path/../Frameworks/QtGui.framework/Versions/Current/QtGui ./build/Applications/RemotePC.app/Contents/MacOS/RemotePC
+install_name_tool -change QtCore.framework/Versions/5/QtCore @executable_path/../Frameworks/QtCore.framework/Versions/Current/QtCore ./build/Applications/RemotePC.app/Contents/Frameworks/QtGui.framework/Versions/Current/QtGui
+install_name_tool -change QtCore.framework/Versions/5/QtCore @executable_path/../Frameworks/QtCore.framework/Versions/Current/QtCore ./build/Applications/RemotePC.app/Contents/plugins/imageformats/libqjpeg.dylib
+install_name_tool -change QtGui.framework/Versions/5/QtGui @executable_path/../Frameworks/QtGui.framework/Versions/Current/QtGui ./build/Applications/RemotePC.app/Contents/plugins/imageformats/libqjpeg.dylib
 
 # Change package content permissions.
 sudo chown -R root:admin ./build

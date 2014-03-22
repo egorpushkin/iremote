@@ -1,5 +1,6 @@
 # iRemote
 dev/RemotePC.QT/debug
+dev/RemotePC.QT/release
 dev/RemotePC.QT/ui_*.h
 dev/RemotePC.QT/moc_*.cpp
 dev/RemotePC.QT/qrc_*.cpp
