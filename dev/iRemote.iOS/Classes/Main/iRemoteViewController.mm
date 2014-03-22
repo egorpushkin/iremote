@@ -28,6 +28,7 @@
 #include "Versions/Versions.h"
 
 // Controls
+#import "../Controls/Controls.h"
 #import "../Controls/TiledButton.h"
 #import "../Controls/PasswordAlert.h"
 
@@ -55,7 +56,6 @@
 @end
 
 #include "Connector/Server.h"
-#include "Connector/Device.h"
 #include "../State/UIConfig.h"
 
 @implementation iRemoteViewController
@@ -241,18 +241,15 @@
 - (void)showIp:(NSString *)ip andPort:(NSString *)port {
 	// Disable multiple simultaneous connection attempts.
     if ( !ipAddress.enabled )
-		return;  	
+		return;
+    
     // Set ip and port.
     ipAddress.text = ip;
     service.text = port;       
-	if ( mc::iPhone::Device::IsTablet() ) {
-		// On tablets we establish connection immediately. 
-		[self onConnect];
-	} else {
-		// On the phone we attempt to establish connection, when 
-		// login page is presented again (hosts controller is popped).
-		connectWhenPresented = YES;
-	}
+
+    // On the phone we attempt to establish connection, when
+    // login page is presented again (hosts controller is popped).
+    connectWhenPresented = YES;
 }
 
 - (void)restoreHostSettingsFromConfig {
@@ -330,7 +327,7 @@
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	if ( mc::iPhone::Device::IsTablet() )
+	if ( [Controls isTablet] )
 		return YES;
 	else 	
 		return ( UIInterfaceOrientationPortrait == interfaceOrientation );

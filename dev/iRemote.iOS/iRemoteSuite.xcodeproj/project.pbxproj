@@ -11,6 +11,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		2F00A0D51240E02C00209309 /* iRemoteAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2F00A0D41240E02C00209309 /* iRemoteAppDelegate.mm */; };
+		2F07D34918DD3B190080FEF2 /* Comtrols.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2F07D34818DD3B190080FEF2 /* Comtrols.mm */; };
 		2F14E4BE13DC541100FD706E /* FBService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F14E4BD13DC541100FD706E /* FBService.cpp */; };
 		2F2997AB143389D100590D9F /* FBPreviewArea.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2F2997AA143389D100590D9F /* FBPreviewArea.mm */; };
 		2F2D6EB7120ABC9400776AB7 /* Help001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2F2D6EAD120ABC9300776AB7 /* Help001.jpg */; };
@@ -53,7 +54,6 @@
 		2F3016CC13DC283600442693 /* ServiceDescriptor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F3016C913DC283600442693 /* ServiceDescriptor.cpp */; };
 		2F30175113DC39DA00442693 /* StreamContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F30175013DC39DA00442693 /* StreamContext.cpp */; };
 		2F3FD901141F7E480009C493 /* ServiceRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FD900141F7E480009C493 /* ServiceRequest.cpp */; };
-		2F44A1E00FE580AC006125B8 /* Controls.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F44A1DF0FE580AC006125B8 /* Controls.m */; };
 		2F44A2390FE5883A006125B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F44A2380FE5883A006125B8 /* main.m */; };
 		2F44A23E0FE5886D006125B8 /* Dist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F44A23C0FE5886D006125B8 /* Dist.plist */; };
 		2F47B5A813F8238900097C0D /* FBSurfaceHolder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2F47B5A713F8238900097C0D /* FBSurfaceHolder.mm */; };
@@ -278,6 +278,7 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2F00A0D41240E02C00209309 /* iRemoteAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iRemoteAppDelegate.mm; sourceTree = "<group>"; };
+		2F07D34818DD3B190080FEF2 /* Comtrols.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Comtrols.mm; sourceTree = "<group>"; };
 		2F14E4BC13DC541100FD706E /* FBService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBService.h; sourceTree = "<group>"; };
 		2F14E4BD13DC541100FD706E /* FBService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FBService.cpp; sourceTree = "<group>"; };
 		2F14E4FF13DC5A3700FD706E /* IFBService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFBService.h; sourceTree = "<group>"; };
@@ -360,7 +361,6 @@
 		2F3FD8FF141F7E480009C493 /* ServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceRequest.h; sourceTree = "<group>"; };
 		2F3FD900141F7E480009C493 /* ServiceRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ServiceRequest.cpp; sourceTree = "<group>"; };
 		2F44A1DE0FE580AC006125B8 /* Controls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controls.h; sourceTree = "<group>"; };
-		2F44A1DF0FE580AC006125B8 /* Controls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controls.m; sourceTree = "<group>"; };
 		2F44A2380FE5883A006125B8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2F44A23C0FE5886D006125B8 /* Dist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Dist.plist; path = Resources/Dist.plist; sourceTree = "<group>"; };
 		2F44A2420FE588A4006125B8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
@@ -1101,7 +1101,7 @@
 			isa = PBXGroup;
 			children = (
 				2F44A1DE0FE580AC006125B8 /* Controls.h */,
-				2F44A1DF0FE580AC006125B8 /* Controls.m */,
+				2F07D34818DD3B190080FEF2 /* Comtrols.mm */,
 				2F5DA6520FF39B03002AC571 /* ShellView.h */,
 				2F5DA6530FF39B03002AC571 /* ShellView.m */,
 				2FBD3A090FD7FFDA0018E00B /* PasswordAlert.h */,
@@ -2456,7 +2456,6 @@
 				2F7700110FDE5EC600F1C38F /* xmltok.c in Sources */,
 				2F7700120FDE5EC600F1C38F /* xmltok_impl.c in Sources */,
 				2F7700130FDE5EC600F1C38F /* xmltok_ns.c in Sources */,
-				2F44A1E00FE580AC006125B8 /* Controls.m in Sources */,
 				2F44A2390FE5883A006125B8 /* main.m in Sources */,
 				2F72CF2C0FE79FB0002C2675 /* EAGLView.m in Sources */,
 				2F72CF2D0FE79FB0002C2675 /* Painter2dFrames.m in Sources */,
@@ -2553,6 +2552,7 @@
 				2FAF72541416B61B00C6FB07 /* WindowsPanel.m in Sources */,
 				2F2D8C82141E57B800CB9D0D /* AudioMessages.cpp in Sources */,
 				2F2D8C83141E57B800CB9D0D /* AuthMessage.cpp in Sources */,
+				2F07D34918DD3B190080FEF2 /* Comtrols.mm in Sources */,
 				2F2D8C85141E57B800CB9D0D /* AuthResponse.cpp in Sources */,
 				2F2D8C86141E57B800CB9D0D /* AuthResponse2.cpp in Sources */,
 				2F2D8C87141E57B800CB9D0D /* CookieMessage.cpp in Sources */,

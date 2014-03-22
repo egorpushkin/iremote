@@ -63,8 +63,12 @@ namespace iPhone
 	
 	bool Device::IsTablet()
 	{
-		return 
-			( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad );
+        // Tablets are not currently supported.
+		return NO;
+        
+        // Correct check looks like that:
+        // return
+		//     ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad );
 	}
 }
 }

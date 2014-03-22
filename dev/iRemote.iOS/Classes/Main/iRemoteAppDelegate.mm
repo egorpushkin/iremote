@@ -322,14 +322,9 @@
     if ( nil != mainController.view.superview ) 
         return;
 
-	if ( mc::iPhone::Device::IsTablet() ) {
-		// Tablet UI support all orientations on all screens. Thus it is not required 
-		// to update orientation, when switching between controllers.
-	} else {
-		// Restore previous interface orientation.
-		// This must be done before switching views.
-		[[UIApplication sharedApplication] setStatusBarOrientation:previousOrientation animated:YES];		
-	}
+    // Restore previous interface orientation.
+    // This must be done before switching views.
+    [[UIApplication sharedApplication] setStatusBarOrientation:previousOrientation animated:YES];
     
     // Perform switch:
     // 1. Remove login view.

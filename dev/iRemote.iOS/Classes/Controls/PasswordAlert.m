@@ -25,39 +25,24 @@
 
 @implementation PasswordAlert
 
-- (UITextField *)createPasswordField {
-	UITextField *returnTextField = [[UITextField alloc] initWithFrame:CGRectMake(22.0, 100.0, 240, 31)];
-    returnTextField.borderStyle = UITextBorderStyleRoundedRect;
-    returnTextField.textColor = [UIColor blackColor];
-	returnTextField.font = [UIFont systemFontOfSize:14.0];
-    returnTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-    returnTextField.placeholder = @"<password>";
-    returnTextField.backgroundColor = [UIColor clearColor];	
-	returnTextField.keyboardType = UIKeyboardTypeDefault;
-	returnTextField.returnKeyType = UIReturnKeyDefault;	
-	returnTextField.secureTextEntry = YES;	// make the text entry secure (bullets).	
-	returnTextField.clearButtonMode = UITextFieldViewModeWhileEditing;	// has a clear 'x' button to the right
-	return returnTextField;
-}
-
 - (id)initWithPass:(NSNumber*)wrongPass andDelegate:(id)delegate {
     NSString *alertTitle = nil;
     NSString *alertText = nil;
     if ( ![wrongPass boolValue] ) {
         alertTitle = @"Enter Password";
-        alertText = @"Enter password to get control over host machine.\n\n\n";
+        alertText = @"Enter password to get control over host machine.";
     } else {
         alertTitle = @"Wrong Password";
-        alertText = @"Enter correct password to get control over host machine.\n\n\n";
+        alertText = @"Enter correct password to get control over host machine.";
     }
     
     if (self = [super initWithTitle:alertTitle message:alertText
         delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil]) {     
         hostDelegate = delegate;
-        // Construct and add password field.
-        passwordField = [self createPasswordField];
-        passwordField.delegate = self;
-        [self addSubview:passwordField];      
+        
+        // Configure password field.
+        self.alertViewStyle = UIAlertViewStyleSecureTextInput;
+        [self textFieldAtIndex:0].delegate = self;
     }
     return self;
 }
@@ -72,28 +57,18 @@
     [hostDelegate alertView:self clickedButtonAtIndex:buttonIndex];
 }
 
-- (void)willPresentAlertView:(UIAlertView *)alertView {
-	if ( ![Controls isTablet] ) {
-		self.frame = CGRectMake(20.0f, 40.0f, 286.0f, 210.0f);    
-	}
-    [passwordField becomeFirstResponder];                
-}
-
 #pragma mark Text fields methods
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if ( textField != passwordField )
-        return NO;
     [hostDelegate alertView:self clickedButtonAtIndex:1];
     return YES;    
 }
 
 - (NSString*)password {
-    return passwordField.text;
+    return [self textFieldAtIndex:0].text;
 }
 
 - (void)dealloc {
-    [passwordField release];
     [super dealloc];
 }
 

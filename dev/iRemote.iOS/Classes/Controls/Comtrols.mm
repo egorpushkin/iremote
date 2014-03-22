@@ -23,6 +23,9 @@
 #import "Controls.h"
 #import "Content.h"
 
+#include "Common/Common.h"
+#include "Connector/Device.h"
+
 @implementation Controls
 
 + (UIBarButtonItem *)backButtonItem:(id)target action:(SEL)action {
@@ -62,8 +65,7 @@
 }
 
 + (BOOL)isTablet {
-	return 
-		( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad );
+    return mc::iPhone::Device::IsTablet();
 }
 
 @end

@@ -25,7 +25,6 @@
 @interface PasswordAlert : UIAlertView< UITextFieldDelegate, UIAlertViewDelegate > {
 
 @private
-    UITextField *passwordField;
     id<UIAlertViewDelegate> hostDelegate;
     
 }

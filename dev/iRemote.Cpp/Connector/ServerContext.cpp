@@ -152,11 +152,8 @@ namespace RemotePC
         // Notify messaging services on establishing connection. 
         NotifyOnConnected(protocol_);
 		
-		if ( !mc::iPhone::Device::IsTablet() )
-		{
-			// Start screenshots renderer.
-			renderingQueue_->start(events_);		
-		}
+        // Start screenshots renderer.
+        renderingQueue_->start(events_);
         
 		// Just another safety measure.
 		try
@@ -193,12 +190,9 @@ namespace RemotePC
         // Prevent UI from receiving notifications from servier since this moment.
         isUIReady_ = false;
 		
-		if ( !mc::iPhone::Device::IsTablet() )
-		{		
-			// Stop rendering screenshots.
-			renderingQueue_->stop();
-			renderingQueue_ = NULL;				
-		}		
+        // Stop rendering screenshots.
+        renderingQueue_->stop();
+        renderingQueue_ = NULL;
 		
 		// Notify services manager on disconnection.
 		servicesManager_->DeviceDisconnected(protocol_);
@@ -330,30 +324,6 @@ namespace RemotePC
             
             // Authentication is proven. Notify UI on success.
             events_->OnApproved();            
-			
-			// Check compatibility. 
-			int rpcMajor = message->GetProperty( AuthResponse2::PROP_VER_MAJOR ).toInt();
-			int rpcMinor = message->GetProperty( AuthResponse2::PROP_VER_MINOR ).toInt();			
-			if ( mc::iPhone::Device::IsTablet() )
-			{
-				// Tablets require SFB. Neet to check, whether server supports it. 
-				if ( !Features::RemotePCServices(rpcMajor, rpcMinor) )
-				{
-					// Services are required for SFB. Notify user on old Remote PC Suite. 
-					events_->WarnOnOldRemotePC();					
-				}
-			}
-			else 
-			{
-				// Phones still rely on legacy screen sharing. 
-				// Since Remote PC 1.5 even legacy sharing must be turned on explicitly.
-				if ( Features::RemotePCServices(rpcMajor, rpcMinor) )
-				{
-					mc::IMessagePtr serviceRequest( mc::Class< ServiceRequest >::Create( 
-						ScreenshotMessage::serviceId_, 1, 0, "" ) );
-					Send(serviceRequest);
-				}
-			}
         }		
         else if ( AuthResponse::messageId_ == messageId )
         {

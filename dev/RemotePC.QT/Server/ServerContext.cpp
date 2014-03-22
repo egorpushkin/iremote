@@ -207,13 +207,6 @@ namespace RemotePC
 			client->Send( PrepareAuthMessage( clientRecord.GetMajorVersion(), clientRecord.GetMinorVersion() ) );
 			// Notify client on current volume value. 
 			SendVolumeLevel(client);
-			// Check whether streaming services are supported by iRemote.
-			if ( clientRecord.AreServicesSupported() ) 
-			{
-				// Desable legacy screen capturing. Client should request
-				// all required services manually.
-				clientRecord.EnableScreenCapture(false);
-			}
 			// Ensure that client supports zooming.
 			if ( clientRecord.IsZoomingSupported() )
 			{
@@ -440,9 +433,6 @@ namespace RemotePC
 		client->GetMessagesMap()->Register(ZoomLevelMessage::messageId_, mc::Class< ZoomLevelMessage >::Create );
         client->GetMessagesMap()->Register(ServiceRequest::messageId_, mc::Class< ServiceRequest >::Create );
         client->GetMessagesMap()->Register(StreamRequest::messageId_, mc::Class< StreamRequest >::Create );
-        // EXPERIMENTAL: RS messages.
-        // client->GetMessagesMap()->Register(RS::RSMessages::scanDirectory_, mc::Class< StringMessage >::Create );
-        // client->GetMessagesMap()->Register(RS::ReadPortion::messageId_, mc::Class< RS::ReadPortion >::Create );
 
 		// Subscribe on message notifications.
 		mc::Events::Advise(client, 

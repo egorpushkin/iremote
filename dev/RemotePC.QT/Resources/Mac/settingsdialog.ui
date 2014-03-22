@@ -175,7 +175,7 @@ margin: 0;
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
-     <string>Screen</string>
+     <string>General</string>
     </attribute>
     <widget class="QLabel" name="label_10">
      <property name="geometry">
