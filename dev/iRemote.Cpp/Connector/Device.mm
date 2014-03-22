@@ -34,7 +34,18 @@ namespace iPhone
 
     std::string Device::GetId()
     {
-        return std::string( Guid::Generate().ToString() );
+        static NSString* deviceIdKey = @"com.scientific-soft.iremote.ios.device.id";
+        
+        NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+        [defaults synchronize];
+        NSString* deviceId = [defaults stringForKey:deviceIdKey];
+        if ( !deviceId )
+        {
+            deviceId = [NSString stringWithUTF8String:Guid::Generate().ToString().c_str()];
+            [defaults setValue:deviceId forKey:deviceIdKey];
+            [defaults synchronize];
+        }
+        return std::string( [deviceId UTF8String] );
     }
 
     std::string Device::GetName()
