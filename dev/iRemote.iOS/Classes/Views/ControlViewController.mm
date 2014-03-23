@@ -81,7 +81,7 @@
 #pragma mark Text field delegate
 
 - (BOOL)isKeyboardPresented {
-    return [hiddenEdit isFirstResponder];
+    return ( 0 != keyboardRect.size.height );
 }
 
 - (IBAction)toggleKeybopard {
@@ -211,6 +211,8 @@
     [super viewDidAppear:animated];
     
     [[ScreenshotProvider instance] setScreenshotHost:controlArea];
+    
+    [self updateControls];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
