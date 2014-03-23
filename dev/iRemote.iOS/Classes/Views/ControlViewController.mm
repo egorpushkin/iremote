@@ -209,10 +209,13 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
     [[ScreenshotProvider instance] setScreenshotHost:controlArea];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];    
+    
     [[ScreenshotProvider instance] setScreenshotHost:nil];
     
     // Stop listening to keyboard events.

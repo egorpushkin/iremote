@@ -31,6 +31,8 @@
     IBOutlet ShellView *shellOutput;
     
 	IBOutlet UIView *promptHolder;
+    
+    IBOutlet UIView *shellArea;
 	
     IBOutlet UITextField *command;
 	
@@ -38,9 +40,13 @@
 	
 	IBOutlet UIButton *clearButton;	
 	
-	IBOutlet UIButton *sendButton;		
+	IBOutlet UIButton *sendButton;
+    
+    CGRect keyboardRect;
     
 }
+
+- (IBAction)onBack:(id)sender;
 
 - (IBAction)onHelp;
 - (IBAction)onSend;

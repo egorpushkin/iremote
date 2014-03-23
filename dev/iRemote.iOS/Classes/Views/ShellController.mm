@@ -143,34 +143,12 @@
     [shellOutput add:response];
 }
 
-#pragma mark Animations
-
-- (void)movePromptDown {
-	[UIView beginAnimations:nil context:nil];
-	[UIView setAnimationDuration:0.3f];
-	promptHolder.frame = CGRectMake(
-		0.0, 325.0, promptHolder.frame.size.width, promptHolder.frame.size.height);
-	shellOutput.frame = CGRectMake(0.0, 0.0, 320.0, 325.0);
-	[UIView commitAnimations];
-}
-
-- (void)movePromptUp {
-	[UIView beginAnimations:nil context:nil];
-	[UIView setAnimationDuration:0.3f];
-	promptHolder.frame = CGRectMake(
-		0.0, 156.0, promptHolder.frame.size.width, promptHolder.frame.size.height);
-	shellOutput.frame = CGRectMake(0.0, 0.0, 320.0, 156.0);
-	[UIView commitAnimations];
-}
-
 #pragma mark Text field (prompt) callbacks
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 	if ( textField == command ) {
 		// Hide keyboard.
 		[command resignFirstResponder];
-		// Move prompt to tabbar.
-		[self movePromptDown];
 		// Allow to hide keyboard.
 		return YES;
 	}
@@ -179,8 +157,6 @@
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
 	if ( textField == command ) {
-		// Move prompt to the middle of the screen.
-		[self movePromptUp];
 		// Allow to show keyboard.
 		return YES;
 	}
@@ -203,9 +179,7 @@
 		[self enableControls:NO];
 		// 2. Hide keyboard.
 		[command resignFirstResponder];  		
-		// 3. Move prompt down.
-		[self movePromptDown];	
-		// 4. Print warning.
+		// 3. Print warning.
 		[self printRemotePCCompatibilityWarning];
     } else {        
         // Shell is supported. Everything goes fine.
@@ -214,18 +188,96 @@
 		[self enableControls:YES];
 		// 2. Display keyboard.
 		[command becomeFirstResponder];  
-		// 3. Move prompt up.
-		[self movePromptUp];				
-		// 4. Print introduction.
+		// 3. Print introduction.
 		[self printIntro];
     }		
 }
 
+#pragma mark View transformation
+
+- (CGSize)controlAreaSize:(UIInterfaceOrientation)interfaceOrientation {
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    if ( UIInterfaceOrientationPortrait == interfaceOrientation ) {
+        CGFloat delta = ( 0 == keyboardRect.size.height ) ? 113.0f : 64.0f;
+        return CGSizeMake(screenRect.size.width, screenRect.size.height - keyboardRect.size.height - delta);
+    } else {
+        return CGSizeMake(screenRect.size.height, screenRect.size.width - keyboardRect.size.height);
+    }
+}
+
+- (void)updateControlsToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    CGSize area = [self controlAreaSize:toInterfaceOrientation];
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:duration / 2.0f];
+    shellArea.frame = CGRectMake(
+        shellArea.frame.origin.x,
+        shellArea.frame.origin.y,
+        area.width,
+        area.height);
+    shellOutput.frame = CGRectMake(
+        shellOutput.frame.origin.x,
+        shellOutput.frame.origin.y,
+        shellOutput.frame.size.width,
+        shellArea.frame.size.height - promptHolder.frame.size.height);
+    [UIView commitAnimations];
+}
+
+- (void)updateControls {
+    [self updateControlsToInterfaceOrientation:[UIApplication sharedApplication].statusBarOrientation duration:0.5f];
+}
+
+# pragma mark Keyboard handling
+
+- (void)keyboardWillBeShown:(NSNotification*)notification {
+    keyboardRect = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    keyboardRect = [self.view convertRect:keyboardRect toView:nil];
+    
+    [self updateControls];
+}
+
+- (void)keyboardWillBeHidden:(NSNotification*)info {
+    keyboardRect = CGRectZero;
+    
+    [self updateControls];
+}
+
+- (void)registerForKeyboardNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+        selector:@selector(keyboardWillBeShown:)
+        name:UIKeyboardWillShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+        selector:@selector(keyboardWillBeHidden:)
+        name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)unregisterForKeyboardNotifications {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+        name:UIKeyboardWillShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+        name:UIKeyboardWillHideNotification object:nil];
+}
+
 #pragma mark View controller section
 
-- (void)viewDidLoad {
-	// Configure back control.
-	self.topViewController.navigationItem.leftBarButtonItem = [Controls backButtonItem:self action:@selector(onBack:)];	
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // Listen to keyboard events.
+    [self registerForKeyboardNotifications];
+    
+    // Initialize the view.
+    keyboardRect = CGRectZero;
+    
+    [self updateControls];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    // Stop listening to keyboard events.
+    [self unregisterForKeyboardNotifications];
 }
 
 #pragma mark Life cycle section
