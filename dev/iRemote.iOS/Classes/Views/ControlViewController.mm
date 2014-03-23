@@ -241,6 +241,10 @@
     [[ScreenshotProvider instance] setScreenshotHost:controlArea];
 }
 
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
 - (NSUInteger)supportedInterfaceOrientations {
     return
         UIInterfaceOrientationMaskPortrait |

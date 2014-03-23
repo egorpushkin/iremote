@@ -138,11 +138,6 @@
         && UIInterfaceOrientationPortraitUpsideDown != toInterfaceOrientation ) {
         [self rememberScreenLayout];
     }
-    
-    // Only "touchpad" screen supports landscape. 
-    if ( UIInterfaceOrientationPortrait != toInterfaceOrientation ) {
-        self.selectedIndex = 0;
-    }
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {    
@@ -155,35 +150,15 @@
     }        
 }
 
-/**
- * This method specifies, which orientations are supported for particular controller.
- * TODO: UIInterfaceOrientationPortraitUpsideDown is not supported for now due
- * to unexpected behavior on the devices.
- */
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Check whether auto rotation is enabled globally.
-    if ( !RemotePC::UIConfig::Instance().Autorotation() )
-        return
-            ( UIInterfaceOrientationPortrait == interfaceOrientation );
-    // Check whether auto rotation is enabled for the current controller.
-    // Touch Pad.
-    if ( 0 == self.selectedIndex ) 
-        return (
-            ( UIInterfaceOrientationPortrait == interfaceOrientation )
-            /* || ( UIInterfaceOrientationPortraitUpsideDown == interfaceOrientation ) */
-            || ( UIInterfaceOrientationLandscapeLeft == interfaceOrientation )
-            || ( UIInterfaceOrientationLandscapeRight == interfaceOrientation )
-        );
-    // Keyboard.
-    else if ( 3 == self.selectedIndex )
-        // This means that the screen remains unchanged, nomatter how 
-        // device orientation changes.
-        return NO;
-    // Other.
-    else
-        return
-            ( ( UIInterfaceOrientationPortrait == interfaceOrientation )
-            /* || ( UIInterfaceOrientationPortraitUpsideDown == interfaceOrientation ) */ );    
+-(NSUInteger)supportedInterfaceOrientations {
+    if ( !self.selectedViewController ) {
+        return UIInterfaceOrientationMaskPortrait;
+    }
+    return [self.selectedViewController supportedInterfaceOrientations];
+}
+
+- (BOOL)shouldAutorotate {
+    return RemotePC::UIConfig::Instance().Autorotation();
 }
 
 @end

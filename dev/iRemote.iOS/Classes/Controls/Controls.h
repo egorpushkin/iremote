@@ -36,4 +36,6 @@
 
 + (BOOL)isTablet;
 
++ (BOOL)hasFourInchDisplay;
+
 @end

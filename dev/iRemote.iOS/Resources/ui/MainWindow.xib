@@ -40,7 +40,7 @@
             <viewControllers>
                 <viewController id="365">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="372">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" id="373">
@@ -55,11 +55,13 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="EULA" id="367">
                         <barButtonItem key="leftBarButtonItem" title="Decline" id="369">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="onDecline" destination="364" id="377"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Accept" id="370">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="onAccept" destination="364" id="375"/>
                             </connections>
@@ -384,7 +386,7 @@
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <size key="freeformSize" width="320" height="480"/>
-            <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectedItem="457" id="24">
+            <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectedItem="238" id="24">
                 <rect key="frame" x="0.0" y="519" width="320" height="49"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -792,6 +794,7 @@
                             <extendedEdge key="edgesForExtendedLayout"/>
                             <navigationItem key="navigationItem" title="Hot Keys" id="314">
                                 <barButtonItem key="rightBarButtonItem" title="Help" id="164">
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <connections>
                                         <action selector="onHelp" destination="311" id="318"/>
                                     </connections>
@@ -819,7 +822,7 @@
                     <viewControllers>
                         <viewController id="235">
                             <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="239">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.078431374999999998" green="0.078431374999999998" blue="0.078431374999999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>

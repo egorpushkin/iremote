@@ -52,8 +52,8 @@
 	// TODO: Init 'show each time'.
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return YES;
+- (BOOL)shouldAutorotate {
+    return NO;
 }
 
 @end

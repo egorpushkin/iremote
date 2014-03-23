@@ -44,9 +44,10 @@
 #define DEGREES_TO_RADIANS(__ANGLE__) ((__ANGLE__) / 180.0 * M_PI)
 
 -(void)setViewToLandscape:(UIView*)viewObject {
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
     [viewObject setCenter:CGPointMake(160, 240)];
     viewObject.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(90));
-    viewObject.bounds = CGRectMake(0, 0, 480, 320);
+    viewObject.bounds = CGRectMake(- ( screenRect.size.height - 480 ) / 2, 0, 480, 320);
 }
 
 - (void)viewWillAppear:(BOOL)animated {

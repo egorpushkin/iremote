@@ -24,6 +24,7 @@
 #import "FullKeyboardController.h"
 
 #import "../Main/iRemoteAppDelegate.h"
+#import "../Controls/Controls.h"
 
 // Platform runtime detection tool. 
 #include "Connector/Platform/HostPlatform.h"
@@ -34,7 +35,9 @@
     [super viewWillAppear:animated];    
     
     // Hide status bar.
-    [UIApplication sharedApplication].statusBarHidden = YES;
+    if ( ![Controls hasFourInchDisplay] ) {
+        [UIApplication sharedApplication].statusBarHidden = YES;
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -57,6 +60,14 @@
     
     // Show status bar.
     [UIApplication sharedApplication].statusBarHidden = NO;
+}
+
+- (BOOL)shouldAutorotate {
+    return NO;
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

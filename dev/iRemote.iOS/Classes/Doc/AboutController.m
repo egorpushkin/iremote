@@ -54,11 +54,8 @@
     [contentView loadRequest:resourceRequest];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	if ( [Controls isTablet] )
-		return YES;
-	else 	
-		return ( UIInterfaceOrientationPortrait == interfaceOrientation );
+- (BOOL)shouldAutorotate {
+    return NO;
 }
 
 @end

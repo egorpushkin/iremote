@@ -44,4 +44,12 @@
     autorotation.on = RemotePC::UIConfig::Instance().Autorotation();
 }
 
+- (BOOL)shouldAutorotate {
+    return NO;
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 @end

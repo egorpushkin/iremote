@@ -326,13 +326,6 @@
     [self stopRefreshingAds];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	if ( [Controls isTablet] )
-		return YES;
-	else 	
-		return ( UIInterfaceOrientationPortrait == interfaceOrientation );
-}
-
 - (NSUInteger)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
 }

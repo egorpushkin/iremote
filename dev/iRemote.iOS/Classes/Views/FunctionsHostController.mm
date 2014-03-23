@@ -58,6 +58,16 @@
     return [view autorelease];
 }
 
+#pragma mark View controller section
+
+- (BOOL)shouldAutorotate {
+    return NO;
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 #pragma mark Life cycle tools
 
 - (id)initWithCoder:(NSCoder*)coder {
