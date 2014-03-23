@@ -47,8 +47,6 @@
 }
 
 - (void)viewDidLoad {
-	// Configure back control.
-	self.topViewController.navigationItem.leftBarButtonItem = [Controls backButtonItem:self action:@selector(onBack:)];	
 	// Present help content.	
     NSString *resource = [Controls pathForResource:@"About" ofType:@"htm"];
     NSURL *resourceUrl = [NSURL fileURLWithPath:resource];

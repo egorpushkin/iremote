@@ -79,6 +79,7 @@
     // Find tab bar related views.    
     UIView *transView = [self findView:@"UITransitionView"];
     UIView *tabbar = [self findView:@"UITabBar"];
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
     
     // Restore frame of transition view.
     transView.frame = portraitTransitionViewFrame;
@@ -87,10 +88,10 @@
     [UIView setAnimationDuration:0.4f];
     tabbar.frame = CGRectMake( 
         tabbar.frame.origin.x,
-        480.0f - tabbar.frame.size.height, 
+        screenRect.size.height - tabbar.frame.size.height,
         tabbar.frame.size.width,
         tabbar.frame.size.height);
-    [UIView commitAnimations];      
+    [UIView commitAnimations];
 }
 
 - (void)hideBars {
@@ -100,19 +101,20 @@
     
     // Find tab bar related views.
     UIView *transView = [self findView:@"UITransitionView"];
-    UIView *tabbar = [self findView:@"UITabBar"];    
+    UIView *tabbar = [self findView:@"UITabBar"];
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
     
     // Specify new size for transition view. This must be done to fit the entire
     // screen, including space allocated for tab bar. System still treats this
     // space as occupied, even when tab bar is hidden programmatically.
-    transView.frame = CGRectMake(0.0f,  0.0f, 480.0f, 320.0f);     
+    transView.frame = CGRectMake(0.0f,  0.0f, screenRect.size.height, screenRect.size.width);
     
     // Hide tab bar with animation.
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.4f];
     tabbar.frame = CGRectMake( 
         tabbar.frame.origin.x,
-        480.0f + tabbar.frame.size.height, 
+        screenRect.size.height + tabbar.frame.size.height,
         tabbar.frame.size.width,
         tabbar.frame.size.height);
     [UIView commitAnimations];
@@ -136,6 +138,11 @@
         && UIInterfaceOrientationPortraitUpsideDown != toInterfaceOrientation ) {
         [self rememberScreenLayout];
     }
+    
+    // Only "touchpad" screen supports landscape. 
+    if ( UIInterfaceOrientationPortrait != toInterfaceOrientation ) {
+        self.selectedIndex = 0;
+    }
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {    
@@ -144,7 +151,7 @@
         || UIInterfaceOrientationPortraitUpsideDown == self.interfaceOrientation ) {
         [self showBars];
     } else {
-        [self hideBars];        
+        [self hideBars];
     }        
 }
 

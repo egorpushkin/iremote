@@ -28,7 +28,7 @@
 
 @interface ControlViewController (PrivateMethods)
 
-- (void)updateControls:(NSTimeInterval)duration;
+- (void)updateControls;
 
 @end
 
@@ -89,7 +89,6 @@
         [hiddenEdit resignFirstResponder];
     else
         [hiddenEdit becomeFirstResponder];
-    [self updateControls:0.5f];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {    
@@ -121,19 +120,13 @@
 #pragma mark View transformation
 
 - (CGSize)controlAreaSize:(UIInterfaceOrientation)interfaceOrientation {
-    CGSize area = CGSizeZero;
-    if ( [self isKeyboardPresented] ) {
-        if ( UIInterfaceOrientationIsPortrait(interfaceOrientation) ) 
-            area = CGSizeMake(320.0f, 200.0f);
-        else
-            area = CGSizeMake(480.0f, 138.0f);    
-    } else {        
-        if ( UIInterfaceOrientationIsPortrait(interfaceOrientation) ) 
-            area = CGSizeMake(320.0f, 367.0f);
-        else
-            area = CGSizeMake(480.0f, 300.0f);
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    if ( UIInterfaceOrientationPortrait == interfaceOrientation ) {
+        CGFloat delta = ( 0 == keyboardRect.size.height ) ? 113.0f : 64.0f;
+        return CGSizeMake(screenRect.size.width, screenRect.size.height - keyboardRect.size.height - delta);
+    } else {
+        return CGSizeMake(screenRect.size.height, screenRect.size.width - keyboardRect.size.height);
     }
-    return area;
 }
 
 - (void)updateControlsToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
@@ -143,19 +136,52 @@
     [UIView setAnimationDuration:duration / 2.0f];
     controlArea.frame = CGRectMake( 
         controlArea.frame.origin.x,
-        controlArea.frame.origin.y, 
+        controlArea.frame.origin.y,
         area.width,
         area.height);
     // Update mouse controls within the same animation block.
     CGFloat controlAlpha = 1.0;
-    if ( [self isKeyboardPresented] ) 
+    if ( [self isKeyboardPresented] )
         controlAlpha = 0.0;
     mouseControls.alpha = controlAlpha;
     [UIView commitAnimations];
 }
 
-- (void)updateControls:(NSTimeInterval)duration {
-    [self updateControlsToInterfaceOrientation:[UIApplication sharedApplication].statusBarOrientation duration:duration];
+- (void)updateControls {
+    [self updateControlsToInterfaceOrientation:[UIApplication sharedApplication].statusBarOrientation duration:0.5f];
+}
+
+# pragma mark Keyboard handling
+
+- (void)keyboardWillBeShown:(NSNotification*)notification {
+    keyboardRect = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    keyboardRect = [self.view convertRect:keyboardRect toView:nil];
+    
+    [self updateControls];
+}
+
+- (void)keyboardWillBeHidden:(NSNotification*)info {
+    keyboardRect = CGRectZero;
+    
+    [self updateControls];
+}
+
+- (void)registerForKeyboardNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+        selector:@selector(keyboardWillBeShown:)
+        name:UIKeyboardWillShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+        selector:@selector(keyboardWillBeHidden:)
+        name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)unregisterForKeyboardNotifications {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+        name:UIKeyboardWillShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+        name:UIKeyboardWillHideNotification object:nil];
 }
 
 #pragma mark View controller section
@@ -168,8 +194,17 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
     // Add single space to edit field to distinguish backspace button.
     hiddenEdit.text = @" ";
+    
+    // Listen to keyboard events.
+    [self registerForKeyboardNotifications];
+    
+    // Initialize the view.
+    keyboardRect = CGRectZero;
+    
+    [self updateControls];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -179,14 +214,18 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [[ScreenshotProvider instance] setScreenshotHost:nil];
+    
+    // Stop listening to keyboard events.
+    [self unregisterForKeyboardNotifications];
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
     
     // Unsubscribe from screenshots while rotating.
-    [[ScreenshotProvider instance] setScreenshotHost:nil];    
-    // Adjust controls to fit new orientation.    
+    [[ScreenshotProvider instance] setScreenshotHost:nil];
+    
+    // Adjust controls to fit new orientation.
     [self updateControlsToInterfaceOrientation:toInterfaceOrientation duration:duration];
 }
 
@@ -195,6 +234,12 @@
     
     // Subscribe on screenshots when rotation is complete.
     [[ScreenshotProvider instance] setScreenshotHost:controlArea];
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+    return
+        UIInterfaceOrientationMaskPortrait |
+        UIInterfaceOrientationMaskLandscape;
 }
 
 #pragma mark Tabbar controller section

@@ -30,4 +30,6 @@
 
 + (void)showOnTopOf:(UIViewController *)controller;
 
+- (IBAction)onBack:(id)sender;
+
 @end

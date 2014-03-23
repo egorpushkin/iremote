@@ -83,6 +83,7 @@
     }
 
     // Present application window.
+    signInWindow.rootViewController = viewController;
     [signInWindow makeKeyAndVisible];    
 }
 
@@ -308,6 +309,8 @@
         [signInWindow addSubview:viewController.view];      
 		// 3. Notify controllers on disconnection.
 		[self notifyControllersOn:@selector(disconnected)];
+        // 4. Update window's root controller.
+        signInWindow.rootViewController = viewController;
     }    
     
     // Update login page error message.
@@ -331,8 +334,10 @@
     [viewController.view removeFromSuperview];
     // 2. Display content view.
     [signInWindow addSubview:mainController.view];       
-	// 4. Notify controllers on connection.
+	// 3. Notify controllers on connection.
 	[self notifyControllersOn:@selector(connected)];
+    // 4. Update window's root controller.
+    signInWindow.rootViewController = mainController;
     
     // Notify server on successful UI initialization.
     RemotePC::Holder::Instance().GetServer()->SetUIReady();

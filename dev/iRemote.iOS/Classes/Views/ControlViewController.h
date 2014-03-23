@@ -34,7 +34,9 @@
     IBOutlet UIView *mouseControls;
 
     /** Edit field to trigger standard keyboard. */
-    IBOutlet UITextField *hiddenEdit; 
+    IBOutlet UITextField *hiddenEdit;
+    
+    CGRect keyboardRect;
     
 }
 

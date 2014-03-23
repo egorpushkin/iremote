@@ -105,7 +105,7 @@ const CGFloat screenshotExpirationInterval = 3.0f;
     if ((self = [super init])) {
 		screenshot = [[Texture alloc] initWithSize:
 			CGSizeMake(RemotePC::UIConfig::screenshotWidth_, RemotePC::UIConfig::screenshotHeight_)];
-		background = [[Texture alloc] initWithFilename:@"TouchPadBack.png"];
+		background = [[Texture alloc] initWithFilename:@"Background.png"];
 		texture = background;
         // Register timer responsible for screeenshots expiration.
         screenshotTimer = [[NSTimer alloc] initWithFireDate:nil interval:screenshotTimerInterval target:self selector:@selector(checkScreenhotExpiration:) userInfo:nil repeats:YES];    
