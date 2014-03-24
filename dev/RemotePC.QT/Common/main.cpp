@@ -39,6 +39,9 @@
 #endif // Platform
 #include "InstanceLock.h"
 
+// Prevents app from sleeping.
+#include "../Hardware/Mac/AppNapSuspender.h"
+
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
@@ -52,8 +55,12 @@ int main(int argc, char *argv[])
 		return 0;
 	}
 
+#if defined(__MACH__)
+    RemotePC::AppNapSuspender appNapSuspender;
+#endif //
+
 	// Configure default style sheet.
-	app.setStyleSheet(RemotePC::UIConfig::globalStylesheet_);
+    app.setStyleSheet(RemotePC::UIConfig::globalStylesheet_);
 
 	// Prevents from terminating application when:
 	//  main window is hidden to tray and user closes any other window.
@@ -62,16 +69,16 @@ int main(int argc, char *argv[])
 	// Configure qt environment.
 #if !defined(IREMOTE_NO_QT_PLUGINS)
 	// Specify subdirectory where plugins are located.
-#	if defined(WIN32)
+ #if defined(WIN32)
 	QDir pluginsDir(QApplication::applicationDirPath());
 	pluginsDir.cd("plugins");
 	QApplication::setLibraryPaths(QStringList(pluginsDir.absolutePath()));
-#	elif defined(__MACH__)
+ #elif defined(__MACH__)
 	QDir pluginsDir(QApplication::applicationDirPath());
 	pluginsDir.cdUp();
 	pluginsDir.cd("plugins");
 	QApplication::setLibraryPaths(QStringList(pluginsDir.absolutePath()));
-#endif // Platform
+ #endif // Platform
 #endif //Plugins
 
 	// Load application settings.

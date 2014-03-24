@@ -59,12 +59,14 @@ macx {
         Hardware/Mac/DisplayControl.h \
         Hardware/Mac/KeyboardLeds.h \
         Hardware/Mac/KeyboardEvents.h \
+        Hardware/Mac/AppNapSuspender.h \
         Server/Shell/Processes.bsd.h
     OBJECTIVE_SOURCES += Hardware/Mac/HardwareControl.mm \
         Hardware/Mac/VolumeControl.mm \
         Hardware/Mac/DisplayControl.mm \
         Hardware/Mac/KeyboardLeds.cpp \
         Hardware/Mac/KeyboardEvents.mm \
+        Hardware/Mac/AppNapSuspender.mm \
         ../iRemote.Cpp/SFB/Server/ImageSource.mm
     SOURCES += Server/Shell/Processes.bsd.cpp
     ICON = Resources/Mac/RemotePC.icns
@@ -76,16 +78,13 @@ macx {
         Resources/Mac/edituserdialog.ui \
         Resources/Mac/rememberuserdialog.ui \
         Resources/Mac/usersmngdialog.ui
-    LIBS += -framework \
-        CoreAudio \
-        -framework \
-        DiscRecording \
-        -framework \
-        IOKit \
-        -framework \
-        AppKit \
-        -framework \
-        OpenGL
+    LIBS += \
+        -framework Foundation \
+        -framework CoreAudio \
+        -framework DiscRecording \
+        -framework IOKit \
+        -framework AppKit \
+        -framework OpenGL
 }
 HEADERS += \
     Common/Common.h \
@@ -379,3 +378,4 @@ OTHER_FILES += Resources/RemotePC.icns \
     Resources/Mac/Info.plist \
     ../3rdParty/libjpeg/jconfig.doc \
     ../3rdParty/libjpeg/config.h.in
+
