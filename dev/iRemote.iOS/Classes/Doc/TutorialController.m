@@ -26,9 +26,9 @@
 @implementation TutorialController
 
 + (void)showOnTopOf:(UIViewController *)controller {
-	[controller presentModalViewController:
+	[controller presentViewController:
 		[[[TutorialController alloc] initWithNibName:@"Tutorial-iPad" bundle:[NSBundle mainBundle]] autorelease]
-		animated:YES];
+		animated:YES completion:NULL];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -39,7 +39,7 @@
 }
 
 - (IBAction)onClose {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)viewDidLoad {

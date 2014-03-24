@@ -30,7 +30,7 @@
     // Mark that EULA has been accepted.
     [[LocalStorage instance] acceptEula];
     // Just close this dialog to present login form.
-    [self dismissModalViewControllerAnimated:YES];    
+    [self dismissViewControllerAnimated:YES completion:NULL];    
 }
 
 - (IBAction)onDecline {

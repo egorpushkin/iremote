@@ -44,8 +44,7 @@
 #import "../Hosts/HostsViewController.h"
 
 // AdMob support
-#import "../../3rdParty/AdMob/AdMobDelegate.h"
-#import "../../3rdParty/AdMob/AdMobView.h"
+#import "../../3rdParty/AdMob/GADBannerView.h"
 
 @interface iRemoteViewController(PrivateMethods)
 
@@ -263,23 +262,26 @@
 }
 
 - (void)showKeyboard {
-    if ( ipAddress.enabled )
-        [ipAddress becomeFirstResponder];    
-    else
-        [hiddenEdit becomeFirstResponder];    
+    if ( ipAddress.enabled ) {
+        [service becomeFirstResponder];
+        [ipAddress becomeFirstResponder];
+    } else {
+        [hiddenEdit becomeFirstResponder];
+    }
 }
 
 #pragma mark AdMob tools
 
 - (void)initAdMob {
-    adMobDelegate = [[AdMobDelegate alloc] initWithViewController:self];
-    adMobView = [[AdMobView requestAdWithDelegate:adMobDelegate] retain];
-    adMobView.frame = CGRectMake(0.0f, 0.0f, 320.0f, 48.0f);
-    [adPlace addSubview:adMobView];    
+    adMobView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
+    adMobView.frame = CGRectMake(0.0f, 0.0f, 320.0f, 50.0f);
+    adMobView.adUnitID = @"a14c46ae5d2297a";
+    adMobView.rootViewController = self;
+    [adPlace addSubview:adMobView];
 }
 
 - (void)refreshAd {
-    [adMobView requestFreshAd];
+    [adMobView loadRequest:[GADRequest request]];
 }
 
 - (void)startRefreshingAds {
@@ -316,6 +318,7 @@
     [self showKeyboard];
     [self restoreHostSettingsFromConfig];
     [self startRefreshingAds];
+    [self refreshAd];
 	[hostsController updateHosts];
 }
 
@@ -364,7 +367,6 @@
 
 - (void)dealloc {
     [adMobView release];
-    [adMobDelegate release];
     [adRefreshTimer release];
     if ( passwordAlert )
         [passwordAlert release];

@@ -31,21 +31,21 @@
 - (NSString *)formatDuration:(long)seconds {
 	long minutes = seconds / 60;
 	if ( seconds < 60 )
-		return [NSString stringWithFormat:@"%d sec", seconds];
+		return [NSString stringWithFormat:@"%ld sec", seconds];
 	else if ( minutes < 60 ) {
 		long secondsLastMinute = seconds % 60;		
-		return [NSString stringWithFormat:@"%d:%d m:s", minutes, secondsLastMinute];
+		return [NSString stringWithFormat:@"%ld:%ld m:s", minutes, secondsLastMinute];
 	} else {
 		long hours = minutes / 60;		
 		long minutesLastHour = minutes % 60;		
-		return [NSString stringWithFormat:@"%d:%d h:m", hours, minutesLastHour];
+		return [NSString stringWithFormat:@"%ld:%ld h:m", hours, minutesLastHour];
 	}
 }
 
 - (NSString *)formatSize:(long)bytes {
 	long kbytes = bytes / 1024;
 	if ( bytes < 1024 )
-		return [NSString stringWithFormat:@"%d B", bytes];
+		return [NSString stringWithFormat:@"%ld B", bytes];
 	else if ( kbytes < 1024 ) {		
 		return [NSString stringWithFormat:@"%.2f kB", bytes / 1024.0f];
 	} else {

@@ -26,7 +26,7 @@
 
 #include "AudioPlaybackQueue.h"
 
-#define PRINTERROR(LABEL) printf("%s err %4.4s %d\n", LABEL, &err, err)
+#define PRINTERROR(LABEL) printf("%s err %ld\n", LABEL, err)
 
 namespace RemotePC
 {

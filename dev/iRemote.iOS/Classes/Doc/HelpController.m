@@ -27,11 +27,11 @@
 @implementation HelpController
 
 + (void)showOnTopOf:(UIViewController *)controller {
-    [controller presentModalViewController:[[iRemoteAppDelegate delegate] helpController] animated:YES];
+    [controller presentViewController:[[iRemoteAppDelegate delegate] helpController] animated:YES completion:NULL];
 }
 
 - (IBAction)onBack:(id)sender {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {

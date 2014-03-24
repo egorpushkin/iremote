@@ -27,11 +27,11 @@
 @implementation AboutController
 
 + (void)showOnTopOf:(UIViewController *)controller {
-    [controller presentModalViewController:[[iRemoteAppDelegate delegate] aboutController] animated:YES];
+    [controller presentViewController:[[iRemoteAppDelegate delegate] aboutController] animated:YES completion:NULL];
 }
 
 - (IBAction)onBack:(id)sender {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {

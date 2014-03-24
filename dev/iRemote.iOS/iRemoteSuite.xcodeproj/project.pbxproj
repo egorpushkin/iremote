@@ -205,7 +205,6 @@
 		2F82CD410F8A6ECA00A26D5E /* About.htm in Resources */ = {isa = PBXBuildFile; fileRef = 2F82CD400F8A6EC900A26D5E /* About.htm */; };
 		2F837292120319FC0018376C /* SettingsController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2F837291120319FC0018376C /* SettingsController.mm */; };
 		2F8436040F84C68A004E55F8 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8436030F84C68A004E55F8 /* AboutController.m */; };
-		2F864E3112095EEB00400805 /* AdMobDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F864E3012095EEB00400805 /* AdMobDelegate.m */; };
 		2F864E8E1209711500400805 /* KeyboardButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F864E8D1209711500400805 /* KeyboardButton.png */; };
 		2F8BB57C140C2F8D00C0BAC7 /* FBModePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8BB57B140C2F8D00C0BAC7 /* FBModePickerController.m */; };
 		2F9609330F7A92630082B782 /* FullKeyboardHostController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2F9609320F7A92630082B782 /* FullKeyboardHostController.mm */; };
@@ -253,6 +252,13 @@
 		2FB417721329C88700F828ED /* UploaderThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4176F1329C88700F828ED /* UploaderThread.m */; };
 		2FB5E2510F8B4A44000C2EFC /* MouseCursor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FB5E2500F8B4A44000C2EFC /* MouseCursor.png */; };
 		2FB5E3930F8B70AA000C2EFC /* License.htm in Resources */ = {isa = PBXBuildFile; fileRef = 2FB5E3920F8B70AA000C2EFC /* License.htm */; };
+		2FBB9FCA18DFB997002A7690 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBB9FC818DFB997002A7690 /* libGoogleAdMobAds.a */; };
+		2FBB9FCB18DFB997002A7690 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2FBB9FC918DFB997002A7690 /* README.txt */; };
+		2FBB9FCD18DFB9D0002A7690 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBB9FCC18DFB9D0002A7690 /* AdSupport.framework */; };
+		2FBB9FCF18DFB9DB002A7690 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBB9FCE18DFB9DB002A7690 /* AVFoundation.framework */; };
+		2FBB9FD118DFB9E6002A7690 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBB9FD018DFB9E6002A7690 /* CoreTelephony.framework */; };
+		2FBB9FD518DFBA02002A7690 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBB9FD418DFBA02002A7690 /* StoreKit.framework */; };
+		2FBB9FD718DFBA0A002A7690 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBB9FD618DFBA0A002A7690 /* SystemConfiguration.framework */; };
 		2FBD3A0B0FD7FFDA0018E00B /* PasswordAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD3A0A0FD7FFDA0018E00B /* PasswordAlert.m */; };
 		2FC627C71432385B0068A7DF /* SettingsControlleriPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC627C61432385B0068A7DF /* SettingsControlleriPad.m */; };
 		2FC627CC143239420068A7DF /* Settings-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FC627CB143239420068A7DF /* Settings-iPad.xib */; };
@@ -268,7 +274,6 @@
 		2FF61CEE13D8B6CA00423B46 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF61CED13D8B6CA00423B46 /* MainWindow-iPad.xib */; };
 		2FFBC6B81206ACDF00074CE9 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FFBC6B71206ACDF00074CE9 /* Settings.png */; };
 		2FFBC7AA1206CDFA00074CE9 /* pugixml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBC7A71206CDFA00074CE9 /* pugixml.cpp */; };
-		2FFBC7BF1206CE5A00074CE9 /* libAdMob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFBC7BC1206CE5A00074CE9 /* libAdMob.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -721,8 +726,6 @@
 		2F837291120319FC0018376C /* SettingsController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SettingsController.mm; sourceTree = "<group>"; };
 		2F8436020F84C68A004E55F8 /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
 		2F8436030F84C68A004E55F8 /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutController.m; sourceTree = "<group>"; };
-		2F864E2F12095EEB00400805 /* AdMobDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobDelegate.h; sourceTree = "<group>"; };
-		2F864E3012095EEB00400805 /* AdMobDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdMobDelegate.m; sourceTree = "<group>"; };
 		2F864E8D1209711500400805 /* KeyboardButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyboardButton.png; sourceTree = "<group>"; };
 		2F8BB57A140C2F8D00C0BAC7 /* FBModePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBModePickerController.h; sourceTree = "<group>"; };
 		2F8BB57B140C2F8D00C0BAC7 /* FBModePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBModePickerController.m; sourceTree = "<group>"; };
@@ -822,6 +825,23 @@
 		2FB417701329C88700F828ED /* WebserviceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebserviceConstants.h; sourceTree = "<group>"; };
 		2FB5E2500F8B4A44000C2EFC /* MouseCursor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MouseCursor.png; sourceTree = "<group>"; };
 		2FB5E3920F8B70AA000C2EFC /* License.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = License.htm; sourceTree = "<group>"; };
+		2FBB9FBF18DFB997002A7690 /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		2FBB9FC018DFB997002A7690 /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		2FBB9FC118DFB997002A7690 /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		2FBB9FC218DFB997002A7690 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		2FBB9FC318DFB997002A7690 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		2FBB9FC418DFB997002A7690 /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		2FBB9FC518DFB997002A7690 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		2FBB9FC618DFB997002A7690 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		2FBB9FC718DFB997002A7690 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		2FBB9FC818DFB997002A7690 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		2FBB9FC918DFB997002A7690 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		2FBB9FCC18DFB9D0002A7690 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		2FBB9FCE18DFB9DB002A7690 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2FBB9FD018DFB9E6002A7690 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		2FBB9FD218DFB9F1002A7690 /* libAWDProtobufFacetimeiMessage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libAWDProtobufFacetimeiMessage.dylib; path = usr/lib/libAWDProtobufFacetimeiMessage.dylib; sourceTree = SDKROOT; };
+		2FBB9FD418DFBA02002A7690 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		2FBB9FD618DFBA0A002A7690 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2FBD3A090FD7FFDA0018E00B /* PasswordAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordAlert.h; sourceTree = "<group>"; };
 		2FBD3A0A0FD7FFDA0018E00B /* PasswordAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordAlert.m; sourceTree = "<group>"; };
 		2FC627C51432385B0068A7DF /* SettingsControlleriPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsControlleriPad.h; sourceTree = "<group>"; };
@@ -849,11 +869,6 @@
 		2FFBC7A61206CDFA00074CE9 /* pugiconfig.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugiconfig.hpp; sourceTree = "<group>"; };
 		2FFBC7A71206CDFA00074CE9 /* pugixml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pugixml.cpp; sourceTree = "<group>"; };
 		2FFBC7A81206CDFA00074CE9 /* pugixml.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugixml.hpp; sourceTree = "<group>"; };
-		2FFBC7B51206CE5A00074CE9 /* AdMobDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobDelegateProtocol.h; sourceTree = "<group>"; };
-		2FFBC7B61206CE5A00074CE9 /* AdMobInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobInterstitialAd.h; sourceTree = "<group>"; };
-		2FFBC7B71206CE5A00074CE9 /* AdMobInterstitialDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobInterstitialDelegateProtocol.h; sourceTree = "<group>"; };
-		2FFBC7B81206CE5A00074CE9 /* AdMobView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobView.h; sourceTree = "<group>"; };
-		2FFBC7BC1206CE5A00074CE9 /* libAdMob.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdMob.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -861,15 +876,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FBB9FD718DFBA0A002A7690 /* SystemConfiguration.framework in Frameworks */,
+				2FBB9FD518DFBA02002A7690 /* StoreKit.framework in Frameworks */,
+				2F69D8A511F708FA0041BEF6 /* MessageUI.framework in Frameworks */,
+				2FBB9FD118DFB9E6002A7690 /* CoreTelephony.framework in Frameworks */,
+				2FBB9FCF18DFB9DB002A7690 /* AVFoundation.framework in Frameworks */,
+				2FBB9FCD18DFB9D0002A7690 /* AdSupport.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				2FBB9FCA18DFB997002A7690 /* libGoogleAdMobAds.a in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				2F638BC50F67CFAC0040C5BD /* OpenGLES.framework in Frameworks */,
 				2F638BCA0F67CFCD0040C5BD /* QuartzCore.framework in Frameworks */,
 				2F69D8A211F708FA0041BEF6 /* AudioToolbox.framework in Frameworks */,
 				2F69D8A411F708FA0041BEF6 /* MediaPlayer.framework in Frameworks */,
-				2F69D8A511F708FA0041BEF6 /* MessageUI.framework in Frameworks */,
-				2FFBC7BF1206CE5A00074CE9 /* libAdMob.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -930,6 +950,12 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2FBB9FD618DFBA0A002A7690 /* SystemConfiguration.framework */,
+				2FBB9FD418DFBA02002A7690 /* StoreKit.framework */,
+				2FBB9FD218DFB9F1002A7690 /* libAWDProtobufFacetimeiMessage.dylib */,
+				2FBB9FD018DFB9E6002A7690 /* CoreTelephony.framework */,
+				2FBB9FCE18DFB9DB002A7690 /* AVFoundation.framework */,
+				2FBB9FCC18DFB9D0002A7690 /* AdSupport.framework */,
 				2F69D89D11F708FA0041BEF6 /* AudioToolbox.framework */,
 				2F69D89E11F708FA0041BEF6 /* CoreGraphics.framework */,
 				2F69D89F11F708FA0041BEF6 /* MediaPlayer.framework */,
@@ -2253,13 +2279,17 @@
 		2FFBC7B41206CE5A00074CE9 /* AdMob */ = {
 			isa = PBXGroup;
 			children = (
-				2F864E2F12095EEB00400805 /* AdMobDelegate.h */,
-				2F864E3012095EEB00400805 /* AdMobDelegate.m */,
-				2FFBC7B51206CE5A00074CE9 /* AdMobDelegateProtocol.h */,
-				2FFBC7B61206CE5A00074CE9 /* AdMobInterstitialAd.h */,
-				2FFBC7B71206CE5A00074CE9 /* AdMobInterstitialDelegateProtocol.h */,
-				2FFBC7B81206CE5A00074CE9 /* AdMobView.h */,
-				2FFBC7BC1206CE5A00074CE9 /* libAdMob.a */,
+				2FBB9FBF18DFB997002A7690 /* GADAdMobExtras.h */,
+				2FBB9FC018DFB997002A7690 /* GADAdNetworkExtras.h */,
+				2FBB9FC118DFB997002A7690 /* GADAdSize.h */,
+				2FBB9FC218DFB997002A7690 /* GADBannerView.h */,
+				2FBB9FC318DFB997002A7690 /* GADBannerViewDelegate.h */,
+				2FBB9FC418DFB997002A7690 /* GADInterstitial.h */,
+				2FBB9FC518DFB997002A7690 /* GADInterstitialDelegate.h */,
+				2FBB9FC618DFB997002A7690 /* GADRequest.h */,
+				2FBB9FC718DFB997002A7690 /* GADRequestError.h */,
+				2FBB9FC818DFB997002A7690 /* libGoogleAdMobAds.a */,
+				2FBB9FC918DFB997002A7690 /* README.txt */,
 			);
 			name = AdMob;
 			path = 3rdParty/AdMob;
@@ -2291,7 +2321,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0510;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = 6HR3KJS4M5;
@@ -2381,6 +2411,7 @@
 				2F2D6EBF120ABC9400776AB7 /* Help009.jpg in Resources */,
 				2F2D6EC0120ABC9400776AB7 /* Help010.jpg in Resources */,
 				2F2D6F2C120C18A800776AB7 /* Help012.jpg in Resources */,
+				2FBB9FCB18DFB997002A7690 /* README.txt in Resources */,
 				2F2D6F2D120C18A800776AB7 /* Help011.jpg in Resources */,
 				2F74948B12103B410096DF5D /* MagGlass.png in Resources */,
 				2FF61CEE13D8B6CA00423B46 /* MainWindow-iPad.xib in Resources */,
@@ -2490,7 +2521,6 @@
 				2F837292120319FC0018376C /* SettingsController.mm in Sources */,
 				2F7EEBEF181F700900C961A8 /* Constructors.cpp in Sources */,
 				2FFBC7AA1206CDFA00074CE9 /* pugixml.cpp in Sources */,
-				2F864E3112095EEB00400805 /* AdMobDelegate.m in Sources */,
 				2FF125CA12269D8E0043B821 /* AudioStream.cpp in Sources */,
 				2FF1261A1226A7F40043B821 /* AudioPlaybackQueue.cpp in Sources */,
 				2F00A0D51240E02C00209309 /* iRemoteAppDelegate.mm in Sources */,
@@ -2600,7 +2630,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -2613,6 +2642,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/3rdParty/AdMob\"",
+					"$(PROJECT_DIR)/3rdParty/AdMob",
 				);
 				PRODUCT_NAME = iRemoteSuite;
 				PROVISIONING_PROFILE = "";
@@ -2625,7 +2655,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -2636,6 +2665,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/3rdParty/AdMob\"",
+					"$(PROJECT_DIR)/3rdParty/AdMob",
 				);
 				PRODUCT_NAME = iRemoteSuite;
 				PROVISIONING_PROFILE = "";
@@ -2648,7 +2678,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Egor Pushkin (2BP7L8JR67)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -2666,6 +2695,7 @@
 				);
 				INFOPLIST_PREPROCESSOR_DEFINITIONS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
 				PROVISIONING_PROFILE = "53410470-62F4-4E59-8892-8BFE07615D36";
 				SDKROOT = iphoneos;
 				USE_HEADERMAP = NO;
@@ -2676,7 +2706,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = Resources/Dist.plist;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -2688,6 +2717,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/3rdParty/AdMob\"",
+					"$(PROJECT_DIR)/3rdParty/AdMob",
 				);
 				PRODUCT_NAME = iRemoteSuite;
 				PROVISIONING_PROFILE = "";
@@ -2700,7 +2730,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Egor Pushkin (2BP7L8JR67)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -2718,6 +2747,7 @@
 				);
 				INFOPLIST_PREPROCESSOR_DEFINITIONS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
 				PROVISIONING_PROFILE = "53410470-62F4-4E59-8892-8BFE07615D36";
 				SDKROOT = iphoneos;
 				USE_HEADERMAP = NO;
@@ -2728,7 +2758,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = Resources/Dist.plist;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -2740,6 +2769,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/3rdParty/AdMob\"",
+					"$(PROJECT_DIR)/3rdParty/AdMob",
 				);
 				PRODUCT_NAME = iRemoteSuite;
 				PROVISIONING_PROFILE = "";
@@ -2752,7 +2782,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Egor Pushkin (2BP7L8JR67)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -2771,6 +2800,7 @@
 				INFOPLIST_PREPROCESSOR_DEFINITIONS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				PROVISIONING_PROFILE = "53410470-62F4-4E59-8892-8BFE07615D36";
 				SDKROOT = iphoneos;
 				USE_HEADERMAP = NO;
@@ -2781,7 +2811,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Egor Pushkin (2BP7L8JR67)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -2799,6 +2828,7 @@
 				);
 				INFOPLIST_PREPROCESSOR_DEFINITIONS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
 				PROVISIONING_PROFILE = "53410470-62F4-4E59-8892-8BFE07615D36";
 				SDKROOT = iphoneos;
 				USE_HEADERMAP = NO;

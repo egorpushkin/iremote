@@ -16,7 +16,7 @@
 #ifdef HAVE_EXPAT_CONFIG_H
 #include <expat_config.h>
 #endif
-#endif /* ndef COMPILED_FROM_DSP */
+#endif / ndef COMPILED_FROM_DSP */
 
 #include "macconfig.h"
 

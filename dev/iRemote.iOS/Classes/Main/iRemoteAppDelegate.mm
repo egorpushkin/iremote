@@ -79,7 +79,7 @@
     // Check whether EULA has been accepted.
     if ( ![[LocalStorage instance] eulaAccepted] ) {
         // Display license dialog on top of login form.
-        [viewController presentModalViewController:licenseController animated:NO];
+        [viewController presentViewController:licenseController animated:NO completion:NULL];
     }
 
     // Present application window.
@@ -265,7 +265,7 @@
     // if ( controller.modalViewController ) {
 	@try {
 		// Dismiss modal view.
-		[controller.modalViewController dismissModalViewControllerAnimated:NO];
+		[controller.presentedViewController dismissViewControllerAnimated:NO completion:NULL];
 	} @catch (NSException * e) {
 	}
 }

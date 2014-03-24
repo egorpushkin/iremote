@@ -22,11 +22,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class AdMobView;
-@class AdMobDelegate;
 @class PasswordAlert;
 @class TiledButton;
 @class HostsViewController;
+@class GADBannerView;
 
 @interface iRemoteViewController : UINavigationController< UINavigationControllerDelegate, UIAlertViewDelegate, UITextFieldDelegate > {
 
@@ -43,8 +42,7 @@
     IBOutlet TiledButton *hostsButton;    
 
     IBOutlet UIView *adPlace;    
-    AdMobView *adMobView;
-    AdMobDelegate *adMobDelegate;
+    GADBannerView *adMobView;
     NSTimer *adRefreshTimer;
     
     NSTimer *connectingTimer;

@@ -38,7 +38,7 @@ const NSInteger maxShellLines = 128;
 	UILabel *messageLabel = [[UILabel alloc] initWithFrame:rect];
 	messageLabel.font = messageFont;
 	messageLabel.text = message;
-	messageLabel.textAlignment = UITextAlignmentLeft;
+	messageLabel.textAlignment = NSTextAlignmentLeft;
 	messageLabel.textColor = [UIColor greenColor];
 	messageLabel.backgroundColor = [UIColor clearColor];
     // Add label to content view.

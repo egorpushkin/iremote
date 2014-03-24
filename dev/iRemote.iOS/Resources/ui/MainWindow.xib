@@ -185,12 +185,12 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="595">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.080000000000000002" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="Srp-Ag-bjy">
-                                <rect key="frame" x="0.0" y="48" width="334" height="151"/>
+                                <rect key="frame" x="0.0" y="50" width="334" height="151"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFit" image="BackArt.png" id="427">
@@ -255,7 +255,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="iRemote x.x.x" lineBreakMode="tailTruncation" minimumFontSize="12" id="449">
-                                        <rect key="frame" x="20" y="128" width="128" height="21"/>
+                                        <rect key="frame" x="20" y="126" width="128" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
                                         <color key="textColor" white="0.75" alpha="1" colorSpace="calibratedWhite"/>
