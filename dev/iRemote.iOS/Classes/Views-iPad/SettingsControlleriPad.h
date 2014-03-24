@@ -35,6 +35,7 @@
 
 }
 
+- (id)initController;
 - (IBAction)controlAreaAbsoluteCursorChanged:(id)sender;
 - (IBAction)previewPanelZoomChanged:(id)sender;
 

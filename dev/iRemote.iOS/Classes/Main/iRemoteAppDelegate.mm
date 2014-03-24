@@ -35,6 +35,11 @@
 #import "../State/LocalStorage.h"
 #import "../State/UISettings.h"
 
+// 3rd-party. Localytics.
+#import "../../3rdParty/Localytics/LocalyticsSession.h"
+// 3rd-party. Crashlytics.
+#import <Crashlytics/Crashlytics.h>
+
 @interface iRemoteAppDelegate (PrivateMethods)
 
 - (void)dismissModalFoyrController:(UIViewController *)controller;
@@ -56,7 +61,10 @@
 
 @implementation iRemoteAppDelegate
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {    
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
+    // Initialize crash reporting.
+    [Crashlytics startWithAPIKey:@"1c51e83d4d0dc7bea62a746e20c2ad2c96734a17"];
+    
     // Load application state and configuration.
     [[LocalStorage instance] loadData];    
 	RemotePC::Config::Instance().Load();
@@ -92,7 +100,11 @@
     [[LocalStorage instance] saveData];    
 	RemotePC::Config::Instance().Save();
     RemotePC::UIConfig::Instance().Save();
-	[[UISettings instance] saveSettings];	
+	[[UISettings instance] saveSettings];
+    
+    // Localytics.
+    [[LocalyticsSession shared] close];
+    [[LocalyticsSession shared] upload];
 }
 
 /**
@@ -120,6 +132,10 @@
     RemotePC::Holder::Instance().Stop();
     // Switch to login page.
     [self onQiut];
+    
+    // Localytics.
+    [[LocalyticsSession shared] close];
+    [[LocalyticsSession shared] upload];
 }
 
 /**
@@ -141,7 +157,24 @@
     if ( RemotePC::Holder::Instance().HasCookie() ) {
         // Restore connection if any.
         [viewController onConnect];       
-    } 
+    }
+    
+    // Localytics setup.
+    [[LocalyticsSession shared] LocalyticsSession:@"fcf4cef7273eabe14aaa97e-2086a592-4b8a-11e0-c50b-007af5bd88a0"];
+    [[LocalyticsSession shared] resume];
+    [[LocalyticsSession shared] upload];
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    // Localytics.
+    [[LocalyticsSession shared] resume];
+    [[LocalyticsSession shared] upload];
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    // Localytics.
+    [[LocalyticsSession shared] close];
+    [[LocalyticsSession shared] upload];
 }
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
@@ -168,7 +201,7 @@
 
 - (void)onConnected {
     // Unlock cookie.
-    RemotePC::Holder::Instance().LockCookie(false);   
+    RemotePC::Holder::Instance().LockCookie(false);
     // Destroy wakeup time if any.
     if ( wakeupTime ) {
         [wakeupTime release];
@@ -183,8 +216,9 @@
     [viewController onApproved];
     // Switch to content page.
     [self switchToContentPage];
-    // Update screen layout.
-    // [self layout];
+    
+    // Log event.
+    [[LocalyticsSession shared] tagEvent:@"connected"];
 }
 
 - (void)onPasswordRequested:(NSNumber*)wrongPass {

@@ -248,8 +248,6 @@
 		2FA131C70FDBEE0500676300 /* hl_sha512wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FA131BB0FDBEE0500676300 /* hl_sha512wrapper.cpp */; };
 		2FA133660FDBEEEC00676300 /* Resource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA133650FDBEEEC00676300 /* Resource.m */; };
 		2FAF72541416B61B00C6FB07 /* WindowsPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF72531416B61B00C6FB07 /* WindowsPanel.m */; };
-		2FB417711329C88700F828ED /* LocalyticsSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4176D1329C88700F828ED /* LocalyticsSession.m */; };
-		2FB417721329C88700F828ED /* UploaderThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4176F1329C88700F828ED /* UploaderThread.m */; };
 		2FB5E2510F8B4A44000C2EFC /* MouseCursor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FB5E2500F8B4A44000C2EFC /* MouseCursor.png */; };
 		2FB5E3930F8B70AA000C2EFC /* License.htm in Resources */ = {isa = PBXBuildFile; fileRef = 2FB5E3920F8B70AA000C2EFC /* License.htm */; };
 		2FBB9FCA18DFB997002A7690 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBB9FC818DFB997002A7690 /* libGoogleAdMobAds.a */; };
@@ -259,6 +257,12 @@
 		2FBB9FD118DFB9E6002A7690 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBB9FD018DFB9E6002A7690 /* CoreTelephony.framework */; };
 		2FBB9FD518DFBA02002A7690 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBB9FD418DFBA02002A7690 /* StoreKit.framework */; };
 		2FBB9FD718DFBA0A002A7690 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBB9FD618DFBA0A002A7690 /* SystemConfiguration.framework */; };
+		2FBB9FDD18DFC7F2002A7690 /* iOSa_2.23.0.version in Resources */ = {isa = PBXBuildFile; fileRef = 2FBB9FD818DFC7F2002A7690 /* iOSa_2.23.0.version */; };
+		2FBB9FDF18DFC7F2002A7690 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2FBB9FDA18DFC7F2002A7690 /* LICENSE */; };
+		2FBB9FE118DFC854002A7690 /* libLocalyticsAMP_x64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBB9FE018DFC854002A7690 /* libLocalyticsAMP_x64.a */; };
+		2FBB9FE518DFC889002A7690 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBB9FE418DFC889002A7690 /* libsqlite3.dylib */; };
+		2FBB9FE718DFC8B8002A7690 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBB9FE618DFC8B8002A7690 /* libz.dylib */; };
+		2FBB9FEC18DFD3D9002A7690 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBB9FEB18DFD3D9002A7690 /* Crashlytics.framework */; };
 		2FBD3A0B0FD7FFDA0018E00B /* PasswordAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD3A0A0FD7FFDA0018E00B /* PasswordAlert.m */; };
 		2FC627C71432385B0068A7DF /* SettingsControlleriPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC627C61432385B0068A7DF /* SettingsControlleriPad.m */; };
 		2FC627CC143239420068A7DF /* Settings-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FC627CB143239420068A7DF /* Settings-iPad.xib */; };
@@ -818,11 +822,6 @@
 		2FA133650FDBEEEC00676300 /* Resource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Resource.m; sourceTree = "<group>"; };
 		2FAF72521416B61B00C6FB07 /* WindowsPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowsPanel.h; sourceTree = "<group>"; };
 		2FAF72531416B61B00C6FB07 /* WindowsPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowsPanel.m; sourceTree = "<group>"; };
-		2FB4176C1329C88700F828ED /* LocalyticsSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsSession.h; sourceTree = "<group>"; };
-		2FB4176D1329C88700F828ED /* LocalyticsSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsSession.m; sourceTree = "<group>"; };
-		2FB4176E1329C88700F828ED /* UploaderThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploaderThread.h; sourceTree = "<group>"; };
-		2FB4176F1329C88700F828ED /* UploaderThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploaderThread.m; sourceTree = "<group>"; };
-		2FB417701329C88700F828ED /* WebserviceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebserviceConstants.h; sourceTree = "<group>"; };
 		2FB5E2500F8B4A44000C2EFC /* MouseCursor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MouseCursor.png; sourceTree = "<group>"; };
 		2FB5E3920F8B70AA000C2EFC /* License.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = License.htm; sourceTree = "<group>"; };
 		2FBB9FBF18DFB997002A7690 /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
@@ -842,6 +841,14 @@
 		2FBB9FD218DFB9F1002A7690 /* libAWDProtobufFacetimeiMessage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libAWDProtobufFacetimeiMessage.dylib; path = usr/lib/libAWDProtobufFacetimeiMessage.dylib; sourceTree = SDKROOT; };
 		2FBB9FD418DFBA02002A7690 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2FBB9FD618DFBA0A002A7690 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2FBB9FD818DFC7F2002A7690 /* iOSa_2.23.0.version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iOSa_2.23.0.version; sourceTree = "<group>"; };
+		2FBB9FDA18DFC7F2002A7690 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		2FBB9FDB18DFC7F2002A7690 /* LocalyticsAmpSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsAmpSession.h; sourceTree = "<group>"; };
+		2FBB9FDC18DFC7F2002A7690 /* LocalyticsSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsSession.h; sourceTree = "<group>"; };
+		2FBB9FE018DFC854002A7690 /* libLocalyticsAMP_x64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLocalyticsAMP_x64.a; sourceTree = "<group>"; };
+		2FBB9FE418DFC889002A7690 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		2FBB9FE618DFC8B8002A7690 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		2FBB9FEB18DFD3D9002A7690 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = 3rdParty/Crashlytics.framework; sourceTree = "<group>"; };
 		2FBD3A090FD7FFDA0018E00B /* PasswordAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordAlert.h; sourceTree = "<group>"; };
 		2FBD3A0A0FD7FFDA0018E00B /* PasswordAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordAlert.m; sourceTree = "<group>"; };
 		2FC627C51432385B0068A7DF /* SettingsControlleriPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsControlleriPad.h; sourceTree = "<group>"; };
@@ -876,6 +883,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FBB9FE718DFC8B8002A7690 /* libz.dylib in Frameworks */,
+				2FBB9FE518DFC889002A7690 /* libsqlite3.dylib in Frameworks */,
 				2FBB9FD718DFBA0A002A7690 /* SystemConfiguration.framework in Frameworks */,
 				2FBB9FD518DFBA02002A7690 /* StoreKit.framework in Frameworks */,
 				2F69D8A511F708FA0041BEF6 /* MessageUI.framework in Frameworks */,
@@ -883,6 +892,8 @@
 				2FBB9FCF18DFB9DB002A7690 /* AVFoundation.framework in Frameworks */,
 				2FBB9FCD18DFB9D0002A7690 /* AdSupport.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				2FBB9FE118DFC854002A7690 /* libLocalyticsAMP_x64.a in Frameworks */,
+				2FBB9FEC18DFD3D9002A7690 /* Crashlytics.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2FBB9FCA18DFB997002A7690 /* libGoogleAdMobAds.a in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -950,6 +961,9 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2FBB9FEB18DFD3D9002A7690 /* Crashlytics.framework */,
+				2FBB9FE618DFC8B8002A7690 /* libz.dylib */,
+				2FBB9FE418DFC889002A7690 /* libsqlite3.dylib */,
 				2FBB9FD618DFBA0A002A7690 /* SystemConfiguration.framework */,
 				2FBB9FD418DFBA02002A7690 /* StoreKit.framework */,
 				2FBB9FD218DFB9F1002A7690 /* libAWDProtobufFacetimeiMessage.dylib */,
@@ -2147,11 +2161,11 @@
 		2FB4176B1329C88700F828ED /* Localytics */ = {
 			isa = PBXGroup;
 			children = (
-				2FB4176C1329C88700F828ED /* LocalyticsSession.h */,
-				2FB4176D1329C88700F828ED /* LocalyticsSession.m */,
-				2FB4176E1329C88700F828ED /* UploaderThread.h */,
-				2FB4176F1329C88700F828ED /* UploaderThread.m */,
-				2FB417701329C88700F828ED /* WebserviceConstants.h */,
+				2FBB9FE018DFC854002A7690 /* libLocalyticsAMP_x64.a */,
+				2FBB9FD818DFC7F2002A7690 /* iOSa_2.23.0.version */,
+				2FBB9FDA18DFC7F2002A7690 /* LICENSE */,
+				2FBB9FDB18DFC7F2002A7690 /* LocalyticsAmpSession.h */,
+				2FBB9FDC18DFC7F2002A7690 /* LocalyticsSession.h */,
 			);
 			name = Localytics;
 			path = 3rdParty/Localytics;
@@ -2365,6 +2379,7 @@
 				2F5F1A090F7D193100F45464 /* ButtonPressedCenter.png in Resources */,
 				2F5F1A0A0F7D193100F45464 /* ButtonPressedLeft.png in Resources */,
 				2F5F1A0B0F7D193100F45464 /* ButtonPressedRight.png in Resources */,
+				2FBB9FDD18DFC7F2002A7690 /* iOSa_2.23.0.version in Resources */,
 				2F5F1A900F7D272700F45464 /* TouchPad.png in Resources */,
 				2F56D02318389CC7008967EA /* Default-568h@2x.png in Resources */,
 				2F5F1A970F7D2C4600F45464 /* Keyboard.png in Resources */,
@@ -2398,6 +2413,7 @@
 				2FCEBA8110034EC50067495C /* FullKeyboardMac.xib in Resources */,
 				2FCEBB4C10037D0A0067495C /* FunctionsWin.xib in Resources */,
 				2FCEBC40100381D60067495C /* FunctionsMac.xib in Resources */,
+				2FBB9FDF18DFC7F2002A7690 /* LICENSE in Resources */,
 				2F6B2B2411E71A74005A347A /* iTunesArtwork in Resources */,
 				2FFBC6B81206ACDF00074CE9 /* Settings.png in Resources */,
 				2F864E8E1209711500400805 /* KeyboardButton.png in Resources */,
@@ -2524,8 +2540,6 @@
 				2FF125CA12269D8E0043B821 /* AudioStream.cpp in Sources */,
 				2FF1261A1226A7F40043B821 /* AudioPlaybackQueue.cpp in Sources */,
 				2F00A0D51240E02C00209309 /* iRemoteAppDelegate.mm in Sources */,
-				2FB417711329C88700F828ED /* LocalyticsSession.m in Sources */,
-				2FB417721329C88700F828ED /* UploaderThread.m in Sources */,
 				2F9D398813D7891C003E3156 /* Config.cpp in Sources */,
 				2F9D398913D7891C003E3156 /* Device.mm in Sources */,
 				2F9D398A13D7891C003E3156 /* Holder.cpp in Sources */,
@@ -2633,6 +2647,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/3rdParty",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2641,8 +2660,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/3rdParty/AdMob\"",
 					"$(PROJECT_DIR)/3rdParty/AdMob",
+					"$(PROJECT_DIR)/3rdParty/Localytics",
 				);
 				PRODUCT_NAME = iRemoteSuite;
 				PROVISIONING_PROFILE = "";
@@ -2658,14 +2677,19 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/3rdParty",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Classes/Main/iRemote_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/3rdParty/AdMob\"",
 					"$(PROJECT_DIR)/3rdParty/AdMob",
+					"$(PROJECT_DIR)/3rdParty/Localytics",
 				);
 				PRODUCT_NAME = iRemoteSuite;
 				PROVISIONING_PROFILE = "";
@@ -2710,14 +2734,19 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/3rdParty",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Classes/Main/iRemote_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/3rdParty/AdMob\"",
 					"$(PROJECT_DIR)/3rdParty/AdMob",
+					"$(PROJECT_DIR)/3rdParty/Localytics",
 				);
 				PRODUCT_NAME = iRemoteSuite;
 				PROVISIONING_PROFILE = "";
@@ -2762,14 +2791,19 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/3rdParty",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Classes/Main/iRemote_Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/3rdParty/AdMob\"",
 					"$(PROJECT_DIR)/3rdParty/AdMob",
+					"$(PROJECT_DIR)/3rdParty/Localytics",
 				);
 				PRODUCT_NAME = iRemoteSuite;
 				PROVISIONING_PROFILE = "";
