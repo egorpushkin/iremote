@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <deployment version="768" defaultVersion="1296" identifier="iOS"/>
+        <deployment version="768" defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
@@ -36,10 +36,6 @@
                         <rect key="frame" x="64" y="30" width="14" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DisclosureIndicator.png" id="27">
-                        <rect key="frame" x="299" y="29" width="8" height="13"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
                     <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="37">
                         <rect key="frame" x="20" y="63" width="280" height="1"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -59,7 +55,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="191"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="16" id="kJi-bJ-5Uz">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="191"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="NoHostsBack.png" id="24">
@@ -116,7 +112,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="28" id="s6a-CZ-3zl">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Select host to connect immediately." textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="14" id="35">
@@ -144,7 +140,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="DisclosureIndicator.png" width="8" height="13"/>
         <image name="Host.png" width="64" height="72"/>
         <image name="NoHostsBack.png" width="100" height="100"/>
     </resources>

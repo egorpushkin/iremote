@@ -35,8 +35,7 @@
 
 - (id)initWithCoder:(NSCoder*)coder {    
     if ((self = [super initWithCoder:coder])) {
-        // Configure the cell.
-        // self.selectionStyle = UITableViewCellSelectionStyleGray;
+        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     return self;
 }

@@ -61,7 +61,8 @@
 	// Update hosts table.
 	[self updateHosts];    
     // Configure back control
-	self.navigationItem.leftBarButtonItem = [Controls backButtonItem:self action:@selector(onBack:)];
+	self.navigationItem.leftBarButtonItem = [Controls backButtonItem:self action:@selector(onBack:)];    
+    self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
 }
 
 - (void)onBack:(id)sender {

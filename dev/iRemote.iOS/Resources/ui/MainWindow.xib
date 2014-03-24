@@ -102,7 +102,7 @@
                     </webView>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="About iRemote" id="382">
-                        <barButtonItem key="leftBarButtonItem" title=" Back" id="WgZ-mF-bzZ">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="WgZ-mF-bzZ">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="onBack:" destination="379" id="pIM-pc-aWQ"/>
@@ -143,7 +143,7 @@
                     </webView>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="iRemote Help" id="415">
-                        <barButtonItem key="leftBarButtonItem" title=" Back" id="u4Z-t8-JRK">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="u4Z-t8-JRK">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="onBack:" destination="412" id="gP9-8B-ORz"/>
@@ -343,13 +343,13 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="iRemote Suite" id="250">
-                        <barButtonItem key="leftBarButtonItem" title=" About" id="305">
+                        <barButtonItem key="leftBarButtonItem" title="About" id="305">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="onAbout" destination="247" id="406"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Help " id="255">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="255">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="onHelp" destination="247" id="257"/>
@@ -386,7 +386,7 @@
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <size key="freeformSize" width="320" height="480"/>
-            <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectedItem="238" id="24">
+            <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectedItem="287" id="24">
                 <rect key="frame" x="0.0" y="519" width="320" height="49"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

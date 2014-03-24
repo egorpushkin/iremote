@@ -29,14 +29,9 @@
 @implementation Controls
 
 + (UIBarButtonItem *)backButtonItem:(id)target action:(SEL)action {
-	// Create and configure button.
-	UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-	backButton.frame = CGRectMake(0, 0, 49, 30);
-    [backButton setImage:[[Content instance] imageNamed:@"BackNormal"] forState:UIControlStateNormal];
-    [backButton setImage:[[Content instance] imageNamed:@"BackPressed"] forState:UIControlStateHighlighted];    
-	[backButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-	// Wrap button into bar button item.	
-	return [[[UIBarButtonItem alloc] initWithCustomView:backButton] autorelease];
+    UIBarButtonItem* item = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:target action:action];
+    item.tintColor = [UIColor whiteColor];
+	return [item autorelease];
 }
 
 + (void)showOldRemotePCAlert {
