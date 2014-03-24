@@ -26,6 +26,8 @@
 #include "Host.h"
 #include "HostsManager.h"
 
+#include "../Config/Config.h"
+
 namespace RemotePC
 {
 
@@ -86,6 +88,9 @@ namespace RemotePC
 		
 		// Do add user.
 		hosts_.push_back(host);
+        
+        // Save config.
+        Config::Instance().Save();
 	}
 
 	void HostsManager::RemoveInterface(size_t hostIndex, size_t interfaceIndex)
@@ -109,6 +114,9 @@ namespace RemotePC
 			// Remove host interface with specified index.
 			host.RemoveInterface(interfaceIndex);
 		}
+        
+        // Save config.
+        Config::Instance().Save();
 	}
 	
 	void HostsManager::SaveHost(const Host& srcHost) 
@@ -172,7 +180,10 @@ namespace RemotePC
 		{
 			// Host was not found. Add new host here. 
 			AddHost(srcHost);
-		}		
+		}
+        
+        // Save config.
+        Config::Instance().Save();
 	}
 	
 }

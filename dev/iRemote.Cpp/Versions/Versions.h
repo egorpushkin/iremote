@@ -33,7 +33,7 @@ namespace RemotePC
 		iREMOTE_VER_MAJOR = 1,
 		iREMOTE_VER_MINOR = 3,
         iREMOTE_VER_FIX = 0,
-		iREMOTE_VER_REV = 414,		
+		iREMOTE_VER_REV = 500,
 
 		iREMOTE_LICENSE = 2,  		
 		
