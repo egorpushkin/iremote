@@ -91,15 +91,24 @@
             </navigationBar>
             <viewControllers>
                 <viewController id="380">
-                    <webView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" id="423">
+                    <view key="view" contentMode="scaleToFill" id="wf3-9Q-9Lp">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <dataDetectorType key="dataDetectorTypes"/>
-                        <connections>
-                            <outlet property="delegate" destination="379" id="425"/>
-                        </connections>
-                    </webView>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="Dxc-1F-Tyk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.080000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <webView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" id="9w9-4p-qGr">
+                                <rect key="frame" x="0.0" y="50" width="320" height="366"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.080000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="About iRemote" id="382">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="WgZ-mF-bzZ">
@@ -117,7 +126,8 @@
                 </viewController>
             </viewControllers>
             <connections>
-                <outlet property="contentView" destination="423" id="424"/>
+                <outlet property="adView" destination="Dxc-1F-Tyk" id="9wX-ZT-gr7"/>
+                <outlet property="contentView" destination="9w9-4p-qGr" id="FyR-nb-6tY"/>
             </connections>
         </navigationController>
         <navigationController id="412" customClass="HelpController">
@@ -132,15 +142,24 @@
             </navigationBar>
             <viewControllers>
                 <viewController id="413">
-                    <webView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" id="419">
+                    <view key="view" contentMode="scaleToFill" id="cdG-6M-gzn">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <dataDetectorType key="dataDetectorTypes"/>
-                        <connections>
-                            <outlet property="delegate" destination="412" id="426"/>
-                        </connections>
-                    </webView>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="Oxu-I0-kLk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.080000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <webView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" id="Sv0-Mt-XS2">
+                                <rect key="frame" x="0.0" y="50" width="320" height="366"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.080000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="iRemote Help" id="415">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="u4Z-t8-JRK">
@@ -158,7 +177,8 @@
                 </viewController>
             </viewControllers>
             <connections>
-                <outlet property="contentView" destination="419" id="421"/>
+                <outlet property="adView" destination="Oxu-I0-kLk" id="MiC-9w-IZm"/>
+                <outlet property="contentView" destination="Sv0-Mt-XS2" id="UUQ-uo-gWe"/>
             </connections>
         </navigationController>
         <navigationController id="247" customClass="iRemoteViewController">

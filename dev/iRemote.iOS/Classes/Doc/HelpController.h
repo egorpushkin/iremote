@@ -22,9 +22,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class AdMobHelper;
+
 @interface HelpController : UINavigationController< UIWebViewDelegate > {
 
-    IBOutlet UIWebView *contentView;    
+    IBOutlet UIView *adView;
+    
+    IBOutlet UIWebView *contentView;
+    
+    AdMobHelper *adMobHelper;
 
 }
 

@@ -31,6 +31,7 @@
 #import "../Controls/Controls.h"
 #import "../Controls/TiledButton.h"
 #import "../Controls/PasswordAlert.h"
+#import "../Controls/AdMobHelper.h"
 
 // State tool
 #import "../State/LocalStorage.h"
@@ -42,9 +43,6 @@
 
 // Hosts controller
 #import "../Hosts/HostsViewController.h"
-
-// AdMob support
-#import "../../3rdParty/AdMob/GADBannerView.h"
 
 @interface iRemoteViewController(PrivateMethods)
 
@@ -270,43 +268,17 @@
     }
 }
 
-#pragma mark AdMob tools
-
-- (void)initAdMob {
-    adMobView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
-    adMobView.frame = CGRectMake(0.0f, 0.0f, 320.0f, 50.0f);
-    adMobView.adUnitID = @"a14c46ae5d2297a";
-    adMobView.rootViewController = self;
-    [adPlace addSubview:adMobView];
-}
-
-- (void)refreshAd {
-    [adMobView loadRequest:[GADRequest request]];
-}
-
-- (void)startRefreshingAds {
-    if ( adRefreshTimer )
-        [adRefreshTimer release];
-    adRefreshTimer = [[NSTimer alloc] initWithFireDate:
-        [NSDate dateWithTimeIntervalSinceNow:(RemotePC::UIConfig::adRefreshInterval_)] 
-        interval:RemotePC::UIConfig::adRefreshInterval_ 
-        target:self selector:@selector(refreshAd) userInfo:nil repeats:YES];    
-    [[NSRunLoop mainRunLoop] addTimer:adRefreshTimer forMode:NSDefaultRunLoopMode];        
-}
-
-- (void)stopRefreshingAds {
-    [adRefreshTimer invalidate]; 
-    [adRefreshTimer release]; 
-    adRefreshTimer = nil;
-}
-
 #pragma mark View controller methods
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-    [self initAdMob];
+    
+    // Init ad banner.
+    adMobHelper = [[AdMobHelper alloc] initWithController:self andView:adPlace];
+    
 	// Tablet specific initialization.
 	hostsController.tableView = hostsTable;
+    
 	// Format version.
 	version.text = [NSString stringWithFormat:@"iRemote %d.%d%@", 
 		RemotePC::iREMOTE_VER_MAJOR, RemotePC::iREMOTE_VER_MINOR, 
@@ -317,8 +289,7 @@
     [super viewWillAppear:animated];    
     [self showKeyboard];
     [self restoreHostSettingsFromConfig];
-    [self startRefreshingAds];
-    [self refreshAd];
+    [adMobHelper startRefreshingAds];
 	[hostsController updateHosts];
 }
 
@@ -326,7 +297,7 @@
     [super viewWillDisappear:animated];
     [connectingTimer invalidate];        
     [self saveHostSettingsToConfig]; 
-    [self stopRefreshingAds];
+    [adMobHelper stopRefreshingAds];
 }
 
 - (NSUInteger)supportedInterfaceOrientations {
@@ -359,15 +330,13 @@
 - (id)init {
     if ((self = [super init])) {
         // Initialize flags and fields.
-        connectWhenPresented = NO;       
-        adRefreshTimer = nil;
+        connectWhenPresented = NO;
     }
     return self;
 }
 
 - (void)dealloc {
-    [adMobView release];
-    [adRefreshTimer release];
+    [AdMobHelper release];
     if ( passwordAlert )
         [passwordAlert release];
     [connectingTimer release];

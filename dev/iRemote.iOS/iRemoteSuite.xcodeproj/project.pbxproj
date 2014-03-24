@@ -263,6 +263,7 @@
 		2FBB9FE518DFC889002A7690 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBB9FE418DFC889002A7690 /* libsqlite3.dylib */; };
 		2FBB9FE718DFC8B8002A7690 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBB9FE618DFC8B8002A7690 /* libz.dylib */; };
 		2FBB9FEC18DFD3D9002A7690 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBB9FEB18DFD3D9002A7690 /* Crashlytics.framework */; };
+		2FBB9FF218E003FD002A7690 /* AdMobHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2FBB9FF118E003FD002A7690 /* AdMobHelper.mm */; };
 		2FBD3A0B0FD7FFDA0018E00B /* PasswordAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD3A0A0FD7FFDA0018E00B /* PasswordAlert.m */; };
 		2FC627C71432385B0068A7DF /* SettingsControlleriPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC627C61432385B0068A7DF /* SettingsControlleriPad.m */; };
 		2FC627CC143239420068A7DF /* Settings-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FC627CB143239420068A7DF /* Settings-iPad.xib */; };
@@ -849,6 +850,8 @@
 		2FBB9FE418DFC889002A7690 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		2FBB9FE618DFC8B8002A7690 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		2FBB9FEB18DFD3D9002A7690 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = 3rdParty/Crashlytics.framework; sourceTree = "<group>"; };
+		2FBB9FF018E003FD002A7690 /* AdMobHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobHelper.h; sourceTree = "<group>"; };
+		2FBB9FF118E003FD002A7690 /* AdMobHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AdMobHelper.mm; sourceTree = "<group>"; };
 		2FBD3A090FD7FFDA0018E00B /* PasswordAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordAlert.h; sourceTree = "<group>"; };
 		2FBD3A0A0FD7FFDA0018E00B /* PasswordAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordAlert.m; sourceTree = "<group>"; };
 		2FC627C51432385B0068A7DF /* SettingsControlleriPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsControlleriPad.h; sourceTree = "<group>"; };
@@ -1161,6 +1164,8 @@
 				2F6E6D6B11CF959300BC9656 /* TabbarController.h */,
 				2F6E6B0011CF491300BC9656 /* RotatingTabBarController.h */,
 				2F6E6B0111CF491300BC9656 /* RotatingTabBarController.mm */,
+				2FBB9FF018E003FD002A7690 /* AdMobHelper.h */,
+				2FBB9FF118E003FD002A7690 /* AdMobHelper.mm */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -2556,6 +2561,7 @@
 				2F7EEBE3181F700900C961A8 /* DRawDataStub.cpp in Sources */,
 				2F9D399113D7891C003E3156 /* Matrix.cpp in Sources */,
 				2F9D399213D7891C003E3156 /* RenderingQueue.cpp in Sources */,
+				2FBB9FF218E003FD002A7690 /* AdMobHelper.mm in Sources */,
 				2F9D399313D7891C003E3156 /* Surface.cpp in Sources */,
 				2F9D399413D7891C003E3156 /* Texture.cpp in Sources */,
 				2F9D39A713D7896B003E3156 /* BatchHeader.cpp in Sources */,

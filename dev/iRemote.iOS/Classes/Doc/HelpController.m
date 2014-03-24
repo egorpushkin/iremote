@@ -23,6 +23,7 @@
 #import "HelpController.h"
 #import "../Main/iRemoteAppDelegate.h"
 #import "../Controls/Controls.h"
+#import "../Controls/AdMobHelper.h"
 
 @implementation HelpController
 
@@ -47,6 +48,9 @@
 }
 
 - (void)viewDidLoad {
+    // Init ad banner.
+    adMobHelper = [[AdMobHelper alloc] initWithController:self andView:adView];
+    
 	// Present help content.
 	NSString *resource = [Controls pathForResource:@"Help" ofType:@"htm"];
     NSURL *resourceUrl = [NSURL fileURLWithPath:resource];
@@ -56,6 +60,21 @@
 
 - (BOOL)shouldAutorotate {
     return NO;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [adMobHelper startRefreshingAds];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [adMobHelper stopRefreshingAds];
+}
+
+- (void)dealloc {
+    [adMobHelper release];
+ 	[super dealloc];
 }
 
 @end

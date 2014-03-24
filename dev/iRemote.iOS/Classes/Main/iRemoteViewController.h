@@ -25,7 +25,7 @@
 @class PasswordAlert;
 @class TiledButton;
 @class HostsViewController;
-@class GADBannerView;
+@class AdMobHelper;
 
 @interface iRemoteViewController : UINavigationController< UINavigationControllerDelegate, UIAlertViewDelegate, UITextFieldDelegate > {
 
@@ -42,8 +42,7 @@
     IBOutlet TiledButton *hostsButton;    
 
     IBOutlet UIView *adPlace;    
-    GADBannerView *adMobView;
-    NSTimer *adRefreshTimer;
+    AdMobHelper *adMobHelper;
     
     NSTimer *connectingTimer;
     
