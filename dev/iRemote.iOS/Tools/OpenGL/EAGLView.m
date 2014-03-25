@@ -58,7 +58,7 @@
             kEAGLColorFormatRGBA8, 
             kEAGLDrawablePropertyColorFormat, nil];
         // Configure context
-        [[GLContext instance] setCurrentContext];
+        [[GLContext instance] setMainContext];
     }
     return self;
 }
@@ -77,13 +77,13 @@
             kEAGLColorFormatRGBA8, 
             kEAGLDrawablePropertyColorFormat, nil];
         // Configure context
-        [[GLContext instance] setCurrentContext];    
+        [[GLContext instance] setMainContext];
     }
     return self;
 }
 
 - (void)drawViewInit {
-	[[GLContext instance] setCurrentContext];
+	[[GLContext instance] setMainContext];
 	
     glBindFramebufferOES(GL_FRAMEBUFFER_OES, viewFramebuffer);
     glViewport(0, 0, backingWidth, backingHeight);

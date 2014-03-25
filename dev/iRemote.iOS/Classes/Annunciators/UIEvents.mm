@@ -98,7 +98,7 @@ namespace RemotePC
 	
 	void UIEvents::AttachGLContext()
 	{
-		[[GLContext instance] setCurrentContext];		
+		[[GLContext instance] setBackgroundContext];
 	}
 	
 	void UIEvents::ShowScreenshot(mc::IMessageRef message)

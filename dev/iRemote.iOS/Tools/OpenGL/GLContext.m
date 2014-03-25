@@ -25,13 +25,18 @@
 @implementation GLContext
 
 // Context tools
-- (void)setCurrentContext {
-    if ( [EAGLContext currentContext] != context )
-        [EAGLContext setCurrentContext:context];
+- (void)setMainContext {
+    if ( [EAGLContext currentContext] != mainContext ) {
+        [EAGLContext setCurrentContext:mainContext];
+    }
+}
+
+- (void)setBackgroundContext {
+    [EAGLContext setCurrentContext:backgroundContext];
 }
 
 - (EAGLContext *)context {
-    return context;
+    return mainContext;
 }
 
 // Internal life cycle tools
@@ -40,20 +45,26 @@ static GLContext *globalGLContext = nil;
 - (id)init {	
 	if ( self = [super init] ) {			        
         // Create context and make it current for caller thread.
-		context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
-        if ( !context || ![EAGLContext setCurrentContext:context] ) {
+		mainContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
+        if ( !mainContext || ![EAGLContext setCurrentContext:mainContext] ) {
             [self release];
             return nil;
-        }        
+        }
+        backgroundContext = [[EAGLContext alloc] initWithAPI:[mainContext API] sharegroup:[mainContext sharegroup]];
+        if ( !backgroundContext ) {
+            [self release];
+            return nil;
+        }
     }	
 	return self;	
 }
 
 - (void)dealloc {
-    if ( [EAGLContext currentContext] == context ) {
+    if ( [EAGLContext currentContext] == mainContext ) {
         [EAGLContext setCurrentContext:nil];
     }
-    [context release];
+    [backgroundContext release];
+    [mainContext release];
 	[super dealloc];	
 }
 

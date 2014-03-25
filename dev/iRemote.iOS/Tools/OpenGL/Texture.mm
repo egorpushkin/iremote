@@ -91,8 +91,6 @@ static const GLuint wrongTexture = -1;
 		return; 
 	}
 	
-	// TODO: Remove this if it is really obsolete.
-	// CGContextClearRect(context, CGRectMake(0.0, 0.0, width, height));
 	CGContextDrawImage(context, CGRectMake(0.0, 0.0, (CGFloat)width, (CGFloat)height), image);	
 	CGContextRelease(context);
 	

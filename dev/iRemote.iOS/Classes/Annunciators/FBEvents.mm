@@ -47,7 +47,7 @@ namespace SFB
 	
 	void FBEvents::attachGLContext()
 	{
-		[[GLContext instance] setCurrentContext];		
+		[[GLContext instance] setBackgroundContext];
 	}
 	
 	void FBEvents::init(const SurfacePtr& surface)

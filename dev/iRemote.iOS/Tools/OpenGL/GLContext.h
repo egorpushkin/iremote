@@ -27,12 +27,14 @@
 
 @interface GLContext : Singleton {
     
-    EAGLContext *context;
+    EAGLContext *mainContext;
+    EAGLContext *backgroundContext;
 
 }
 
 // Public tools
-- (void)setCurrentContext;
+- (void)setMainContext;
+- (void)setBackgroundContext;
 - (EAGLContext *)context;
 
 // Singleton section

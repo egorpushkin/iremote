@@ -42,10 +42,6 @@ namespace SFB
 		, length_(0)
 	{
 		generate();
-		
-		// For now, textures are not filled with white by default. 
-		// Texture is not rendered, untill it is filled with real data.
-		// createEmpty();
 	}
 	
 	Texture::Texture(unsigned char *data, size_t length)
@@ -153,12 +149,6 @@ namespace SFB
 		
 		// Mark that texture has data to draw. 
 		initialized_ = true;
-		
-		// The code below is not thread safe. Sometimes it crashes inside glTexImage2D,
-		// when other thread calls glDrawArrays or swaps rendering buffers.
-        // glBindTexture(GL_TEXTURE_2D, id_);	
-		// GLint format = ( 1 == bytesPerPixel_ ) ? ( GL_LUMINANCE ) : ( GL_RGBA );
-		// glTexImage2D(GL_TEXTURE_2D, 0, format, width_, height_, 0, format, GL_UNSIGNED_BYTE, data);        
 	}
 	
 	void Texture::updateFromData(unsigned char *data, size_t length)
