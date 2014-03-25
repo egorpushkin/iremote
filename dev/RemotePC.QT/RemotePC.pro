@@ -41,7 +41,8 @@ win32 {
         Resources/Win/rememberuserdialog.ui \
         Resources/Win/usersmngdialog.ui
 }
-macx { 
+macx {
+    QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.6
     CONFIG(release, debug|release) {
         LIBS += ../3rdParty/cmnkit/source/lib/macx/release/libMinCOM.a
         PRE_TARGETDEPS = ../3rdParty/cmnkit/source/lib/macx/release/libMinCOM.a

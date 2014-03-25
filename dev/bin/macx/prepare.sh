@@ -42,27 +42,39 @@ cd ..
 
 # Copy QT libraries.
 function copyQtLib {
+    # $1 source
+    # $2 destination
 	mkdir -p $(dirname $2)
 	cp $1 $2    
 } 
 copyQtLib "/Applications/Qt/$QT_VER/clang_64/lib/QtCore.framework/Versions/Current/QtCore" "./build/Applications/RemotePC.app/Contents/Frameworks/QtCore.framework/Versions/Current/QtCore"
 copyQtLib "/Applications/Qt/$QT_VER/clang_64/lib/QtGui.framework/Versions/Current/QtGui" "./build/Applications/RemotePC.app/Contents/Frameworks/QtGui.framework/Versions/Current/QtGui"
+copyQtLib "/Applications/Qt/$QT_VER/clang_64/lib/QtWidgets.framework/Versions/Current/QtWidgets" "./build/Applications/RemotePC.app/Contents/Frameworks/QtWidgets.framework/Versions/Current/QtWidgets"
+copyQtLib "/Applications/Qt/$QT_VER/clang_64/lib/QtPrintSupport.framework/Versions/Current/QtPrintSupport" "./build/Applications/RemotePC.app/Contents/Frameworks/QtPrintSupport.framework/Versions/Current/QtPrintSupport"
+copyQtLib "/Applications/Qt/$QT_VER/clang_64/plugins/platforms/libqcocoa.dylib" "./build/Applications/RemotePC.app/Contents/plugins/platforms/libqcocoa.dylib"
 copyQtLib "/Applications/Qt/$QT_VER/clang_64/plugins/imageformats/libqjpeg.dylib" "./build/Applications/RemotePC.app/Contents/plugins/imageformats/libqjpeg.dylib"
 
-# Fix dependencies from QT libraries for the following assemblies:
-#     RemotePC.app/Contents/MacOS/RemotePC
-#         QtCore
-#         QtGui
-#     RemotePC.app/Frameworks/QtGui.framework/Versions/4/QtGui
-#         QtCore
-#     RemotePC.app/plugins/imageformats/libqjpeg.dylib
-#         QtCore
-#         QtGui
-install_name_tool -change QtCore.framework/Versions/5/QtCore @executable_path/../Frameworks/QtCore.framework/Versions/Current/QtCore ./build/Applications/RemotePC.app/Contents/MacOS/RemotePC
-install_name_tool -change QtGui.framework/Versions/5/QtGui @executable_path/../Frameworks/QtGui.framework/Versions/Current/QtGui ./build/Applications/RemotePC.app/Contents/MacOS/RemotePC
-install_name_tool -change QtCore.framework/Versions/5/QtCore @executable_path/../Frameworks/QtCore.framework/Versions/Current/QtCore ./build/Applications/RemotePC.app/Contents/Frameworks/QtGui.framework/Versions/Current/QtGui
-install_name_tool -change QtCore.framework/Versions/5/QtCore @executable_path/../Frameworks/QtCore.framework/Versions/Current/QtCore ./build/Applications/RemotePC.app/Contents/plugins/imageformats/libqjpeg.dylib
-install_name_tool -change QtGui.framework/Versions/5/QtGui @executable_path/../Frameworks/QtGui.framework/Versions/Current/QtGui ./build/Applications/RemotePC.app/Contents/plugins/imageformats/libqjpeg.dylib
+# Fix dependencies in QT libraries.
+function updateRef {
+    # $1 library to be patched
+    # $2 referred framework name
+    install_name_tool -change /Applications/Qt/$QT_VER/clang_64/lib/$2.framework/Versions/5/$2 @executable_path/../Frameworks/$2.framework/Versions/Current/$2 $1
+} 
+updateRef "./build/Applications/RemotePC.app/Contents/MacOS/RemotePC" "QtWidgets"
+updateRef "./build/Applications/RemotePC.app/Contents/MacOS/RemotePC" "QtGui"
+updateRef "./build/Applications/RemotePC.app/Contents/MacOS/RemotePC" "QtCore"
+updateRef "./build/Applications/RemotePC.app/Contents/Frameworks/QtWidgets.framework/Versions/Current/QtWidgets" "QtGui"
+updateRef "./build/Applications/RemotePC.app/Contents/Frameworks/QtWidgets.framework/Versions/Current/QtWidgets" "QtCore"
+updateRef "./build/Applications/RemotePC.app/Contents/Frameworks/QtGui.framework/Versions/Current/QtGui" "QtCore"
+updateRef "./build/Applications/RemotePC.app/Contents/Frameworks/QtPrintSupport.framework/Versions/Current/QtPrintSupport" "QtCore"
+updateRef "./build/Applications/RemotePC.app/Contents/Frameworks/QtPrintSupport.framework/Versions/Current/QtPrintSupport" "QtGui"
+updateRef "./build/Applications/RemotePC.app/Contents/Frameworks/QtPrintSupport.framework/Versions/Current/QtPrintSupport" "QtWidgets"
+updateRef "./build/Applications/RemotePC.app/Contents/plugins/platforms/libqcocoa.dylib" "QtCore"
+updateRef "./build/Applications/RemotePC.app/Contents/plugins/platforms/libqcocoa.dylib" "QtGui"
+updateRef "./build/Applications/RemotePC.app/Contents/plugins/platforms/libqcocoa.dylib" "QtWidgets"
+updateRef "./build/Applications/RemotePC.app/Contents/plugins/platforms/libqcocoa.dylib" "QtPrintSupport"
+updateRef "./build/Applications/RemotePC.app/Contents/plugins/imageformats/libqjpeg.dylib" "QtGui"
+updateRef "./build/Applications/RemotePC.app/Contents/plugins/imageformats/libqjpeg.dylib" "QtCore"
 
 # Change package content permissions.
 sudo chown -R root:admin ./build

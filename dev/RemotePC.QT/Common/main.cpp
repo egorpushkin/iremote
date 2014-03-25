@@ -44,6 +44,22 @@
 
 int main(int argc, char *argv[])
 {
+    // Configure qt environment.
+#if !defined(IREMOTE_NO_QT_PLUGINS)
+    // Specify subdirectory where plugins are located.
+ #if defined(WIN32)
+    QDir pluginsDir(argv[0]);
+    pluginsDir.cd("plugins");
+    QApplication::setLibraryPaths(QStringList(pluginsDir.absolutePath()));
+ #elif defined(__MACH__)
+    QDir pluginsDir(argv[0]);
+    pluginsDir.cdUp();
+    pluginsDir.cdUp();
+    pluginsDir.cd("plugins");
+    QApplication::setLibraryPaths(QStringList(pluginsDir.absolutePath()));
+ #endif // Platform
+#endif //Plugins
+
     QApplication app(argc, argv);
 
 	// Check whether another instance of the application is already running.
@@ -56,8 +72,9 @@ int main(int argc, char *argv[])
 	}
 
 #if defined(__MACH__)
+    // Disable App Nap
     RemotePC::AppNapSuspender appNapSuspender;
-#endif //
+#endif // __MACH__
 
 	// Configure default style sheet.
     app.setStyleSheet(RemotePC::UIConfig::globalStylesheet_);
@@ -65,21 +82,6 @@ int main(int argc, char *argv[])
 	// Prevents from terminating application when:
 	//  main window is hidden to tray and user closes any other window.
 	app.setQuitOnLastWindowClosed(false);
-
-	// Configure qt environment.
-#if !defined(IREMOTE_NO_QT_PLUGINS)
-	// Specify subdirectory where plugins are located.
- #if defined(WIN32)
-	QDir pluginsDir(QApplication::applicationDirPath());
-	pluginsDir.cd("plugins");
-	QApplication::setLibraryPaths(QStringList(pluginsDir.absolutePath()));
- #elif defined(__MACH__)
-	QDir pluginsDir(QApplication::applicationDirPath());
-	pluginsDir.cdUp();
-	pluginsDir.cd("plugins");
-	QApplication::setLibraryPaths(QStringList(pluginsDir.absolutePath()));
- #endif // Platform
-#endif //Plugins
 
 	// Load application settings.
 	QDir configDir(QApplication::applicationDirPath());
