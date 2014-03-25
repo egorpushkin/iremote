@@ -92,6 +92,9 @@
         tabbar.frame.size.width,
         tabbar.frame.size.height);
     [UIView commitAnimations];
+    
+    // Remember that bars are presented.
+    barsShown = YES;
 }
 
 - (void)hideBars {
@@ -118,6 +121,9 @@
         tabbar.frame.size.width,
         tabbar.frame.size.height);
     [UIView commitAnimations];
+    
+    // Remember that bars are hidden.
+    barsShown = NO;
 }
 
 #pragma mark Initialization section
@@ -126,6 +132,7 @@
     if ((self = [super initWithCoder:coder])) {
         self.delegate = self;
         portraitTransitionViewFrame = CGRectZero;
+        barsShown = YES;
     }
     return self;
 }
@@ -159,6 +166,19 @@
 
 - (BOOL)shouldAutorotate {
     return RemotePC::UIConfig::Instance().Autorotation();
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if ( UIInterfaceOrientationPortrait == self.interfaceOrientation ) {
+        if ( !barsShown ) {
+            [self showBars];
+        }
+    } else {
+        if ( barsShown ) {
+            [self hideBars];
+        }
+    }
 }
 
 @end

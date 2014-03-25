@@ -26,6 +26,8 @@
  
     CGRect portraitTransitionViewFrame;
     
+    BOOL barsShown;
+    
 }
 
 @end
