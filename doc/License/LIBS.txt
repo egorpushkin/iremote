@@ -1,33 +1,56 @@
 THIS IS THE LIST OF THIRD PARTY SOFTWARE UTILIZED IN IREMOTE SUITE
 AND REMOTE PC SUITE PRODUCTS.
 
-1. Apple iPhone SDK.
+1. iOS SDK
 
-Apple iPhone SDK was utilized in iRemote Suite. This software is distrinuted 
-under 'iPhone SDK Agreement'.
+iOS SDK is utilized in iRemote Suite for iOS. This software is distrinuted 
+under 'iOS SDK Agreement'.
 
-2. Nokia Qt.
+2. Android SDK
 
-Qt 4.5.0 was utilized in Remote PC Suite. Utilized version of Qt is 
-distributed under 'GNU LESSER GENERAL PUBLIC LICENSE (Version 2.1)'.
+Android SDK is utilized in iRemote Suite for Android. This software is distrinuted 
+under 'Android Software Development Kit License Agreement'.
 
-3. Boost.
+3. Qt Library
 
-Boost 1.37 was utilized in both iRemote Suite and Remote PC Suite.
-This library is distributed under 'Boost Software License - Version 1.0 - 
-August 17th, 2003'.
+Qt 5.2.1 is utilized in Remote PC Suite. This software is distrinuted under
+'GNU LESSER GENERAL PUBLIC LICENSE (Version 2.1)'.
 
-4. Loki.
+4. Common Kit
 
-Loki 0.1.6 was utilized in both iRemote Suite and Remote PC Suite.
+Common Kit is utilized in Remote PC Suite and iRemote Suite. This software is 
+distrinuted under 'GNU LESSER GENERAL PUBLIC LICENSE'.
+
+5. Google Mobile Ads SDK
+
+Ads SDK is utilized in iRemote Suite. This software is distrinuted under 
+'AdSense Terms and Conditions'. 
+
+6. Localytics
+
+Localytics SDK is utilized in iRemote Suite. This software is distrinuted under 
+'Localytics Client Library End User License Agreement'
+
+7. Crashlytics
+
+Crashlytics SDK is utilized in iRemote Suite. 
+
+8. Boost
+
+Boost 1.46 is utilized in both iRemote Suite and Remote PC Suite.
+This library is distributed under 'Boost Software License - Version 1.0'.
+
+9. Loki
+
+Loki 0.1.6 is utilized in both iRemote Suite and Remote PC Suite.
 This library is distributed under 'MIT Licence'.
 
-5. Expat. 
+10. Expat
 
-Expat was utilized in both iRemote Suite and Remote PC Suite.
+Expat is utilized in both iRemote Suite and Remote PC Suite.
 This library is distributed under 'MIT Licence'.
 
-6. HashLib++.
+11. HashLib++
 
 hashlib++ - a simple hash library for C++
 Copyright (c) 2007,2008 Benjamin Grüdelbach
@@ -42,3 +65,13 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
 ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+12. TouchJSON
+
+TouchJSON is utilized in both iRemote Suite for iOS. This software is distrinuted 
+under '2-clause BSD license ("Simplified BSD License" or "FreeBSD License")'.
+
+13. PugiXML
+
+PugiXML is utilized in both iRemote Suite for iOS. This software is distrinuted 
+under 'MIT license'.

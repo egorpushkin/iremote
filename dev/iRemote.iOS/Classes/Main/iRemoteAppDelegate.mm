@@ -84,15 +84,16 @@
     viewController.delegate = viewController;    
     // Display login form. 
     [signInWindow addSubview:viewController.view];
+    
+    // Present application window.
+    signInWindow.rootViewController = viewController;
+    [signInWindow makeKeyAndVisible];
+    
     // Check whether EULA has been accepted.
     if ( ![[LocalStorage instance] eulaAccepted] ) {
         // Display license dialog on top of login form.
         [viewController presentViewController:licenseController animated:NO completion:NULL];
     }
-
-    // Present application window.
-    signInWindow.rootViewController = viewController;
-    [signInWindow makeKeyAndVisible];    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
