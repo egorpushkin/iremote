@@ -18,6 +18,10 @@ clang {
     QMAKE_CXXFLAGS_WARN_ON += -Wno-parentheses-equality
     QMAKE_CXXFLAGS_WARN_ON += -Wno-unused-parameter
     QMAKE_CXXFLAGS_WARN_ON += -Wno-unused-private-field
+
+    # Disable optimizations in release mode.
+    # As annoying as it sounds some clang optimizations break boost::asio.
+    QMAKE_CXXFLAGS_RELEASE -= -O2
 }
 
 QT += widgets
