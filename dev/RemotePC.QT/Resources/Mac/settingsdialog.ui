@@ -193,7 +193,7 @@ margin: 0;
       </font>
      </property>
      <property name="text">
-      <string>up to 20 fps</string>
+      <string>up to 30 fps</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_7">

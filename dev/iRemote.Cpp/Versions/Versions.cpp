@@ -27,7 +27,7 @@
 namespace RemotePC
 {
     // Status of Remote PC Suite build ("Dev", "Stable", etc.).
-    const std::string RemotePCBuildStatus = "Dev";
+    const std::string RemotePCBuildStatus = "Final";
 
 	// Unique identifier of RemotePC application.
 	// {720215BC-9673-4ab5-9889-6EA255809630}

@@ -94,7 +94,7 @@ void SettingsDialog::apply()
 	if ( RemotePC::Config::Instance().GetFPS() != fps )
 	{
 		// Check whether new value is appropriate
-		if ( fps > 20.0f )
+        if ( fps > 30.0f )
 		{
 			RemotePC::Controls::Warning(
 				this,

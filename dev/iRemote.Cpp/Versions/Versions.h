@@ -42,7 +42,7 @@ namespace RemotePC
 
 		REMOTEPC_VER_MAJOR = 1,
         REMOTEPC_VER_MINOR = 5,
-        REMOTEPC_VER_REV = 414
+        REMOTEPC_VER_REV = 500
 	} 
     Versions;
 
