@@ -23,9 +23,10 @@ clang {
 QT += widgets
 win32 {
     QT += axbase
+    RC_FILE = ./Resources/RemotePC.rc
     CONFIG(release, debug|release) {
         LIBS += ../3rdParty/cmnkit/source/lib/mingw/release/MinCOM.lib
-        PRE_TARGETDEPS = ../3rdParty/cmnkit/source/lib/mingw/release/libMinCOM.a
+        PRE_TARGETDEPS = ../3rdParty/cmnkit/source/lib/mingw/release/MinCOM.lib
         OBJECTS_DIR = ./release
         DESTDIR = ../bin/win/release
     }
