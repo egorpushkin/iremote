@@ -2,20 +2,30 @@
 :: Script to prepare Remote PC package contents.
 ::
 
+:: Dependencies
+set QT_PATH=c:\Dev\Qt\5.2.1\msvc2012_64_opengl
+set VS_PATH=c:\Program Files (x86)\Microsoft Visual Studio 11.0
+
 :: Copy VC++ runtime dependencies.
-copy /Y "C:\Program Files\Microsoft Visual Studio 10.0\VC\redist\x86\Microsoft.VC100.CRT\msvcp100.dll" .\Release
-copy /Y "C:\Program Files\Microsoft Visual Studio 10.0\VC\redist\x86\Microsoft.VC100.CRT\msvcr100.dll" .\Release
+copy /Y "%VS_PATH%\VC\redist\x64\Microsoft.VC110.CRT\msvcp110.dll" .\release
+copy /Y "%VS_PATH%\VC\redist\x64\Microsoft.VC110.CRT\msvcr110.dll" .\release
 
 :: Copy QT libraries.
-copy /Y C:\Qt\2010.05\qt\bin\QtCore4.dll .\Release
-copy /Y C:\Qt\2010.05\qt\bin\QtGui4.dll .\Release
-mkdir .\Release\plugins\imageformats
-copy /Y C:\Qt\2010.05\qt\plugins\imageformats\qjpeg4.dll .\Release\plugins\imageformats
+copy /Y %QT_PATH%\bin\icudt51.dll .\release
+copy /Y %QT_PATH%\bin\icuin51.dll .\release
+copy /Y %QT_PATH%\bin\icuuc51.dll .\release
+copy /Y %QT_PATH%\bin\Qt5Core.dll .\release
+copy /Y %QT_PATH%\bin\Qt5Gui.dll .\release
+copy /Y %QT_PATH%\bin\Qt5Widgets.dll .\release
+mkdir .\release\plugins\platforms
+mkdir .\release\plugins\imageformats
+copy /Y %QT_PATH%\plugins\platforms\qwindows.dll .\release\plugins\platforms
+copy /Y %QT_PATH%\plugins\imageformats\qjpeg.dll .\release\plugins\imageformats
 
 :: Copy help contents.
-mkdir .\Release\help
-XCOPY ..\..\..\doc\RemotePCHelp\*.* .\Release\help /E /I /Y /EXCLUDE:ignore.txt
+mkdir .\release\help
+XCOPY ..\..\..\doc\RemotePCHelp\*.* .\release\help /E /I /Y /EXCLUDE:ignore.txt
 
 :: Copy license stuff.
-COPY /Y ..\..\..\doc\License\EULA.txt .\Release
-COPY /Y ..\..\..\doc\License\LIBS.txt .\Release
+COPY /Y ..\..\..\doc\License\EULA.txt .\release
+COPY /Y ..\..\..\doc\License\LIBS.txt .\release
