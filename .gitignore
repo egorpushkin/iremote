@@ -5,6 +5,7 @@ dev/RemotePC.QT/ui_*.h
 dev/RemotePC.QT/moc_*.cpp
 dev/RemotePC.QT/qrc_*.cpp
 dev/RemotePC.QT/Makefile
+dev/RemotePC.QT/Makefile.*
 dev/RemotePC.QT/*.user
 dev/RemotePC.QT/.qmake.*
 

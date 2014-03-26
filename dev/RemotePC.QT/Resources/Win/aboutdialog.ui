@@ -155,12 +155,12 @@ http://www.scientific-soft.com/mobile/apps/iremote/</string>
     <rect>
      <x>110</x>
      <y>306</y>
-     <width>271</width>
+     <width>131</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>Host application version: 1.5.x Dev</string>
+    <string>Host application version:</string>
    </property>
   </widget>
   <widget class="QWidget" name="widget" native="true">
@@ -286,10 +286,21 @@ border: none;
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="version_">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>306</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>x.x.x Build</string>
+   </property>
+  </widget>
  </widget>
- <resources>
-  <include location="../../RemotePC.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>pushButton</sender>

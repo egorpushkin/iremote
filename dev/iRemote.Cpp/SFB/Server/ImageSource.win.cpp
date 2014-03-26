@@ -29,7 +29,8 @@
 #include "Math.h"
 
 // QT provides display wnd id.
-#include <QtGui/QtGui>
+#include <QApplication>
+#include <QDesktopWidget>
 
 namespace RemotePC
 {
@@ -84,7 +85,7 @@ namespace SFB
 
 	RawImagePtr ImageSource::nextImage(const RasterFormatPtr& format, const MemoryCachePtr& cache)
 	{
-		HWND winId = QApplication::desktop()->winId();
+        HWND winId = (HWND)QApplication::desktop()->winId();
 
 		RECT r;
 		::GetClientRect(winId, &r);

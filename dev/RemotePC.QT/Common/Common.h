@@ -23,11 +23,7 @@
 #ifndef COMMON_H__REMOTEPC__INCLUDED_
 #define COMMON_H__REMOTEPC__INCLUDED_
 
-#if defined(REMOTEPC_OS_WINXP)
-#define REMOTEPC_OS_VER 0x0501
-#elif defined(REMOTEPC_OS_WINVISTA)
 #define REMOTEPC_OS_VER 0x0600
-#endif
 
 #if defined(WIN32) && !defined(WINVER)
 #define WINVER REMOTEPC_OS_VER		

@@ -26,20 +26,15 @@
 
 #if defined(WIN32)
 #include "../Win32/IVolumeControlInitializer.h"
-#include "../Win32/MixerVolumeControl.h"
 #include "../Win32/HardwareControl.h"
 #include "../Win32/DisplayControl.h"
-#	if defined(REMOTEPC_OS_WINVISTA)
 #include "../Vista/EndpointVolumeControl.h"
-#	endif // REMOTEPC_OS_WINVISTA
 #elif defined(__MACH__)
 #include "../Mac/VolumeControl.h"
 #include "../Mac/VirtualKeysMapper.h"
 #include "../Mac/HardwareControl.h"
 #include "../Mac/DisplayControl.h"
 #endif // Platform
-// EXPERIMENTAL: Audio streaming
-// #include "../AudioQt/AudioInput.h"
 
 #include "Messages/ZoomParamsMessage.h"
 
@@ -53,16 +48,7 @@ namespace RemotePC
         , audioInput_()
 	{
 #if defined(WIN32)
-#	if defined(REMOTEPC_OS_WINVISTA)
-		OSVERSIONINFO windowsVersion = { sizeof(OSVERSIONINFO) };
-		::GetVersionEx(&windowsVersion);
-		if ( windowsVersion.dwMajorVersion <= 5 )
-			volumeControl_ = mc::Class< MixerVolumeControl >::Create();
-		else
-			volumeControl_ = mc::Class< EndpointVolumeControl >::Create();
-#	elif defined(REMOTEPC_OS_WINXP)
-		volumeControl_ = mc::Class< MixerVolumeControl >::Create();
-#	endif // REMOTEPC_OS_WINVISTA
+        volumeControl_ = mc::Class< EndpointVolumeControl >::Create();
 		hardwareControl_ = mc::Class< HardwareControl >::Create();
 		displayControl_ = mc::Class< DisplayControl >::Create();
 #elif defined(__MACH__)
@@ -70,8 +56,6 @@ namespace RemotePC
 		hardwareControl_ = mc::Class< HardwareControl >::Create();
 		displayControl_ = mc::Class< DisplayControl >::Create();
 #endif // Platform
-		// EXPERIMENTAL: Audio streaming
-        // audioInput_ = mc::Class< AudioInput >::Create((QObject *)NULL);
 	}
 
 	HardwareProvider& HardwareProvider::Instance()

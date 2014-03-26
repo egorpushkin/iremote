@@ -22,17 +22,29 @@ clang {
 
 QT += widgets
 win32 {
-    LIBS += libws2_32 \
-        libmswsock \
-        libuser32
-    DEFINES += REMOTEPC_OS_WINVISTA
+    QT += axbase
+    CONFIG(release, debug|release) {
+        LIBS += ../3rdParty/cmnkit/source/lib/mingw/release/MinCOM.lib
+        PRE_TARGETDEPS = ../3rdParty/cmnkit/source/lib/mingw/release/libMinCOM.a
+        OBJECTS_DIR = ./release
+        DESTDIR = ../bin/win/release
+    }
+    CONFIG(debug, debug|release) {
+        LIBS += ../3rdParty/cmnkit/source/lib/mingw/debug/MinCOM.lib
+        PRE_TARGETDEPS = ../3rdParty/cmnkit/source/lib/mingw/debug/MinCOM.lib
+        OBJECTS_DIR = ./debug
+        DESTDIR = ../bin/win/debug
+    }
+    DEFINES += \
+        BOOST_ALL_NO_LIB
     HEADERS += Hardware/Win32/DisplayControl.h \
         Hardware/Win32/HardwareControl.h \
         Hardware/Win32/IVolumeControlInitializer.h \
         Hardware/Vista/EndpointVolumeControl.h
     SOURCES += Hardware/Win32/DisplayControl.cpp \
         Hardware/Win32/HardwareControl.cpp \
-        Hardware/Vista/EndpointVolumeControl.cpp
+        Hardware/Vista/EndpointVolumeControl.cpp \
+        ../iRemote.Cpp/SFB/Server/ImageSource.win.cpp
     FORMS += Resources/Win/settingsdialog.ui \
         Resources/Win/dialog.ui \
         Resources/Win/authdialog.ui \

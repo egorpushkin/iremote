@@ -253,7 +253,7 @@ background-color: rgb(46, 46, 46);</string>
     <string>Advanced toolset for remote manipulation over your worsktation.</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="version_">
    <property name="geometry">
     <rect>
      <x>335</x>
@@ -378,9 +378,7 @@ image: url(:/Resources/UsersIcon.png);
   <tabstop>pushButton</tabstop>
   <tabstop>endpoints_</tabstop>
  </tabstops>
- <resources>
-  <include location="../../RemotePC.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>pushButton</sender>

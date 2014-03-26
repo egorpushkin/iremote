@@ -165,9 +165,9 @@ Dialog::Dialog(QWidget *parent)
 	// volume control for all platforms.
 	volumeControl->GetMinimumVolume(); 
 #if defined(WIN32)
-	RemotePC::IVolumeControlInitializerPtr volumeControlInitializer(volumeControl);
-	if ( volumeControlInitializer )
-		volumeControlInitializer->Initialize(winId());
+    RemotePC::IVolumeControlInitializerPtr volumeControlInitializer(volumeControl);
+    if ( volumeControlInitializer )
+        volumeControlInitializer->Initialize((HWND)winId());
 #endif // WIN32
 
 	// Start application service

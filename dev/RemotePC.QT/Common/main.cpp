@@ -49,6 +49,7 @@ int main(int argc, char *argv[])
     // Specify subdirectory where plugins are located.
  #if defined(WIN32)
     QDir pluginsDir(argv[0]);
+    pluginsDir.cdUp();
     pluginsDir.cd("plugins");
     QApplication::setLibraryPaths(QStringList(pluginsDir.absolutePath()));
  #elif defined(__MACH__)
