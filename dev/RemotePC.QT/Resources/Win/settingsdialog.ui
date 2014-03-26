@@ -177,7 +177,7 @@ margin: 0;
     <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>20</x>
        <y>80</y>
        <width>111</width>
        <height>16</height>
@@ -190,8 +190,8 @@ margin: 0;
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>140</y>
+       <x>20</x>
+       <y>160</y>
        <width>46</width>
        <height>14</height>
       </rect>
@@ -204,7 +204,7 @@ margin: 0;
      <property name="geometry">
       <rect>
        <x>150</x>
-       <y>140</y>
+       <y>160</y>
        <width>46</width>
        <height>14</height>
       </rect>
@@ -216,10 +216,10 @@ margin: 0;
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>160</y>
+       <x>20</x>
+       <y>180</y>
        <width>311</width>
-       <height>41</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="acceptDrops">
@@ -235,10 +235,10 @@ margin: 0;
     <widget class="Line" name="line_2">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>120</y>
-       <width>320</width>
-       <height>2</height>
+       <x>19</x>
+       <y>145</y>
+       <width>341</width>
+       <height>3</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -253,7 +253,7 @@ border: none;</string>
      <property name="geometry">
       <rect>
        <x>240</x>
-       <y>240</y>
+       <y>250</y>
        <width>81</width>
        <height>16</height>
       </rect>
@@ -282,21 +282,20 @@ border: none;</string>
       </rect>
      </property>
      <property name="text">
-      <string>up to 20 fps</string>
+      <string>up to 30 fps</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="screenshotsMode_">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>20</x>
        <y>10</y>
        <width>141</width>
        <height>19</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">
-</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>Spread screenshots</string>
@@ -308,7 +307,7 @@ border: none;</string>
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>20</x>
        <y>40</y>
        <width>311</width>
        <height>31</height>
@@ -333,7 +332,7 @@ border: none;</string>
      <property name="geometry">
       <rect>
        <x>150</x>
-       <y>240</y>
+       <y>250</y>
        <width>71</width>
        <height>20</height>
       </rect>
@@ -342,8 +341,8 @@ border: none;</string>
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>240</y>
+       <x>20</x>
+       <y>250</y>
        <width>46</width>
        <height>16</height>
       </rect>
@@ -355,8 +354,8 @@ border: none;</string>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>210</y>
+       <x>20</x>
+       <y>220</y>
        <width>101</width>
        <height>16</height>
       </rect>
@@ -369,7 +368,7 @@ border: none;</string>
      <property name="geometry">
       <rect>
        <x>150</x>
-       <y>210</y>
+       <y>220</y>
        <width>46</width>
        <height>14</height>
       </rect>
@@ -378,88 +377,37 @@ border: none;</string>
       <string>Disabled</string>
      </property>
     </widget>
-   </widget>
-   <widget class="QWidget" name="tab_4">
-    <attribute name="title">
-     <string>SFB</string>
-    </attribute>
-    <widget class="QCheckBox" name="sfbEnabled_">
+    <widget class="QLabel" name="sfbComprLabel_">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>10</y>
-       <width>301</width>
-       <height>19</height>
+       <x>310</x>
+       <y>110</y>
+       <width>51</width>
+       <height>16</height>
       </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
      </property>
      <property name="text">
-      <string>Enable Smart Frame Buffer</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-     <property name="tristate">
-      <bool>false</bool>
+      <string>100%</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="sfbCellSize_">
+    <widget class="QLabel" name="label_16">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>230</y>
-       <width>71</width>
-       <height>20</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="sfbPixel_">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>145</y>
-       <width>151</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>MS Shell Dlg 2</family>
-       <pointsize>8</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>16</width>
+       <x>20</x>
+       <y>110</y>
+       <width>111</width>
        <height>16</height>
-      </size>
+      </rect>
      </property>
-     <property name="frame">
-      <bool>true</bool>
+     <property name="text">
+      <string>Compression level:</string>
      </property>
-     <item>
-      <property name="text">
-       <string>True Color - 32bpp</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Black &amp; Wtite - 8bpp</string>
-      </property>
-     </item>
     </widget>
     <widget class="QSlider" name="sfbCompr_">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>190</y>
+       <x>140</x>
+       <y>110</y>
        <width>151</width>
        <height>20</height>
       </rect>
@@ -477,149 +425,6 @@ border: none;</string>
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
-    <widget class="QLabel" name="sfbComprLabel_">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>190</y>
-       <width>51</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>100%</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_12">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>40</y>
-       <width>111</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Frames per second:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_13">
-     <property name="geometry">
-      <rect>
-       <x>240</x>
-       <y>40</y>
-       <width>81</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>[0,01 .. 5] fps</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="sfbFps_">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>40</y>
-       <width>71</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <property name="text">
-      <string>123</string>
-     </property>
-    </widget>
-    <widget class="Line" name="line_3">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>80</y>
-       <width>320</width>
-       <height>2</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string>background-image: url(:/Resources/SeparatorMiddle.png); 
-border: none;</string>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_6">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>100</y>
-       <width>291</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="acceptDrops">
-      <bool>false</bool>
-     </property>
-     <property name="text">
-      <string>These settings allow to tune performance of SFB component (for advanced users).</string>
-     </property>
-     <property name="wordWrap">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_14">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>150</y>
-       <width>111</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Pixel format:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_15">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>230</y>
-       <width>111</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Cell size:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_16">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>190</y>
-       <width>111</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Compression level:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_17">
-     <property name="geometry">
-      <rect>
-       <x>240</x>
-       <y>230</y>
-       <width>111</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>[8 .. 256] power of 2</string>
-     </property>
-    </widget>
    </widget>
   </widget>
  </widget>
@@ -629,9 +434,7 @@ border: none;</string>
   <tabstop>service_</tabstop>
   <tabstop>pushButton</tabstop>
  </tabstops>
- <resources>
-  <include location="../../RemotePC.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>pushButton</sender>
@@ -672,12 +475,12 @@ border: none;</string>
    <slot>compressionChanged(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>284</x>
-     <y>233</y>
+     <x>205</x>
+     <y>155</y>
     </hint>
     <hint type="destinationlabel">
-     <x>407</x>
-     <y>232</y>
+     <x>404</x>
+     <y>64</y>
     </hint>
    </hints>
   </connection>
