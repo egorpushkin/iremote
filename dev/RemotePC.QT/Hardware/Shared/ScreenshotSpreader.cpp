@@ -51,31 +51,80 @@ namespace RemotePC
         // Acquire mouse cursor position.
         RemotePC::ScreenPoint position = RemotePC::HardwareProvider::Instance().GetMouseControl()->GetPosition();
 
+        // Calculate bounding box around current mouse position.
+        float blockSize = 256.0f;
         float zoomLevel = client.GetZoomLevel();
-        float imageDimension = 256.0f * zoomLevel;
+        int imageSize = (int)( blockSize * zoomLevel );
+        int leftX = position.x_ - imageSize / 2;
+        int topY = position.y_ - imageSize / 2;
+        int rightX = leftX + imageSize;
+        int bottomY = topY + imageSize;
 
-        // Grab part of desktop.
-        QPixmap screenImage = QApplication::primaryScreen()->grabWindow(
+        // Find screen to which cursor currently belongs.
+        QDesktopWidget* desktop = QApplication::desktop();
+        int screenNumber = desktop->screenNumber(QPoint(position.x_, position.y_));
+        QWidget* screen = desktop->screen(screenNumber);
+        QRect geometry = screen->geometry();
+
+        // Cut areas beyond the surface of the screen.
+        int leftdX = ( leftX < geometry.left() ) ? ( geometry.left() - leftX ) : 0;
+        int topdY = ( topY < geometry.top() ) ? ( geometry.top() - topY ) : 0;
+        int rightdX = ( rightX > geometry.right() ) ? ( rightX - geometry.right() ) : 0;
+        int bottomdY = ( bottomY >= geometry.bottom() ) ? ( bottomY - geometry.bottom() ) : 0;
+        leftX += leftdX;
+        topY += topdY;
+        rightX += rightdX;
+        bottomY += bottomdY;
+        int fragmentWidth = imageSize - leftdX - rightdX;
+        int fragmentHeight = imageSize - topdY - bottomdY;
+        bool isBoundary = ( leftdX > 0 ) || ( topdY > 0 ) || ( rightdX > 0 ) || ( bottomdY > 0 );
+
+        // Grab part of the screen.
+        QPixmap fragment = QApplication::primaryScreen()->grabWindow(
             QApplication::desktop()->winId(),
-            position.x_ - imageDimension / 2, position.y_ - imageDimension / 2,
-            imageDimension, imageDimension);
-        // Test whether image is correct.
-        if ( screenImage.width() <= 0 || screenImage.height() <= 0  )
-            return;
+            leftX, topY, fragmentWidth, fragmentHeight);
 
-        screenImage = screenImage.scaled(
-            QSize(256, 256),
-            Qt::KeepAspectRatio,
-            Qt::SmoothTransformation);
+        // Check to see if anything was actually grabbed.
+        fragmentWidth = fragment.width();
+        fragmentHeight = fragment.height();
+        if ( fragmentWidth <= 0 || fragmentHeight <= 0 )
+        {
+            return;
+        }
+
+        if ( isBoundary )
+        {
+            // Image was grabbed right next to one of screen edges.
+            QPixmap temp(blockSize, blockSize);
+            QPainter painter(&temp);
+            painter.fillRect(0, 0, blockSize, blockSize, QColor(Qt::black));
+            QRect source(0, 0, fragmentWidth, fragmentHeight);
+            QRect target(
+                leftdX * blockSize / imageSize, topdY * blockSize / imageSize,
+                fragmentWidth * blockSize / imageSize, fragmentHeight * blockSize / imageSize);
+            painter.drawPixmap(target, fragment, source);
+            fragment = temp;
+        }
+        else
+        {
+            if ( imageSize != (int)blockSize )
+            {
+                // Image was grabbed from within the screen.
+                fragment = fragment.scaled(
+                    QSize(blockSize, blockSize),
+                    Qt::KeepAspectRatio,
+                    Qt::SmoothTransformation);
+            }
+        }
 
         // Construct screenshot message from QT image.
         QByteArray imageBytes;
         QBuffer imageBuffer(&imageBytes);
         imageBuffer.open(QIODevice::WriteOnly);
         #if !defined(IREMOTE_NO_QT_PLUGINS)
-            screenImage.save(&imageBuffer, "JPG", Config::Instance().GetSFBCompression());
+            fragment.save(&imageBuffer, "JPG", Config::Instance().GetSFBCompression());
         #else
-            screenImage.save(&imageBuffer, "PNG", Config::Instance().GetSFBCompression());
+            fragment.save(&imageBuffer, "PNG", Config::Instance().GetSFBCompression());
         #endif
 
         mc::IMessagePtr message(
