@@ -8,6 +8,7 @@ dev/RemotePC.QT/Makefile
 dev/RemotePC.QT/Makefile.*
 dev/RemotePC.QT/*.user
 dev/RemotePC.QT/.qmake.*
+dev/iRemote.Android/res/values/com_crashlytics_export_strings.xml
 
 # MacOS misc
 .DS_Store

@@ -25,9 +25,9 @@ package com.scientificsoft.iremote.android.iremote;
 public class AppVersions {
 	
 	public static final int iREMOTE_VER_MAJOR = 1;
-	public static final int iREMOTE_VER_MINOR = 0;
-	public static final int iREMOTE_VER_FIX = 3;	
-	public static final String iREMOTE_VER_SUFFIX = "Beta";
+	public static final int iREMOTE_VER_MINOR = 1;
+	public static final int iREMOTE_VER_FIX = 0;	
+	public static final String iREMOTE_VER_SUFFIX = "";
 	
 	public static String formatVersion() {
 		int zero = 0;
