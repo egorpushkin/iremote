@@ -61,12 +61,4 @@ public class iRemoteApp extends Application {
         // Load config.
         Config.load();
 	}
-	
-	/**
-	 * Bad place to save configs! 
-	 * It will never be called on a production Android device.
-	 */
-	// public void onTerminate () {
-	//	super.onTerminate();
-	// }	
 }

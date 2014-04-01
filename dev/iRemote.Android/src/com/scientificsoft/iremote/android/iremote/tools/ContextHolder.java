@@ -22,7 +22,7 @@
 
 package com.scientificsoft.iremote.android.iremote.tools;
 
-import com.Localytics.android.LocalyticsSession;
+import com.localytics.android.LocalyticsSession;
 import com.scientificsoft.iremote.android.iremote.tools.activitymanager.ActivityManager;
 
 import android.content.Context;
@@ -76,7 +76,7 @@ public final class ContextHolder {
 	 * Sets the context.
 	 */
 	public void setContext(final Context pContext) {
-		this.context_ = pContext;
+		this.context_ = pContext.getApplicationContext();
 	}	
 	
 	/**
@@ -88,7 +88,6 @@ public final class ContextHolder {
 	
 	/** Localytics helpers. */
 	
-    private final static String LOCALYTICS_APP_KEY = "4292f38c51caaa28612210a-51a48154-4b7f-11e0-c508-007af5bd88a0";
     private final static String EVENT_CONNECTED = "connected";	
 	
 	/**
@@ -100,26 +99,27 @@ public final class ContextHolder {
 	
 	public void localyticsStart() {
 		try {
-	        localyticsSession_ = new LocalyticsSession(context_, LOCALYTICS_APP_KEY);
+	        localyticsSession_ = new LocalyticsSession(context_);
 	        localyticsSession_.open();
 	        localyticsSession_.upload();		
 		} catch ( Exception e ) {			
 		}
 	}
 	
-	public void localyticsClose() {
+	public void localyticsPause() {
 		try {
 			localyticsSession_.close();
-		} catch ( Exception e ) {			
-		}		
-	}
-	
-	public void localyticsDestroy() {
-		try {
 			localyticsSession_.upload();
 		} catch ( Exception e ) {			
 		}		
 	}
+	
+	public void localyticsResume() {
+		try {
+			localyticsSession_.open();
+		} catch ( Exception e ) {			
+		}		
+	}	
 	
 	public void localyticsTagConnected() {
 		try {

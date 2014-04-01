@@ -60,7 +60,9 @@ public class CoreGuid {
 		formatter = formatter.format("{%08x-%04x-%04x-%02x%02x-%02x%02x%02x%02x%02x%02x}", 
 			guid.data1_, guid.data2_, guid.data3_, guid.data4_[0], guid.data4_[1],
 			guid.data4_[2], guid.data4_[3], guid.data4_[4], guid.data4_[5], guid.data4_[6], guid.data4_[7]);
-		return formatter.toString();
+		String str = formatter.toString();
+		formatter.close();
+		return str;
 	}
 	
 	public static void generate(Guid guid) {

@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="com.scientificsoft.iremote.android.iremote"
-      android:versionCode="4"
-      android:versionName="1.0.3">
+    package="com.scientificsoft.iremote.android.iremote"
+    android:versionCode="4"
+    android:versionName="1.0.3">
+      
+    <uses-sdk
+    	android:minSdkVersion="3" 
+    	android:targetSdkVersion="19" />
+    	
+    <supports-screens
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:anyDensity="true" />
+    <!--  android:xlargeScreens="true" --> 
+    
+    <uses-feature android:name="android.hardware.wifi" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />        
+
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.VIBRATE" />	
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />	          
       
     <application 
     	android:name="iRemoteApp"
@@ -40,26 +59,10 @@
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale"
             android:theme="@android:style/Theme.NoTitleBar"/>        
 		<activity android:name="com.google.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"/>                        
-	</application>
-
-    <uses-sdk
-    	android:minSdkVersion="3" 
-    	android:targetSdkVersion="5" />
-    	
-    <supports-screens
-        android:resizeable="true"
-        android:smallScreens="true"
-        android:normalScreens="true"
-        android:largeScreens="true"
-        android:anyDensity="true" />
-    <!--  android:xlargeScreens="true" -->    	
+            android:configChanges="keyboard|keyboardHidden|orientation"/>
+		<meta-data
+		    android:name="LOCALYTICS_APP_KEY" 
+		    android:value="4292f38c51caaa28612210a-51a48154-4b7f-11e0-c508-007af5bd88a0"/>
+	</application> 	
         
-	<uses-feature android:name="android.hardware.wifi" android:required="false" />
-    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />        
-
-	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.VIBRATE" />	
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />	
-
 </manifest> 

@@ -145,7 +145,8 @@ public class HomeActivity extends ManagedActivity implements IAppController, DSe
     @Override    
     public void onPause() {
         super.onPause();
-        ContextHolder.instance().localyticsClose();
+        // Pause localytics section.
+        ContextHolder.instance().localyticsPause();
     }    
     
     /** Called when the activity is restored on the screen. */
@@ -161,13 +162,14 @@ public class HomeActivity extends ManagedActivity implements IAppController, DSe
         }
         // This should hide ads in landscape.
         updateOrientation();
+        // Resume localytics section.
+        ContextHolder.instance().localyticsResume();
     }
     
     /** Called when the activity is being destroyed. */
     @Override
     public void onDestroy() {
-    	ad_.destroy();    	
-    	ContextHolder.instance().localyticsDestroy();    	
+    	ad_.destroy();    	    	
     	super.onDestroy();
     }
     
