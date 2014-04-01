@@ -1,0 +1,77 @@
+THIS IS THE LIST OF THIRD PARTY SOFTWARE UTILIZED IN IREMOTE SUITE
+AND REMOTE PC SUITE PRODUCTS.
+
+1. iOS SDK
+
+iOS SDK is utilized in iRemote Suite for iOS. This software is distrinuted 
+under 'iOS SDK Agreement'.
+
+2. Android SDK
+
+Android SDK is utilized in iRemote Suite for Android. This software is distrinuted 
+under 'Android Software Development Kit License Agreement'.
+
+3. Qt Library
+
+Qt 5.2.1 is utilized in Remote PC Suite. This software is distrinuted under
+'GNU LESSER GENERAL PUBLIC LICENSE (Version 2.1)'.
+
+4. Common Kit
+
+Common Kit is utilized in Remote PC Suite and iRemote Suite. This software is 
+distrinuted under 'GNU LESSER GENERAL PUBLIC LICENSE'.
+
+5. Google Mobile Ads SDK
+
+Ads SDK is utilized in iRemote Suite. This software is distrinuted under 
+'AdSense Terms and Conditions'. 
+
+6. Localytics
+
+Localytics SDK is utilized in iRemote Suite. This software is distrinuted under 
+'Localytics Client Library End User License Agreement'
+
+7. Crashlytics
+
+Crashlytics SDK is utilized in iRemote Suite. 
+
+8. Boost
+
+Boost 1.46 is utilized in both iRemote Suite and Remote PC Suite.
+This library is distributed under 'Boost Software License - Version 1.0'.
+
+9. Loki
+
+Loki 0.1.6 is utilized in both iRemote Suite and Remote PC Suite.
+This library is distributed under 'MIT Licence'.
+
+10. Expat
+
+Expat is utilized in both iRemote Suite and Remote PC Suite.
+This library is distributed under 'MIT Licence'.
+
+11. HashLib++
+
+hashlib++ - a simple hash library for C++
+Copyright (c) 2007,2008 Benjamin GrÙdelbach
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+12. TouchJSON
+
+TouchJSON is utilized in both iRemote Suite for iOS. This software is distrinuted 
+under '2-clause BSD license ("Simplified BSD License" or "FreeBSD License")'.
+
+13. PugiXML
+
+PugiXML is utilized in both iRemote Suite for iOS. This software is distrinuted 
+under 'MIT license'.
