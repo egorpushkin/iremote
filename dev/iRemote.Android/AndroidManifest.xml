@@ -58,8 +58,12 @@
         	android:name=".ui.control.ControlActivity"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale"
             android:theme="@android:style/Theme.NoTitleBar"/>        
-		<activity android:name="com.google.ads.AdActivity"
+		<activity 
+		    android:name="com.google.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"/>
+		<meta-data 
+		    android:name="com.crashlytics.ApiKey" 
+		    android:value="1c51e83d4d0dc7bea62a746e20c2ad2c96734a17"/>
 		<meta-data
 		    android:name="LOCALYTICS_APP_KEY" 
 		    android:value="4292f38c51caaa28612210a-51a48154-4b7f-11e0-c508-007af5bd88a0"/>

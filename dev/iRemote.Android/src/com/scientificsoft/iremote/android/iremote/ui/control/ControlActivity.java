@@ -29,7 +29,6 @@ import com.scientificsoft.iremote.server.messages.ScreenshotMessage;
 import com.scientificsoft.iremote.server.messages.ShellResponse;
 import com.scientificsoft.iremote.server.messages.VolumeMessage;
 import com.scientificsoft.iremote.android.iremote.tools.ContextHolder;
-import com.scientificsoft.iremote.android.iremote.tools.CrashReporter;
 import com.scientificsoft.iremote.android.iremote.tools.activitymanager.ManagedTabActivity;
 import com.scientificsoft.iremote.android.iremote.ui.controls.IScreenshotHost;
 import com.scientificsoft.iremote.android.iremote.ui.home.HelpActivity;
@@ -108,9 +107,6 @@ public class ControlActivity extends ManagedTabActivity implements DUIHost, DSes
         	// Return to main screen and make sure that connection to server is terminated.
     		// Disconnect from server. 
         	onDisconnect();
-        	// As the entire control UI is initialized inside this method,
-        	// it is critical to know, why it failed. 
-        	CrashReporter.sendReport(e);
         }
     }	
     

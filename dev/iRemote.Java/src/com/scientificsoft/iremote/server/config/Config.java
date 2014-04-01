@@ -30,7 +30,6 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import com.scientificsoft.iremote.android.iremote.tools.CrashReporter;
 import com.scientificsoft.iremote.platform.tools.File;
 import com.scientificsoft.iremote.server.hosts.Host;
 import com.scientificsoft.iremote.server.hosts.HostsManager;
@@ -74,10 +73,6 @@ public class Config {
 			}
         } catch (Exception e) {
         	// Failed to parse configuration file.
-        	// Application should be configured to initialize all fields with 
-        	// default values and attempt to save configuration on shut down.
-        	// However, if anything goes wrong, we need to know what exactly it was.
-        	CrashReporter.sendReport(e);
         } 
         loading_ = false;
 	}	
@@ -95,9 +90,7 @@ public class Config {
 				configDataStream.close();
 			}
 		} catch (Exception e) {
-			// Failed to write configuration file.
-        	// We need to know what exactly went wrong.
-        	CrashReporter.sendReport(e);			
+			// Failed to write configuration file.		
 		}
 	}
 	

@@ -32,7 +32,6 @@ import com.scientificsoft.iremote.server.protocol.Guid;
 import com.scientificsoft.iremote.android.iremote.R;
 import com.scientificsoft.iremote.android.iremote.AppVersions;
 import com.scientificsoft.iremote.android.iremote.tools.ContextHolder;
-import com.scientificsoft.iremote.android.iremote.tools.CrashReporter;
 import com.scientificsoft.iremote.android.iremote.tools.activitymanager.IAppController;
 import com.scientificsoft.iremote.android.iremote.tools.activitymanager.ManagedActivity;
 import com.scientificsoft.iremote.android.iremote.ui.control.ControlActivity;
@@ -115,7 +114,7 @@ public class HomeActivity extends ManagedActivity implements IAppController, DSe
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState); 
-        try {
+		try {
 	        // Display initial application UI.
 	        setContentView(R.layout.home_activity);	        
 	        updateVersion();
@@ -129,8 +128,6 @@ public class HomeActivity extends ManagedActivity implements IAppController, DSe
 	        // Initialize localytics.
 	        ContextHolder.instance().localyticsStart();
         } catch ( Exception e ) {
-        	// Notify us on initialization problem.
-        	CrashReporter.sendReport(e);
         }
     }
     

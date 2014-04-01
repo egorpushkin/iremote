@@ -23,8 +23,8 @@
 package com.scientificsoft.iremote.android.iremote;
 
 import android.app.Application;
+import com.crashlytics.android.Crashlytics;
 import com.scientificsoft.iremote.android.iremote.tools.ContextHolder;
-import com.scientificsoft.iremote.android.iremote.tools.CrashReporter;
 import com.scientificsoft.iremote.android.iremote.tools.ForegroundExecutor;
 import com.scientificsoft.iremote.server.Holder;
 import com.scientificsoft.iremote.server.config.Config;
@@ -46,9 +46,8 @@ public class iRemoteApp extends Application {
 	public void onCreate() {
 		super.onCreate();
 		
-		// Setup exception handler for the entire application.
-		CrashReporter.setup(this);
-		CrashReporter.initialize(this);
+		// Initialize crash reporter. 
+        Crashlytics.start(this);
 		
 		// Remember application context. 
 		ContextHolder.instance().setContext(this);
