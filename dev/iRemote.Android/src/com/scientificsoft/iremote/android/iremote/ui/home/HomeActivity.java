@@ -22,7 +22,8 @@
 
 package com.scientificsoft.iremote.android.iremote.ui.home;
 
-import com.google.ads.AdView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.scientificsoft.iremote.server.DSession;
 import com.scientificsoft.iremote.server.Features;
 import com.scientificsoft.iremote.server.Holder;
@@ -132,7 +133,6 @@ public class HomeActivity extends ManagedActivity implements IAppController, DSe
     }
     
     protected void updateVersion() {
-        ad_ = (AdView)findViewById(R.id.ad);
     	copyright_ = findViewById(R.id.home_copyright);
     	TextView version = (TextView)findViewById(R.id.home_version);
     	version.setText(version.getText() + AppVersions.formatVersion());
@@ -144,6 +144,10 @@ public class HomeActivity extends ManagedActivity implements IAppController, DSe
         super.onPause();
         // Pause localytics section.
         ContextHolder.instance().localyticsPause();
+        // Pause ads.
+    	if ( null != ad_ ) {
+    		ad_.pause();
+    	}
     }    
     
     /** Called when the activity is restored on the screen. */
@@ -161,12 +165,18 @@ public class HomeActivity extends ManagedActivity implements IAppController, DSe
         updateOrientation();
         // Resume localytics section.
         ContextHolder.instance().localyticsResume();
+        // Resume ads.
+    	if ( null != ad_ ) {
+    		ad_.resume();
+    	}        
     }
     
     /** Called when the activity is being destroyed. */
     @Override
     public void onDestroy() {
-    	ad_.destroy();    	    	
+    	if ( null != ad_ ) {
+    		ad_.destroy();
+    	}
     	super.onDestroy();
     }
     
@@ -316,6 +326,10 @@ public class HomeActivity extends ManagedActivity implements IAppController, DSe
 		configureButton(findViewById(R.id.button_hosts), hostsListener_);
 		configureButton(findViewById(R.id.button_help), helpListener_);
 		configureButton(findViewById(R.id.button_about), aboutListener_);
+		
+        ad_ = (AdView)findViewById(R.id.ad);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        ad_.loadAd(adRequest);        
 	}
 	
 	private void configureButton(View view, View.OnClickListener listener) {

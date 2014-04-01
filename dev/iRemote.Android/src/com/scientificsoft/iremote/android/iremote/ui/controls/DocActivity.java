@@ -30,7 +30,9 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.TextView;
 
-import com.google.ads.AdView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import com.scientificsoft.iremote.android.iremote.R;
 import com.scientificsoft.iremote.android.iremote.tools.activitymanager.ManagedActivity;
 import com.scientificsoft.iremote.android.iremote.ui.home.HomeActivity;
@@ -57,17 +59,24 @@ public class DocActivity extends ManagedActivity {
         content_ = (WebView)findViewById(R.id.doc_web_view);        
         content_.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);        
         ad_ = (AdView)findViewById(R.id.ad);
+        // Start showing ads.
+        AdRequest adRequest = new AdRequest.Builder().build();
+        ad_.loadAd(adRequest);     
     }
     
     public void onDestroy() {
-        // Destroy the AdView.
-        ad_.destroy();
+    	if ( null != ad_ ) {
+    		ad_.destroy();
+    	}
         super.onDestroy();
     }    
     
     /** Called when the activity is going into the background. */    
     @Override    
     public void onPause() {
+        if ( null != ad_ ) {
+        	ad_.pause();
+        }    	
         super.onPause();
     }       
     
@@ -75,6 +84,9 @@ public class DocActivity extends ManagedActivity {
     @Override    
     public void onResume() {
         super.onResume();
+        if ( null != ad_ ) {
+        	ad_.resume();
+        }        
     }    
     
     /** Called once(!), the first time the options menu is displayed. */

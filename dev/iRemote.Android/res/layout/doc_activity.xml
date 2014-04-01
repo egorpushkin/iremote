@@ -4,7 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" 
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads">
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
     
     <!-- Navigation bar -->
 	<RelativeLayout
@@ -12,7 +12,7 @@
 		android:layout_width="fill_parent" 
 		android:layout_height="40dip" 		
 		android:orientation="horizontal">
-		<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+		<ImageView
 			android:src="@drawable/navbar"
 			android:layout_width="fill_parent" 
 			android:layout_height="fill_parent" 
@@ -31,13 +31,12 @@
 	</RelativeLayout>	    
 	
 	<!-- AdMob panel -->
-	<com.google.ads.AdView 
+	<com.google.android.gms.ads.AdView 
 		android:id="@+id/ad"
 		android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         ads:adUnitId="a14c4834b88d1ff"
-        ads:adSize="BANNER"
-        ads:loadAdOnCreate="true"/>	
+        ads:adSize="BANNER"/>	
 
 	<WebView		
 		android:id="@+id/doc_web_view"

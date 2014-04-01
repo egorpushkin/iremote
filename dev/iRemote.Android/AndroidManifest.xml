@@ -5,7 +5,7 @@
     android:versionName="1.1.0">
       
     <uses-sdk
-    	android:minSdkVersion="3" 
+    	android:minSdkVersion="8" 
     	android:targetSdkVersion="19" />
     	
     <supports-screens
@@ -26,7 +26,8 @@
     <application 
     	android:name="iRemoteApp"
     	android:icon="@drawable/icon" 
-    	android:label="@string/app_short_name">    
+    	android:label="@string/app_short_name"
+    	android:allowBackup="false">    
         <activity 
         	android:name=".ui.home.HomeActivity"
         	android:label="@string/app_name"
@@ -59,14 +60,17 @@
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|fontScale"
             android:theme="@android:style/Theme.NoTitleBar"/>        
 		<activity 
-		    android:name="com.google.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"/>
+		    android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
 		<meta-data 
 		    android:name="com.crashlytics.ApiKey" 
 		    android:value="1c51e83d4d0dc7bea62a746e20c2ad2c96734a17"/>
 		<meta-data
 		    android:name="LOCALYTICS_APP_KEY" 
 		    android:value="4292f38c51caaa28612210a-51a48154-4b7f-11e0-c508-007af5bd88a0"/>
+		<meta-data 
+		    android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
 	</application> 	
         
 </manifest> 
