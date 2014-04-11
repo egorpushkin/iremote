@@ -2,9 +2,9 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "Remote PC Suite"
-!define PRODUCT_VERSION "1.4"
+!define PRODUCT_VERSION "1.5"
 !define PRODUCT_PUBLISHER "Egor Pushkin"
-!define PRODUCT_WEB_SITE "http://www.scientific-soft.com/mobile/"
+!define PRODUCT_WEB_SITE "http://www.scientific-soft.com/mobile/iremote"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\RemotePC.exe"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
@@ -49,10 +49,14 @@ ShowUnInstDetails show
 Section "MainSection" SEC01
   SetOutPath "$INSTDIR"
   SetOverwrite ifnewer
-  File "..\win\release\msvcp100.dll"
-  File "..\win\release\msvcr100.dll"
-  File "..\win\release\QtGui4.dll"
-  File "..\win\release\QtCore4.dll"
+  File "..\win\release\msvcp110.dll"
+  File "..\win\release\msvcr110.dll"
+  File "..\win\release\icudt51.dll"
+  File "..\win\release\icuin51.dll"
+  File "..\win\release\icuuc51.dll"
+  File "..\win\release\Qt5Core.dll"
+  File "..\win\release\Qt5Gui.dll"
+  File "..\win\release\Qt5Widgets.dll"
   File "..\win\release\EULA.txt"
   File "..\win\release\LIBS.txt"
   File "..\win\release\RemotePC.exe"
@@ -62,8 +66,10 @@ Section "MainSection" SEC01
   SetOverwrite try
   SetOutPath "$INSTDIR\help"
   File "..\win\release\help\*.*"
+  SetOutPath "$INSTDIR\plugins\platforms"
+  File "..\win\release\plugins\platforms\qwindows.dll"
   SetOutPath "$INSTDIR\plugins\imageformats"
-  File "..\win\release\plugins\imageformats\qjpeg4.dll"
+  File "..\win\release\plugins\imageformats\qjpeg.dll"
 SectionEnd
 
 Section -AdditionalIcons
@@ -96,25 +102,12 @@ Function un.onInit
 FunctionEnd
 
 Section Uninstall
-  Delete "$INSTDIR\${PRODUCT_NAME}.url"
-  Delete "$INSTDIR\uninst.exe"
-  Delete "$INSTDIR\plugins\imageformats\qjpeg4.dll"
-  Delete "$INSTDIR\help\*.*"
-  Delete "$INSTDIR\RemotePC.exe"
-  Delete "$INSTDIR\EULA.txt"
-  Delete "$INSTDIR\LIBS.txt"  
-  Delete "$INSTDIR\QtCore4.dll"
-  Delete "$INSTDIR\QtGui4.dll"
-
+  RMDir /r "$INSTDIR"
+  
   Delete "$SMPROGRAMS\Remote PC Suite\Uninstall.lnk"
   Delete "$SMPROGRAMS\Remote PC Suite\Website.lnk"
   Delete "$DESKTOP\Remote PC Suite.lnk"
   Delete "$SMPROGRAMS\Remote PC Suite\Remote PC Suite.lnk"
-
-  RMDir "$INSTDIR\plugins\imageformats"
-  RMDir "$INSTDIR\plugins"
-  RMDir "$INSTDIR\help"
-  RMDir "$INSTDIR"
 
   DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
   DeleteRegKey HKLM "${PRODUCT_DIR_REGKEY}"
