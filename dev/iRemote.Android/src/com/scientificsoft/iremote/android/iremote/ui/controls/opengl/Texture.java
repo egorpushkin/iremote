@@ -104,7 +104,6 @@ public class Texture {
     	gl.glEnable(GL10.GL_TEXTURE_2D);                              
         gl.glActiveTexture(GL10.GL_TEXTURE0);
         gl.glColor4f(1.0f, 1.0f, 1.0f, 1.0f);        
-        gl.glEnable(GL10.GL_ALPHA_BITS);
         
         gl.glBindTexture(GL10.GL_TEXTURE_2D, id_);
         gl.glVertexPointer(2, GL10.GL_FLOAT, 0, makeFloatBuffer(vertices));
