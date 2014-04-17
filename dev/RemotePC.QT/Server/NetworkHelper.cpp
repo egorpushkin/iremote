@@ -33,20 +33,30 @@ namespace RemotePC
 	{
 		std::vector< std::string > endpoints;
 
-		boost::asio::io_service service;
-		boost::asio::ip::tcp::resolver resolver(service);
-		boost::asio::ip::tcp::resolver::query query(boost::asio::ip::host_name(), Config::Instance().GetService());
-		boost::asio::ip::tcp::resolver::iterator endpointIterator = resolver.resolve(query);
-		boost::asio::ip::tcp::resolver::iterator end;
+        try
+        {
+            boost::asio::io_service service;
+            boost::asio::ip::tcp::resolver resolver(service);
+            boost::asio::ip::tcp::resolver::query query(boost::asio::ip::host_name(), Config::Instance().GetService());
+            boost::asio::ip::tcp::resolver::iterator endpointIterator = resolver.resolve(query);
+            boost::asio::ip::tcp::resolver::iterator end;
 
-		boost::system::error_code error = boost::asio::error::host_not_found;
-		while ( error && endpointIterator != end )
-		{
-			boost::asio::ip::tcp::endpoint endpoint = *endpointIterator++;
-			if ( !endpoint.address().is_v4() )
-				continue;
-			endpoints.push_back(endpoint.address().to_string());
-		}
+            boost::system::error_code error = boost::asio::error::host_not_found;
+            while ( error && endpointIterator != end )
+            {
+                boost::asio::ip::tcp::endpoint endpoint = *endpointIterator++;
+                if ( !endpoint.address().is_v4() )
+                    continue;
+                std::string address = endpoint.address().to_string();
+                if ( endpoints.end() != std::find(endpoints.begin(), endpoints.end(), address) )
+                    continue;
+                endpoints.push_back(address);
+            }
+        }
+        catch ( ... )
+        {
+            endpoints.push_back("Unknown");
+        }
 
 		return endpoints;
 	}
