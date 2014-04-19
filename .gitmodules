@@ -1,6 +1,0 @@
-[submodule "dev/3rdParty/boost"]
-	path = dev/3rdParty/boost
-	url = https://egorpushkin@bitbucket.org/egorpushkin/boost.git
-[submodule "dev/3rdParty/cmnkit"]
-	path = dev/3rdParty/cmnkit
-	url = https://egorpushkin@bitbucket.org/egorpushkin/common-kit.git
