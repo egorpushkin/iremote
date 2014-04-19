@@ -95,14 +95,18 @@ namespace RemotePC
         if ( isBoundary )
         {
             // Image was grabbed right next to one of screen edges.
+
+            // Scale image first. QPainter's scaling does not always work even with QPainter::SmoothPixmapTransform.
+            fragment = fragment.scaled(
+                QSize(fragmentWidth * blockSize / imageSize, fragmentHeight * blockSize / imageSize),
+                Qt::KeepAspectRatio,
+                Qt::SmoothTransformation);
+
+            // Locate grabbed fragment appropriately in the resulting image.
             QPixmap temp(blockSize, blockSize);
             QPainter painter(&temp);
             painter.fillRect(0, 0, blockSize, blockSize, QColor(Qt::black));
-            QRect source(0, 0, fragmentWidth, fragmentHeight);
-            QRect target(
-                leftdX * blockSize / imageSize, topdY * blockSize / imageSize,
-                fragmentWidth * blockSize / imageSize, fragmentHeight * blockSize / imageSize);
-            painter.drawPixmap(target, fragment, source);
+            painter.drawPixmap(QPoint(leftdX * blockSize / imageSize, topdY * blockSize / imageSize), fragment);
             fragment = temp;
         }
         else
@@ -127,6 +131,7 @@ namespace RemotePC
             fragment.save(&imageBuffer, "PNG", Config::Instance().GetSFBCompression());
         #endif
 
+        // Construct message object.
         mc::IMessagePtr message(
             mc::Class< RemotePC::ScreenshotMessage >::Create(
                 imageBytes.size(), imageBytes.constData() ) );
