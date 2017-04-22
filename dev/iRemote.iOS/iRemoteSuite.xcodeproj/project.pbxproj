@@ -53,6 +53,7 @@
 		2F3016CB13DC283600442693 /* ServicesManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F3016C513DC283600442693 /* ServicesManager.cpp */; };
 		2F3016CC13DC283600442693 /* ServiceDescriptor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F3016C913DC283600442693 /* ServiceDescriptor.cpp */; };
 		2F30175113DC39DA00442693 /* StreamContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F30175013DC39DA00442693 /* StreamContext.cpp */; };
+		2F31E41D1EAB105900D88E69 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F31E41C1EAB105900D88E69 /* Icon-60@2x.png */; };
 		2F3FD901141F7E480009C493 /* ServiceRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F3FD900141F7E480009C493 /* ServiceRequest.cpp */; };
 		2F44A2390FE5883A006125B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F44A2380FE5883A006125B8 /* main.m */; };
 		2F44A23E0FE5886D006125B8 /* Dist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F44A23C0FE5886D006125B8 /* Dist.plist */; };
@@ -367,6 +368,7 @@
 		2F3016DF13DC2A9800442693 /* Services.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Services.h; sourceTree = "<group>"; };
 		2F30174F13DC39DA00442693 /* StreamContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamContext.h; sourceTree = "<group>"; };
 		2F30175013DC39DA00442693 /* StreamContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StreamContext.cpp; sourceTree = "<group>"; };
+		2F31E41C1EAB105900D88E69 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		2F3FD8FF141F7E480009C493 /* ServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceRequest.h; sourceTree = "<group>"; };
 		2F3FD900141F7E480009C493 /* ServiceRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ServiceRequest.cpp; sourceTree = "<group>"; };
 		2F44A1DE0FE580AC006125B8 /* Controls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controls.h; sourceTree = "<group>"; };
@@ -1121,6 +1123,7 @@
 				2F56D02218389CC7008967EA /* Default-568h@2x.png */,
 				2F63DAB50F90FA0C003735D3 /* BackArt.png */,
 				2F5F1BC90F7D5AF500F45464 /* Icon.png */,
+				2F31E41C1EAB105900D88E69 /* Icon-60@2x.png */,
 			);
 			name = Images;
 			path = Resources/Images;
@@ -2379,6 +2382,7 @@
 			files = (
 				2F4845C40F72A883008A715F /* Help.htm in Resources */,
 				2F5F1A060F7D193100F45464 /* ButtonNormalCenter.png in Resources */,
+				2F31E41D1EAB105900D88E69 /* Icon-60@2x.png in Resources */,
 				2F7EEBAB181F700900C961A8 /* readme.txt in Resources */,
 				2F5F1A070F7D193100F45464 /* ButtonNormalLeft.png in Resources */,
 				2F5F1A080F7D193100F45464 /* ButtonNormalRight.png in Resources */,

@@ -8,8 +8,11 @@
 	<string>iRemote</string>
 	<key>CFBundleExecutable</key>
 	<string>iRemoteSuite</string>
-	<key>CFBundleIconFile</key>
-	<string>Icon.png</string>
+	<key>CFBundleIconFiles</key>
+    <array>
+        <string>Icon.png</string>
+        <string>Icon-60@2x.png</string>
+    </array>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
