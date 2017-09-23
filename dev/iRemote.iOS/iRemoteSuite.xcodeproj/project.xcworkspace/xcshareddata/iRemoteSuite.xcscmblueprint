@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0600262800FD68A33BEFE48E61CE48193FD1D135",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0600262800FD68A33BEFE48E61CE48193FD1D135" : 9223372036854775807,
+    "42B1CF8468F0DCE6EC834DAA140A735C16C0F9CC" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4830223C-E655-44C0-A864-0A85D7E8333F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0600262800FD68A33BEFE48E61CE48193FD1D135" : "public\/",
+    "42B1CF8468F0DCE6EC834DAA140A735C16C0F9CC" : "public\/dev\/3rdParty\/cmnkit\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "iRemoteSuite",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "dev\/iRemote.iOS\/iRemoteSuite.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/egorpushkin\/iremote.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0600262800FD68A33BEFE48E61CE48193FD1D135"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/egorpushkin\/common-kit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "42B1CF8468F0DCE6EC834DAA140A735C16C0F9CC"
+    }
+  ]
+}

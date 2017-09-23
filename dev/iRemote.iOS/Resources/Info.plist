@@ -8,10 +8,13 @@
 	<string>iRemote</string>
 	<key>CFBundleExecutable</key>
 	<string>iRemoteSuite</string>
-	<key>CFBundleIconFile</key>
-	<string>Icon.png</string>
+	<key>CFBundleIconFiles</key>
+    <array>
+        <string>Icon.png</string>
+        <string>Icon-60@2x.png</string>
+    </array>
 	<key>CFBundleIdentifier</key>
-	<string>com.scientific-soft.iRemoteSuite</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -19,11 +22,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.3</string>
+	<string>1.3.503</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.3.502</string>
+	<string>1.3.503</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMainNibFile</key>
