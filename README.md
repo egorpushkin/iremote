@@ -29,7 +29,7 @@ http://blog.scientific-soft.com/2011/04/08/android-story-of-iremote/
 ## Internals and Repository Structure
 
 Not much have changed since the moment when this article on iRemote architecture was published. It gives good overview of how desktop and mobile applications are organized.  
-http://scientific-soft.com/mobile/iremote/internals
+http://iremote.mobi/internals
 
 Desktop application is built in QT (http://qt-project.org/). Mobile apps are native.
 Among other 3rd Party dependencies (full list can be found here REPO/doc/License/LIBS.txt) there is another project of mine, which actually preceded iRemote. Common Kit library (https://github.com/egorpushkin/common-kit) powers iRemote object model and networking on iOS and desktop platforms. 
@@ -74,7 +74,7 @@ http://opensource.org/licenses/MIT
 
 ## References
 
-Project Page - http://scientific-soft.com/mobile/iremote  
+Project Page - http://iremote.mobi  
 iOS - https://itunes.apple.com/app/iremote-suite/id312222737?mt=8  
 Android - https://play.google.com/store/apps/details?id=com.scientificsoft.iremote.android.iremote  
 
