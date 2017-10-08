@@ -21,3 +21,6 @@ xcuserdata
 # Android
 bin/
 gen/
+
+# IDE
+.idea
